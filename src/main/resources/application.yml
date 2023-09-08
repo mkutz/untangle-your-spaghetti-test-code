@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:unicorn
+    username: unicorn-service
+    password: d4nc31ng0nR41nb0w5
+    driverClassName: org.h2.Driver

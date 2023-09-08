@@ -1,0 +1,10 @@
+CREATE
+    TABLE
+        IF NOT EXISTS PUBLIC.UNICORNS(
+            ID UUID PRIMARY KEY,
+            NAME VARCHAR NOT NULL,
+            MANE_COLOR VARCHAR,
+            HORN_LENGTH NUMBER,
+            HORN_DIAMETER NUMBER,
+            DATE_OF_BIRTH DATE
+        );
