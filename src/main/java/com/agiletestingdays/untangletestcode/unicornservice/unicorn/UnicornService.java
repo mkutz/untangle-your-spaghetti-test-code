@@ -21,4 +21,8 @@ public class UnicornService {
   public Optional<Unicorn> getById(UUID id) {
     return repository.findById(id);
   }
+
+  public void createNewUnicorn(Unicorn newUnicorn) {
+    repository.save(newUnicorn);
+  }
 }

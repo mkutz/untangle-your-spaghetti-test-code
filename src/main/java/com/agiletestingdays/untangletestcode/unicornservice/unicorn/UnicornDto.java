@@ -1,6 +1,7 @@
 package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.validation.constraints.Min;
 import java.time.format.DateTimeFormatter;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -8,8 +9,8 @@ public record UnicornDto(
     String id,
     String name,
     String maneColor,
-    Integer hornLength,
-    Integer hornDiameter,
+    @Min(0) Integer hornLength,
+    @Min(0) Integer hornDiameter,
     String dateOfBirth) {
   public UnicornDto(Unicorn unicorn) {
     this(

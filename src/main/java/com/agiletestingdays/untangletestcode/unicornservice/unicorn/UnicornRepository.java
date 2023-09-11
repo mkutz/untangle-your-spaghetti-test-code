@@ -42,4 +42,18 @@ public class UnicornRepository {
       return Optional.empty();
     }
   }
+
+  public void save(Unicorn newUnicorn) {
+    jdbcTemplate.update(
+        """
+            INSERT INTO UNICORNS(ID, NAME, MANE_COLOR, HORN_LENGTH, HORN_DIAMETER, DATE_OF_BIRTH)
+                VALUES(?, ?, ?, ?, ?, ?);
+            """,
+        newUnicorn.id(),
+        newUnicorn.name(),
+        newUnicorn.maneColor().name(),
+        newUnicorn.hornLength(),
+        newUnicorn.hornDiameter(),
+        newUnicorn.dateOfBirth());
+  }
 }

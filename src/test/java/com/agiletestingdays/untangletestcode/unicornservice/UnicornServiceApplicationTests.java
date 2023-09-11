@@ -1,9 +1,11 @@
 package com.agiletestingdays.untangletestcode.unicornservice;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.http.RequestEntity.post;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class UnicornServiceApplicationTests {
@@ -61,5 +64,37 @@ class UnicornServiceApplicationTests {
 
     assertThat(unicornData.has("dateOfBirth")).isTrue();
     assertThat(unicornData.get("dateOfBirth").asText()).isEqualTo("1982-02-19");
+  }
+
+  @Test
+  @DirtiesContext
+  void postNewUnicorn() throws JsonProcessingException {
+    var garryJson =
+        objectMapper.writeValueAsString(
+            Map.of(
+                "name",
+                "Garry",
+                "maneColor",
+                "BLUE",
+                "hornLength",
+                37,
+                "hornDiameter",
+                11,
+                "dateOfBirth",
+                "1999-10-12"));
+    var response =
+        restTemplate.exchange(
+            post("%s/unicorns/".formatted(baseUrl))
+                .header("Content-Type", "application/json")
+                .body(garryJson),
+            String.class);
+
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(201));
+    assertThat(response.getHeaders().get("Location")).isNotNull().hasSize(1);
+
+    var anotherResponse =
+        restTemplate.getForEntity(response.getHeaders().get("Location").get(0), String.class);
+
+    assertThat(anotherResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
   }
 }
