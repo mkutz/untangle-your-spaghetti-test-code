@@ -3,6 +3,7 @@ plugins {
   id("org.springframework.boot") version "3.1.3"
   id("io.spring.dependency-management") version "1.1.3"
   id("com.diffplug.spotless") version "6.21.0"
+  id("info.solidsoft.pitest") version "1.9.0"
 }
 
 group = "com.agiletestingdays.untangletestcode"
@@ -23,10 +24,13 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("io.projectreactor:reactor-test")
   testImplementation("org.springframework.restdocs:spring-restdocs-webtestclient")
+  testImplementation("org.mockito:mockito-core:5.5.0")
   implementation("com.h2database:h2")
 }
 
 tasks.withType<Test> { useJUnitPlatform() }
+
+pitest { junit5PluginVersion.set("1.0.0") }
 
 spotless {
   format("misc") {
