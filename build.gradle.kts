@@ -20,6 +20,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("org.springframework.boot:spring-boot-starter-validation")
+  implementation("com.h2database:h2")
 
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testImplementation("org.junit.jupiter:junit-jupiter-params")
@@ -28,7 +29,6 @@ dependencies {
   testImplementation("io.projectreactor:reactor-test")
   testImplementation("org.springframework.restdocs:spring-restdocs-webtestclient")
   testImplementation("org.mockito:mockito-core:5.5.0")
-  implementation("com.h2database:h2")
 }
 
 tasks.withType<Test> { useJUnitPlatform() }
