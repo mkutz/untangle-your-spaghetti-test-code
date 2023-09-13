@@ -11,7 +11,6 @@ import static org.mockito.Mockito.when;
 import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
 import jakarta.validation.Validator;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -47,7 +46,7 @@ class UnicornControllerTest {
                 gilly.maneColor().toString(),
                 gilly.hornLength(),
                 gilly.hornDiameter(),
-                gilly.dateOfBirth().format(DateTimeFormatter.ISO_DATE)))
+                gilly.dateOfBirth()))
         .contains(
             new UnicornDto(
                 garry.id().toString(),
@@ -55,7 +54,7 @@ class UnicornControllerTest {
                 garry.maneColor().toString(),
                 garry.hornLength(),
                 garry.hornDiameter(),
-                garry.dateOfBirth().format(DateTimeFormatter.ISO_DATE)));
+                garry.dateOfBirth()));
 
     verify(service, times(1)).getAll();
   }
@@ -78,7 +77,7 @@ class UnicornControllerTest {
                 gilly.maneColor().toString(),
                 gilly.hornLength(),
                 gilly.hornDiameter(),
-                gilly.dateOfBirth().format(DateTimeFormatter.ISO_DATE)));
+                gilly.dateOfBirth()));
     verify(service, times(1)).getById(gilly.id());
   }
 
@@ -94,7 +93,7 @@ class UnicornControllerTest {
 
   @Test
   void postingUnicornShouldReturnTheUnicornAndCreateItViaService() {
-    var gillyDto = new UnicornDto(null, "Gilly", "RED", 111, 11, "1911-11-11");
+    var gillyDto = new UnicornDto(null, "Gilly", "RED", 111, 11, LocalDate.of(1911, 11, 11));
 
     var createResponse =
         unicornController.postUnicorn(gillyDto, UriComponentsBuilder.newInstance());

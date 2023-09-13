@@ -6,7 +6,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
 import jakarta.validation.Validator;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.http.ResponseEntity;
@@ -44,9 +43,19 @@ public class UnicornController {
       path = {"unicorns", "unicorns/"},
       consumes = APPLICATION_JSON_VALUE,
       produces = APPLICATION_JSON_VALUE)
-  public ResponseEntity<UnicornDto> postUnicorn(
+  public ResponseEntity<?> postUnicorn(
       @RequestBody UnicornDto dto, UriComponentsBuilder uriComponentsBuilder) {
-    validator.validate(dto);
+    var validationResult = validator.validate(dto);
+    if (!validationResult.isEmpty()) {
+      var violationMessages =
+          validationResult.stream()
+              .map(
+                  violation ->
+                      "%s %s".formatted(violation.getPropertyPath(), violation.getMessage()))
+              .toList();
+      return ResponseEntity.badRequest().body(violationMessages);
+    }
+
     var unicornId = randomUUID();
     var unicorn =
         new Unicorn(
@@ -55,8 +64,9 @@ public class UnicornController {
             ManeColor.valueOf(dto.maneColor()),
             dto.hornLength(),
             dto.hornDiameter(),
-            LocalDate.parse(dto.dateOfBirth()));
+            dto.dateOfBirth());
     service.createNewUnicorn(unicorn);
+
     return ResponseEntity.created(
             uriComponentsBuilder.path("unicorns/").path(unicornId.toString()).build().toUri())
         .body(new UnicornDto(unicorn));

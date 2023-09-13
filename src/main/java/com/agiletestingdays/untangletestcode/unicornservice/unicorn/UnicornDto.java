@@ -1,17 +1,19 @@
 package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.validation.constraints.Min;
-import java.time.format.DateTimeFormatter;
+import jakarta.validation.constraints.Past;
+import java.time.LocalDate;
+import org.hibernate.validator.constraints.Range;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record UnicornDto(
     String id,
     String name,
     String maneColor,
-    @Min(0) Integer hornLength,
-    @Min(0) Integer hornDiameter,
-    String dateOfBirth) {
+    @Range(min = 1, max = 100) Integer hornLength,
+    @Range(min = 1, max = 40) Integer hornDiameter,
+    @Past @JsonFormat(pattern = "yyyy-MM-dd") LocalDate dateOfBirth) {
   public UnicornDto(Unicorn unicorn) {
     this(
         unicorn.id().toString(),
@@ -19,6 +21,6 @@ public record UnicornDto(
         unicorn.maneColor().name(),
         unicorn.hornLength(),
         unicorn.hornDiameter(),
-        unicorn.dateOfBirth().format(DateTimeFormatter.ISO_DATE));
+        unicorn.dateOfBirth());
   }
 }
