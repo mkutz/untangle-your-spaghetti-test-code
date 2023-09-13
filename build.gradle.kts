@@ -24,11 +24,13 @@ dependencies {
 
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testImplementation("org.junit.jupiter:junit-jupiter-params")
-  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("io.projectreactor:reactor-test")
   testImplementation("org.springframework.restdocs:spring-restdocs-webtestclient")
-  testImplementation("org.mockito:mockito-core:5.5.0")
+  testImplementation(platform("org.mockito:mockito-bom:5.5.0"))
+  testImplementation("org.mockito:mockito-core")
+
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> { useJUnitPlatform() }
