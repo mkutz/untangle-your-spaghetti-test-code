@@ -2,8 +2,10 @@ plugins {
   java
   id("org.springframework.boot") version "3.1.3"
   id("io.spring.dependency-management") version "1.1.3"
-  id("com.diffplug.spotless") version "6.21.0"
+  id("org.sonarqube") version "4.3.1.3277"
+  jacoco
   id("info.solidsoft.pitest") version "1.9.0"
+  id("com.diffplug.spotless") version "6.21.0"
 }
 
 group = "com.agiletestingdays.untangletestcode"
@@ -32,6 +34,19 @@ dependencies {
 }
 
 tasks.withType<Test> { useJUnitPlatform() }
+
+tasks.jacocoTestReport {
+  dependsOn(tasks.test)
+  reports { xml.required.set(true) }
+}
+
+sonar {
+  properties {
+    property("sonar.projectKey", "mkutz_untangle-your-spaghetti-test-code")
+    property("sonar.organization", "mkutz")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
+}
 
 pitest { junit5PluginVersion.set("1.0.0") }
 
