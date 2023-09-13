@@ -25,8 +25,6 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testImplementation("org.junit.jupiter:junit-jupiter-params")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("io.projectreactor:reactor-test")
-  testImplementation("org.springframework.restdocs:spring-restdocs-webtestclient")
   testImplementation(platform("org.mockito:mockito-bom:5.5.0"))
   testImplementation("org.mockito:mockito-core")
 
