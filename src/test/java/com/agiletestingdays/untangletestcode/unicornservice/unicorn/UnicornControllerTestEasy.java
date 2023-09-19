@@ -17,7 +17,7 @@ import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatusCode;
 
-public class UnicornControllerTestEasy {
+class UnicornControllerTestEasy {
 
   UnicornService service = mock(UnicornService.class);
   Validator validator = mock(Validator.class);
