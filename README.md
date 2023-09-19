@@ -3,6 +3,31 @@
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/mkutz_untangle-your-spaghetti-test-code?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 [![Sonar Coverage](https://img.shields.io/sonar/coverage/mkutz_untangle-your-spaghetti-test-code?server=http%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 
+## Agenda
+
+| When  | What                                  |
+|-------|---------------------------------------|
+| 14:45 | Welcome: what we do, setup, code      |
+| 15:55 | Together: review the code base        |
+| 15:05 | Brainstorming: about problems         |
+| 15:20 | Untangle the code                     |
+| 15:30 | Coffee break                          |
+| 16:00 | Ensemble: untangle the code continued |
+| 16:35 | Retro                                 |
+| 16:45 | The end                               |
+
+## Todo
+
+- [X] Agenda
+- [ ] Prepare Repl (or other)
+- [ ] Cheat sheet
+  - Arrange Act Assert
+  - Test Data Builder Pattern
+  - Expressive test case/variable naming
+  - Database Stub/Test database setup util
+  - …
+- [ ] Prepare retro
+
 ## Objectives
 
 1. Have a look at the [UnicornServiceApplicationTest].
@@ -47,4 +72,7 @@
 [UnicornServiceApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
 [UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
-[data.sql]: <src/main/resources/data.sql>
+[data.sql]: <src/test/resources/data.sql>
+
+[Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>
+[Instancio]: <https://www.instancio.org/>
