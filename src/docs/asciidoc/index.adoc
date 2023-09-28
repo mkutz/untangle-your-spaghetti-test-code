@@ -1,0 +1,10 @@
+= Untangle Your Spaghetti Test Code
+Michael Kutz <mail@michael-kutz.de>, Christian Baumann <christian.baumann@maibornwolff.de>
+:toc: left
+:icons: font
+:sectlinks:
+:sectanchors:
+:source-highlighter: coderay
+:hide-uri-scheme:
+
+include::untangles/arrange-act-assert.adoc[leveloffset=1]

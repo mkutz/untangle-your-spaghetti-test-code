@@ -6,6 +6,7 @@ plugins {
   jacoco
   id("info.solidsoft.pitest") version "1.9.0"
   id("com.diffplug.spotless") version "6.21.0"
+  id("org.asciidoctor.jvm.convert") version "3.3.2"
 }
 
 group = "com.agiletestingdays.untangletestcode"
@@ -81,3 +82,5 @@ spotless {
     dbeaver()
   }
 }
+
+tasks.withType<org.asciidoctor.gradle.jvm.AsciidoctorTask> { baseDirFollowsSourceFile() }
