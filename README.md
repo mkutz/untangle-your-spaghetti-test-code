@@ -19,14 +19,14 @@
 ## Todo
 
 - [X] Agenda
-- [ ] Prepare Repl (or other)
+- [ ] Prepare Repl or other (Christian)
 - [ ] Cheat sheet
-  - Arrange Act Assert
-  - Test Data Builder Pattern
-  - Expressive test case/variable naming
-  - Database Stub/Test database setup util
+  - Arrange Act Assert (Micha)
+  - Test Data Builder Pattern (Micha)
+  - Expressive test case/variable naming (Micha)
+  - Database Stub/Test database setup util (Micha)
   - …
-- [ ] Prepare retro
+- [ ] Prepare retro (Micha)
 
 ## Objectives
 
