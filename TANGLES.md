@@ -62,10 +62,38 @@ https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1
 
 ## Expressive test case/variable naming
 
+### Tangles
+
 - Misleading/lying names
 - Hard to understand what's being tested
 
+### Solution
+
+Test case names can easily get outdated when the code is being changed, but the name is forgotten.
+However, they help us to understand what's wrong, especially in test reports where the code is not immediately accessible.
+
+Any naming scheme is better than no naming scheme at all!
+
+My personal suggestion would be to stay very concise.
+Test case names are only useful if they are actually read and understood.
+It might be better to omit redundant information.
+
+```plain
+<ClassUnderTest>Test.<methodUnderTest> [<happyCaseDiffStateUnderTest>]
+```
+
+Other suggestions:
+
+- `<Action> <State under test> <Expected behavior>`
+- `<Action> <Expected behavior> <State under test>`
+- `Should <Expected behavior> When <State under test>`
+- `Given <Preconditions> When <State under test> Then <Expected behavior>`
+
+https://ui-testing.academy/naming/naming-conventions-for-test-cases/
+
 ## Database Stub/Test database setup util
+
+### Tangles
 
 - Hidden arrange
 - Test pollution
