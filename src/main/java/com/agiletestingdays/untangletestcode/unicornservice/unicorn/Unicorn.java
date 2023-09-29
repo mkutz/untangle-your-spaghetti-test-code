@@ -1,6 +1,7 @@
 package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.UUID;
 
 public record Unicorn(
@@ -10,6 +11,16 @@ public record Unicorn(
     Integer hornLength,
     Integer hornDiameter,
     LocalDate dateOfBirth) {
+
+  public Unicorn {
+    if (dateOfBirth.isAfter(LocalDate.now())) {
+      throw new IllegalArgumentException("Future dates of birth are not supported!");
+    }
+  }
+
+  public Integer age() {
+    return Period.between(dateOfBirth, LocalDate.now()).getYears();
+  }
 
   public enum ManeColor {
     BLUE,

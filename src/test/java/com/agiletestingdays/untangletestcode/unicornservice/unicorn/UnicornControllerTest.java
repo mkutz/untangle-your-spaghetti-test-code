@@ -28,7 +28,13 @@ class UnicornControllerTest {
   @Test
   void getAllUnicornsReturnsAListOfUnicornDtos() {
     var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
+        new Unicorn(
+            UUID.fromString("351d0356-6d5e-47d5-adbb-4909058fdf2f"),
+            "Gilly",
+            ManeColor.RED,
+            111,
+            11,
+            LocalDate.of(1911, 11, 11));
     var garry =
         new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
     var unicorns = List.of(gilly, garry);

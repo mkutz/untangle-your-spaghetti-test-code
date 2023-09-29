@@ -1,14 +1,55 @@
-# Tangles & Untangles
+# Tangles
+
+## Unstructured test code
+
+## Long Arrange
+
+When dealing with big data objects, we need to construct these objects to arrange our tests.
+
+Quite often only few of the set properties are actually relevant the test at hand.
+The other set properties are actually just set to satisfy the constructor of the class and often use [Magic Values](#magic-values).
+
+```
+var gilly = new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
+```
+
+## Long Act
+
+## Long Assert
+
+Test cases that check multiple things are
+
+## Magic Values
+
+Magic values (most famously magic numbers) are a well known anti-pattern in production code.
+It is basically some literal value appearing somewhere in the code without any hint why it was chosen.
+
+Example from an arrangement block:
+
+```
+var gilly =
+  new Unicorn(
+    randomUUID(),
+    "Gilly",
+    ManeColor.RED,
+    111,
+    11,
+    LocalDate.now().minusYears(62).plusDays(1));
+```
+
+The example contains several magic values: why 111? why this date? Is any of this important for the test?
+
+This tangle is also quite common in assertions:
+
+```
+assertThat(gilly.age()).isEqualTo(61);
+```
+
+Why 61 in this case?
+
+# Untangles
 
 ## Arrange Act Assert (Given When Then)
-
-### Tangles
-
-- Badly/unstructured test code
-- Too long test cases
-- Hard to understand what's being tested
-
-### Solution
 
 A test should always consist of three parts:
 
@@ -36,18 +77,9 @@ https://martinfowler.com/bliki/GivenWhenThen.html
 
 ## Test Data Builder Pattern
 
-### Tangles
-
 - Too long arranges with irrelevant details
 
-  ```
-  var gilly = new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-  var garry = new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
-  ```
-
 - Magic numbers/magic strings
-
-### Solution
 
 Create a builder class that allows to create whatever object is required for the test.
 That builder class should contain or use random data generators or constants to fill all the fields that are deemed irrelevant for the test at hand.
