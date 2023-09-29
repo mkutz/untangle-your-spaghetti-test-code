@@ -1,6 +1,17 @@
 # Tangles
 
-## Unstructured test code
+## Hidden Arrange
+
+Sometimes our tests rely on a non-obvious setup.
+
+For example: The database implicitly gets set up with a test data set.
+The data is then used in the tests' asserts, but its source is not visible from the test itself.
+
+## Interdependent Test Cases
+
+Similar to [Hidden Arrange](#hidden-arrange), test cases can be written in a way that they rely on other cases implicitly.
+
+This is especially harmful as changing or removing one test case can make multiple other cases fail that dependent on it.
 
 ## Long Arrange
 
@@ -13,11 +24,28 @@ The other set properties are actually just set to satisfy the constructor of the
 var gilly = new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
 ```
 
-## Long Act
+[Test Data Builder](#test-data-builder)
 
 ## Long Assert
 
-Test cases that check multiple things are
+## Lying Test Case Names
+
+Test case names are not executable code.
+Hence, their correctness is not checked automatically like the actual test code.
+
+They often help though, to understand the general intention of a test case, and they are usually the data we get from test reports.
+
+Often test case names are copy-pasted from other tests, and often we fail adjust them when the content of the test case changes.
+Sometimes
+
+```
+void getAllUnicornsReturnsAListOfUnicornDtos() { /* … */ }
+void getSingleUnicornReturnsValidJson() { /* … */ }
+void getSingleUnicornsShouldReturnNullForUnknownId() { /* … */ }
+void postingUnicornShouldReturnTheUnicornAndCreateItViaService() { /* … */ }
+```
+
+[Expressive Test Case Naming](#expressive-test-case-naming)
 
 ## Magic Values
 
@@ -29,7 +57,7 @@ Example from an arrangement block:
 ```
 var gilly =
   new Unicorn(
-    randomUUID(),
+    UUID.of("351d0356-6d5e-47d5-adbb-4909058fdf2f"),
     "Gilly",
     ManeColor.RED,
     111,
@@ -46,6 +74,23 @@ assertThat(gilly.age()).isEqualTo(61);
 ```
 
 Why 61 in this case?
+
+[Test Data Builder](#test-data-builder)
+[Test Data Constants and Generators](#test-data-constants-and-generators)
+
+## Multiple Acts
+
+## Too Much Mocking
+
+Mocking allows us to test a unit without the need to also create and configure its dependencies.
+We can also verify the behavior of our code towards these mocked dependencies.
+
+However, instructing a lot of mocks can lead to a brittle test suite that will fail for the simple reason that the mock was not updated according to a code change.
+In that case the mocking can make code refactorings harder than necessary.
+
+This is not necessarily a test code issue, but is usually an issue of the code structure and architecture.
+
+## Unstructured Test Code
 
 # Untangles
 
@@ -75,11 +120,7 @@ A test should always consist of three parts:
 
 https://martinfowler.com/bliki/GivenWhenThen.html
 
-## Test Data Builder Pattern
-
-- Too long arranges with irrelevant details
-
-- Magic numbers/magic strings
+## Test Data Builder
 
 Create a builder class that allows to create whatever object is required for the test.
 That builder class should contain or use random data generators or constants to fill all the fields that are deemed irrelevant for the test at hand.
@@ -92,14 +133,31 @@ var unicorn = new UnicornTestDataBuilder()
 
 https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1
 
-## Expressive test case/variable naming
+## Test Data Constants and Generators
 
-### Tangles
+Explicitly named test data constants can help to understand the test code a lot.
+If constant values would cause [Interdependent Test Cases](#interdependent-test-cases), data generators might help.
 
-- Misleading/lying names
-- Hard to understand what's being tested
+For example:
 
-### Solution
+```
+var gilly =
+  new Unicorn(
+    UUID.randomUUID(),
+    SOME_UNICORN_NAME,
+    SOME_MANE_COLOR,
+    SOME_VALID_HORN_LENGTH,
+    SOME_VALID_HORN_DIAMETER,
+    LocalDate.now().minusYears(62).plusDays(1));
+```
+
+The UUID is generated to avoid interdependencies between test cases.
+The name, mane color, horn length and diameter are constants starting with `SOME` to indicate that the specific value is not relevant for the test case.
+Only the date of birth is set to an explicit value, so it probably matters.
+
+[Magic Values](#magic-values)
+
+## Expressive Test Case Naming
 
 Test case names can easily get outdated when the code is being changed, but the name is forgotten.
 However, they help us to understand what's wrong, especially in test reports where the code is not immediately accessible.
@@ -123,10 +181,10 @@ Other suggestions:
 
 https://ui-testing.academy/naming/naming-conventions-for-test-cases/
 
-## Database Stub/Test database setup util
+[Lying Test Names](#lying-test-case-names)
 
-### Tangles
+## Database Stub/Test Database Setup Util
 
-- Hidden arrange
-- Test pollution
-- Magic strings
+- [Hidden Arrange](#hidden-arrange)
+- [Interdependent Test Cases](#interdependent-test-cases)
+- [Magic Values](#magic-values)
