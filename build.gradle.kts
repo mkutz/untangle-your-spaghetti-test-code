@@ -5,7 +5,7 @@ plugins {
   id("org.sonarqube") version "4.3.1.3277"
   jacoco
   id("info.solidsoft.pitest") version "1.9.0"
-  id("com.diffplug.spotless") version "6.21.0"
+  id("com.diffplug.spotless") version "6.22.0"
 }
 
 group = "com.agiletestingdays.untangletestcode"
