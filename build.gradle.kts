@@ -2,7 +2,7 @@ plugins {
   java
   id("org.springframework.boot") version "3.1.3"
   id("io.spring.dependency-management") version "1.1.3"
-  id("org.sonarqube") version "4.3.1.3277"
+  id("org.sonarqube") version "4.4.0.3356"
   jacoco
   id("info.solidsoft.pitest") version "1.9.0"
   id("com.diffplug.spotless") version "6.21.0"
