@@ -1,7 +1,9 @@
 # Untangle Your Spaghetti Test Code
 [![Build](https://github.com/mkutz/untangle-your-spaghetti-test-code/actions/workflows/build.yml/badge.svg)](https://github.com/mkutz/untangle-your-spaghetti-test-code/actions/workflows/build.yml)
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/mkutz_untangle-your-spaghetti-test-code?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
-[![Sonar Coverage](https://img.shields.io/sonar/coverage/mkutz_untangle-your-spaghetti-test-code?server=http%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
+[![Sonar Coverage](https://img.shields.io/sonar/coverage/mkutz_untangle-your-spaghetti-test-code?server=http%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)  
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code)  
 
 ## Agenda
 
@@ -27,6 +29,12 @@
   - Database Stub/Test database setup util (Micha)
   - …
 - [ ] Prepare retro (Micha)
+
+## Setup
+
+- Create an account on github: [github.com/join](https://github.com/join)
+- Follow [this link](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code) and follow the instructions
+- Open `src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java` from the file tree on the left and wait for the Java installation to finish
 
 ## Objectives
 
