@@ -9,7 +9,8 @@ The data is then used in the tests' asserts, but its source is not visible from 
 
 ## Interdependent Test Cases
 
-Similar to [Hidden Arrange](#hidden-arrange), test cases can be written in a way that they rely on other cases implicitly.
+Similar to [Hidden Arrange](#hidden-arrange), test cases can be written in a way that they rely on other cases.
+This can happen either by intention due to a very cumbersome setup, but also accidentally when you assume the result of a series of test were actually the result of the arrange phase.
 
 This is especially harmful as changing or removing one test case can make multiple other cases fail that dependent on it.
 
@@ -17,7 +18,7 @@ This is especially harmful as changing or removing one test case can make multip
 
 When dealing with big data objects, we need to construct these objects to arrange our tests.
 
-Quite often only few of the set properties are actually relevant the test at hand.
+Quite often only few of the set properties are actually relevant for the test at hand.
 The other set properties are actually just set to satisfy the constructor of the class and often use [Magic Values](#magic-values).
 
 ```
@@ -26,7 +27,11 @@ var gilly = new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate
 
 [Test Data Builder](#test-data-builder)
 
-## Long Assert
+## Long Assert / Multi-Aspect Assert
+
+```
+
+```
 
 ## Lying Test Case Names
 
@@ -80,6 +85,10 @@ Why 61 in this case?
 
 ## Multiple Acts
 
+```
+
+```
+
 ## Too Much Mocking
 
 Mocking allows us to test a unit without the need to also create and configure its dependencies.
@@ -89,8 +98,6 @@ However, instructing a lot of mocks can lead to a brittle test suite that will f
 In that case the mocking can make code refactorings harder than necessary.
 
 This is not necessarily a test code issue, but is usually an issue of the code structure and architecture.
-
-## Unstructured Test Code
 
 # Untangles
 
