@@ -16,9 +16,8 @@ import java.util.Optional;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.mock.http.client.MockClientHttpResponse;
 
-class UnicornControllerTestEasy {
+class UnicornControllerEasyTest {
 
   UnicornService service = mock(UnicornService.class);
   Validator validator = mock(Validator.class);
@@ -62,8 +61,8 @@ class UnicornControllerTestEasy {
 
   @Test
   void getAllUnicornsReturnsAListOfUnicornDtosFoo() {
-   var gilly =
-            new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
+    var gilly =
+        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
     when(service.getById(any(UUID.class))).thenReturn(Optional.of(gilly));
 
     var unicornResponse = unicornController.getUnicorn(gilly.id());

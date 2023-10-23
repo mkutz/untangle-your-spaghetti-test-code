@@ -5,41 +5,33 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code)
 
+
 ## Agenda
 
-| When  | What                                  |
-|-------|---------------------------------------|
-| 14:45 | Welcome: what we do, setup, code      |
-| 15:55 | Together: review the code base        |
-| 15:05 | Brainstorming: about problems         |
-| 15:20 | Untangle the code                     |
-| 15:30 | Coffee break                          |
-| 16:00 | Ensemble: untangle the code continued |
-| 16:35 | Retro                                 |
-| 16:45 | The end                               |
+| When  | What                             |
+|-------|----------------------------------|
+| 14:45 | Welcome: what we do, setup, code |
+| 15:55 | Together: review the code base   |
+| 15:05 | Brainstorming: about problems    |
+| 15:20 | Untangle the code                |
+| 15:30 | Coffee break                     |
+| 16:00 | Untangle the code continued      |
+| 16:35 | Retro                            |
+| 16:45 | The end                          |
 
-## Todo
-
-- [X] Agenda
-- [X] Prepare Repl or other (Christian)
-- [ ] Cheat sheet
-  - Arrange Act Assert (Micha)
-  - Test Data Builder Pattern (Micha)
-  - Expressive test case/variable naming (Micha)
-  - Database Stub/Test database setup util (Micha)
-  - …
-- [ ] Prepare retro (Micha)
 
 ## Setup
 
-- Create an account on github: [github.com/join](https://github.com/join)
-- Follow [this link](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code) and follow the instructions
-- Open `src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java` from the file tree on the left and wait for the Java installation to finish
+1. Login to GitHub or create an account: [github.com/join](https://github.com/join).
+2. Follow [this link](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code) and follow the instructions.
+3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish.
+
 
 ## Objectives
 
 1. Have a look at the [UnicornServiceApplicationTest].
-   Which problems do you see?
+
+   Brainstorm: Which problems do you see?
 
    - Do you understand **what's being tested**?
 

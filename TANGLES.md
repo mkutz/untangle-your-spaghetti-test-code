@@ -88,8 +88,8 @@ assertThat(gilly.age()).isEqualTo(61);
 
 Why 61 in this case?
 
-_Potential solutions:_  
-- [Test Data Builder](#test-data-builder)  
+_Potential solutions:_
+- [Test Data Builder](#test-data-builder)
 - [Test Data Constants and Generators](#test-data-constants-and-generators)
 
 ## Multiple Acts
@@ -173,7 +173,7 @@ https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1
 
 Potential solution to avoid [magic values](#magic-values)
 
-``` java 
+``` java
 private static final int EXPECTED_OK_STATUS_CODE = 200;
 ```
 
@@ -204,9 +204,9 @@ _Solves_ [Magic Values](#magic-values)
 ## Expressive Test Case Naming
 
 Test case names can easily get outdated when the code is being changed, but the name is forgotten.
-However, they help us to understand what's wrong.  
-Especially in test reports, where the code is not immediately accessible,  it is crucial that they be clear & speaking, 
-unambiguous,  and easily understandable.  
+However, they help us to understand what's wrong.
+Especially in test reports, where the code is not immediately accessible,  it is crucial that they be clear & speaking,
+unambiguous,  and easily understandable.
 This will allow us to understand the general intention of the test cases without having to read the actual test code
 
 Any naming scheme is better than no naming scheme at all!
