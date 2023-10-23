@@ -7,6 +7,14 @@ Sometimes our tests rely on a non-obvious setup.
 For example: The database implicitly gets set up with a test data set.
 The data is then used in the tests' asserts, but its source is not visible from the test itself.
 
+## Duplicate setup code
+
+Creating and setting up test objects is duplicated in multiple tests.
+
+_Potential solutions:_
+- [Test Setup Helper Method](#test-setup-helper-method)
+- [Test Data Builder](#test-data-builder)
+
 ## Interdependent Test Cases
 
 Similar to [Hidden Arrange](#hidden-arrange), test cases can be written in a way that they rely on other cases.
@@ -80,7 +88,7 @@ assertThat(gilly.age()).isEqualTo(61);
 
 Why 61 in this case?
 
-_Potential solution:_  
+_Potential solutions:_  
 - [Test Data Builder](#test-data-builder)  
 - [Test Data Constants and Generators](#test-data-constants-and-generators)
 
@@ -127,6 +135,26 @@ A test should always consist of three parts:
    However, for longer running tests it might be pragmatic to check multiple aspects, if it is not possible to push them down into faster test levels.
 
 https://martinfowler.com/bliki/GivenWhenThen.html
+
+## Test Setup Helper Method
+
+Create test setup helper method to avoid duplication of test object setup in a lot of tests.
+
+``` java
+private Unicorn createUnicorn(String name, ManeColor maneColor, int hornLength, int hornDiameter, LocalDate dateOfBirth) {
+    return new Unicorn(randomUUID(), name, maneColor, hornLength, hornDiameter, dateOfBirth);
+}
+
+@Test
+void getAllUnicornsReturnsAListOfUnicornDtos() {
+    var gilly = createUnicorn("Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
+    var garry = createUnicorn("Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
+
+    // ...rest of the test
+}
+```
+
+_Also see:_ [Test Data Builder](#test-data-builder)
 
 ## Test Data Builder
 

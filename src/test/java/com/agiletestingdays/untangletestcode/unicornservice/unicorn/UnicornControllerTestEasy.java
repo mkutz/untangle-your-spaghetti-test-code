@@ -24,9 +24,6 @@ class UnicornControllerTestEasy {
 
   UnicornController unicornController = new UnicornController(service, validator);
 
-  // Tangle Explanation: Creating and setting up Unicorn objects is duplicated in multiple tests.
-  // Solution: Move the Unicorn creation and setup to a helper method.
-
   @Test
   void getAllUnicornsReturnsAListOfUnicornDtos() {
     var gilly =
@@ -40,24 +37,6 @@ class UnicornControllerTestEasy {
     // ...rest of the test
   }
 
-  // Solution:
-  //    private Unicorn createUnicorn(String name, ManeColor maneColor, int hornLength, int
-  // hornDiameter, LocalDate dateOfBirth) {
-  //        return new Unicorn(randomUUID(), name, maneColor, hornLength, hornDiameter,
-  // dateOfBirth);
-  //    }
-  //
-  //    @Test
-  //    void getAllUnicornsReturnsAListOfUnicornDtos() {
-  //        var gilly = createUnicorn("Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-  //        var garry = createUnicorn("Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
-  //
-  //        var unicorns = List.of(gilly, garry);
-  //        when(service.getAll()).thenReturn(unicorns);
-  //
-  //        // ...rest of the test
-  //    }
-
   // Tangle Explanation: Magic numbers (e.g., 111, 11, 99, 9) are used in object creation and are
   // not self-explanatory.
   // Solution: Replace magic numbers with named constants or variables for better code readability.
@@ -69,7 +48,7 @@ class UnicornControllerTestEasy {
     var garry =
         new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
 
-    // ...
+    // ...rest of the test
   }
 
   // Solution:
