@@ -169,10 +169,18 @@ var unicorn = new UnicornTestDataBuilder()
 
 https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1
 
+## Constant Values
+
+Potential solution to avoid [magic values](#magic-values)
+
+``` java 
+private static final int EXPECTED_OK_STATUS_CODE = 200;
+```
+
 ## Test Data Constants and Generators
 
 Explicitly named test data constants can help to understand the test code a lot.
-If constant values would cause [Interdependent Test Cases](#interdependent-test-cases), data generators might help.
+If [constant values](#constant-values) would cause [Interdependent Test Cases](#interdependent-test-cases), data generators might help.
 
 For example:
 

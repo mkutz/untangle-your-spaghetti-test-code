@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.mock.http.client.MockClientHttpResponse;
 
 class UnicornControllerTestEasy {
 
@@ -36,11 +37,6 @@ class UnicornControllerTestEasy {
 
     // ...rest of the test
   }
-
-  // Tangle Explanation: The test name "getSingleUnicornReturnsValidJson" is not very descriptive
-  // and does not provide clear information about the purpose of the test.
-  // Solution: Use a more descriptive and meaningful test name to improve understanding of the
-  // test's intent.
 
   @Test
   void getSingleUnicornReturnsValidJson() {
@@ -64,97 +60,18 @@ class UnicornControllerTestEasy {
     verify(service, times(1)).getById(gilly.id());
   }
 
-  // Solution:
   @Test
-  void shouldReturnValidJsonForSingleUnicorn() {
-    var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
+  void getAllUnicornsReturnsAListOfUnicornDtosFoo() {
+   var gilly =
+            new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
     when(service.getById(any(UUID.class))).thenReturn(Optional.of(gilly));
 
     var unicornResponse = unicornController.getUnicorn(gilly.id());
 
     assertThat(unicornResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-    assertThat(unicornResponse.getBody())
-        .isNotNull()
-        .isEqualTo(
-            new UnicornDto(
-                gilly.id().toString(),
-                gilly.name(),
-                gilly.maneColor().toString(),
-                gilly.hornLength(),
-                gilly.hornDiameter(),
-                gilly.dateOfBirth()));
-    verify(service, times(1)).getById(gilly.id());
+
+    // ...rest of the test
   }
-
-  // Tangle Explanation: Hardcoded data values (e.g., "200") are used in assertions, making the test
-  // less flexible and more prone to breaking if the expected values change.
-  // Solution: Use constants or variables to store expected values in assertions to make the test
-  // more adaptable to changes.
-
-  @Test
-  void getAllUnicornsReturnsAListOfUnicornDtosFoo() {
-    // ... previous test setup code
-
-    //        assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-    //        assertThat(unicornsResponse.getBody())
-    //                .hasSize(2)
-    //                .contains(
-    //                        new UnicornDto(
-    //                                gilly.id().toString(),
-    //                                gilly.name(),
-    //                                gilly.maneColor().toString(),
-    //                                gilly.hornLength(),
-    //                                gilly.hornDiameter(),
-    //                                gilly.dateOfBirth()))
-    //                .contains(
-    //                        new UnicornDto(
-    //                                garry.id().toString(),
-    //                                garry.name(),
-    //                                garry.maneColor().toString(),
-    //                                garry.hornLength(),
-    //                                garry.hornDiameter(),
-    //                                garry.dateOfBirth()));
-
-    // ... rest of the test
-  }
-
-  // Solution:
-  //    private static final int EXPECTED_OK_STATUS_CODE = 200;
-  //
-  //    @Test
-  //    void getAllUnicornsReturnsAListOfUnicornDtos() {
-  //        // ... previous test setup code
-  //
-  //
-  // assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(EXPECTED_OK_STATUS_CODE));
-  //        assertThat(unicornsResponse.getBody())
-  //                .hasSize(2)
-  //                .contains(
-  //                        new UnicornDto(
-  //                                gilly.id().toString(),
-  //                                gilly.name(),
-  //                                gilly.maneColor().toString(),
-  //                                gilly.hornLength(),
-  //                                gilly.hornDiameter(),
-  //                                gilly.dateOfBirth()))
-  //                .contains(
-  //                        new UnicornDto(
-  //                                garry.id().toString(),
-  //                                garry.name(),
-  //                                garry.maneColor().toString(),
-  //                                garry.hornLength(),
-  //                                garry.hornDiameter(),
-  //                                garry.dateOfBirth()));
-  //
-  //        // ... rest of the test
-  //    }
-
-  // Tangle Explanation: The test method "getAllUnicornsReturnsAListOfUnicornDtos" is testing both
-  // the HTTP response and the behavior of the service/mock. It's testing two things in a single
-  // test.
-  // Solution: Split the test into two separate tests, one for testing the HTTP response and another
-  // for testing the behavior of the service/mock.
 
   @Test
   void getAllUnicornsReturnsAListOfUnicornDtosBar() {
@@ -186,39 +103,6 @@ class UnicornControllerTestEasy {
                 garry.hornLength(),
                 garry.hornDiameter(),
                 garry.dateOfBirth()));
-
-    verify(service, times(1)).getAll();
-  }
-
-  // Solution:
-
-  // Test for HTTP response
-  @Test
-  void getAllUnicornsReturnsHttpResponse() {
-    var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-    var garry =
-        new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
-    var unicorns = List.of(gilly, garry);
-    when(service.getAll()).thenReturn(unicorns);
-
-    var unicornsResponse = unicornController.getAllUnicorns();
-
-    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
-    assertThat(unicornsResponse.getBody()).hasSize(2);
-  }
-
-  // Test for service/mock behavior
-  @Test
-  void getAllUnicornsCallsService() {
-    var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-    var garry =
-        new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
-    var unicorns = List.of(gilly, garry);
-    when(service.getAll()).thenReturn(unicorns);
-
-    unicornController.getAllUnicorns();
 
     verify(service, times(1)).getAll();
   }
