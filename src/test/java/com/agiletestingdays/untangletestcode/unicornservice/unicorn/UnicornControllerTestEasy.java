@@ -37,40 +37,6 @@ class UnicornControllerTestEasy {
     // ...rest of the test
   }
 
-  // Tangle Explanation: Magic numbers (e.g., 111, 11, 99, 9) are used in object creation and are
-  // not self-explanatory.
-  // Solution: Replace magic numbers with named constants or variables for better code readability.
-
-  @Test
-  void getAllUnicornsReturnsAListOfUnicorns() {
-    var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-    var garry =
-        new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
-
-    // ...rest of the test
-  }
-
-  // Solution:
-  private static final int GILLY_HORN_LENGTH = 111;
-  private static final int GILLY_HORN_DIAMETER = 11;
-  private static final int GARRY_HORN_LENGTH = 99;
-  private static final int GARRY_HORN_DIAMETER = 9;
-
-  //    @Test
-  //    void getAllUnicornsReturnsAListOfUnicorns() {
-  //        var gilly =
-  //                new Unicorn(randomUUID(), "Gilly", ManeColor.RED, GILLY_HORN_LENGTH,
-  // GILLY_HORN_DIAMETER, LocalDate.of(1911, 11, 11));
-  //        var garry =
-  //                new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, GARRY_HORN_LENGTH,
-  // GARRY_HORN_DIAMETER, LocalDate.of(1912, 12, 12));
-  //        var unicorns = List.of(gilly, garry);
-  //        when(service.getAll()).thenReturn(unicorns);
-  //
-  //        // ...rest of the test
-  //    }
-
   // Tangle Explanation: The test name "getSingleUnicornReturnsValidJson" is not very descriptive
   // and does not provide clear information about the purpose of the test.
   // Solution: Use a more descriptive and meaningful test name to improve understanding of the
