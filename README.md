@@ -21,7 +21,7 @@
 ## Todo
 
 - [X] Agenda
-- [ ] Prepare Repl or other (Christian)
+- [X] Prepare Repl or other (Christian)
 - [ ] Cheat sheet
   - Arrange Act Assert (Micha)
   - Test Data Builder Pattern (Micha)
