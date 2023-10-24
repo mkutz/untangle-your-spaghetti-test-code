@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.test.annotation.DirtiesContext;
 
@@ -32,7 +33,7 @@ class UnicornServiceApplicationTests {
   void getUnicornsWorksAndReturnsNonEmptyList() throws JsonProcessingException {
     var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
 
-    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
     var body = objectMapper.readTree(response.getBody());
 
@@ -43,16 +44,15 @@ class UnicornServiceApplicationTests {
 
   @Test
   void getSingleUnicornWorksAndReturnsData() throws JsonProcessingException {
-    var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
-    var unicornList = objectMapper.readTree(response.getBody());
-    var unicornId = unicornList.get(0).get("id").asText();
+    var response =
+        restTemplate.getForEntity(
+            "%s/unicorns/%s".formatted(baseUrl, "44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23"),
+            String.class);
+    var unicornData = objectMapper.readTree(response.getBody());
 
-    var anotherResponse =
-        restTemplate.getForEntity("%s/unicorns/%s".formatted(baseUrl, unicornId), String.class);
-    var unicornData = objectMapper.readTree(anotherResponse.getBody());
-
+    // LONG ASSERT + MAGIC VALUES
     assertThat(unicornData.has("id")).isTrue();
-    assertThat(unicornData.get("id").asText()).isEqualTo(unicornId);
+    assertThat(unicornData.get("id").asText()).isEqualTo("44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23");
 
     assertThat(unicornData.has("name")).isTrue();
     assertThat(unicornData.get("name").asText()).isEqualTo("Grace");
@@ -72,20 +72,9 @@ class UnicornServiceApplicationTests {
 
   @Test
   @DirtiesContext
-  void postNewUnicorn() throws JsonProcessingException {
+  void postNewUnicorn() {
     var garryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Garry",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                37,
-                "hornDiameter",
-                11,
-                "dateOfBirth",
-                "1999-10-12"));
+        "{\"dateOfBirth\":\"1999-10-12\",\"hornDiameter\":11,\"hornLength\":37,\"maneColor\":\"BLUE\",\"name\":\"Garry\"}";
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
