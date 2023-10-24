@@ -31,7 +31,7 @@
 
 1. Have a look at the [UnicornServiceApplicationTest].
 
-   Brainstorm: Which problems do you see?
+   <details><summary>Brainstorm: Which problems do you see?</summary>
 
    - Do you understand **what's being tested**?
 
@@ -45,20 +45,25 @@
 
    - Do you understand **how the test works technically**?
 
-   - Which **layer of the testing pyramid** is this test on?
-
-     Is the layer appropriate for the test cases?
-
    - Do you see **where the test data is coming from**?
 
-   - Which **code duplications** do you find?<br/>
+   - Which **code duplications** do you find?
+
      How would you reduce them?
+   </details>
 
 2. Ensemble: Let's untangle it!
 
 3. Have a look at the test at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest].
 
-   Untangle them.
+   <details><summary>Brainstorm: Which problems do you see?</summary>
+
+    - Which **layer of the testing pyramid** is this test on?
+
+      Is the layer appropriate for the test cases?
+      Can we move tests here?
+     </details>
+
 
 [UnicornServiceApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>

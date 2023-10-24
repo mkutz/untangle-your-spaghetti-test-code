@@ -50,7 +50,6 @@ class UnicornServiceApplicationTests {
             String.class);
     var unicornData = objectMapper.readTree(response.getBody());
 
-    // LONG ASSERT + MAGIC VALUES
     assertThat(unicornData.has("id")).isTrue();
     assertThat(unicornData.get("id").asText()).isEqualTo("44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23");
 
