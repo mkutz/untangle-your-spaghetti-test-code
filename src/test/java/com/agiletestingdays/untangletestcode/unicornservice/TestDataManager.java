@@ -38,7 +38,7 @@ public class TestDataManager {
             """,
         unicorn.id(),
         unicorn.name(),
-        unicorn.maneColor(),
+        unicorn.maneColor().name(),
         unicorn.hornLength(),
         unicorn.hornDiameter(),
         unicorn.dateOfBirth());
