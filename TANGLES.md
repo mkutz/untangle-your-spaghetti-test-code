@@ -37,8 +37,27 @@ _Potential solution:_ [Test Data Builder](#test-data-builder)
 
 ## Long Assert / Multi-Aspect Assert
 
-```
+``` java
+var response =
+  restTemplate.getForEntity(
+      "%s/unicorns/%s".formatted(baseUrl, "44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23"),
+      String.class);
+var unicornData = objectMapper.readTree(response.getBody());
 
+assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+
+assertThat(unicornData.has("id")).isTrue();
+assertThat(unicornData.get("id").asText()).isEqualTo("44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23");
+assertThat(unicornData.has("name")).isTrue();
+assertThat(unicornData.get("name").asText()).isEqualTo("Grace");
+assertThat(unicornData.has("maneColor")).isTrue();
+assertThat(unicornData.get("maneColor").asText()).isEqualTo("RAINBOW");
+assertThat(unicornData.has("hornLength")).isTrue();
+assertThat(unicornData.get("hornLength").asInt()).isEqualTo(42);
+assertThat(unicornData.has("hornDiameter")).isTrue();
+assertThat(unicornData.get("hornDiameter").asInt()).isEqualTo(10);
+assertThat(unicornData.has("dateOfBirth")).isTrue();
+assertThat(unicornData.get("dateOfBirth").asText()).isEqualTo("1982-02-19");
 ```
 
 ## Lying Test Case Names
@@ -94,9 +113,34 @@ _Potential solutions:_
 
 ## Multiple Acts
 
-``` java
+Tests should generally only have one line of act.
+Otherwise, the test will have multiple reasons to fail and the test result become less clear.
 
+``` java
+var garryJson =
+  "{\"dateOfBirth\":\"1999-10-12\",\"hornDiameter\":11,\"hornLength\":37,\"maneColor\":\"BLUE\",\"name\":\"Garry\"}";
+var response =
+  restTemplate.exchange(
+      post("%s/unicorns/".formatted(baseUrl))
+          .header("Content-Type", "application/json")
+          .body(garryJson),
+      String.class);
+
+assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(201));
+assertThat(response.getHeaders().get("Location")).isNotNull().hasSize(1);
+
+var anotherResponse =
+  restTemplate.getForEntity(
+      requireNonNull(response.getHeaders().get("Location")).get(0), String.class);
+
+assertThat(anotherResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
 ```
+
+Sometimes an interaction with the application is needed to arrange the actual test.
+In that case there should not be any assertion to check the success of the arranging step.
+
+This tangle might be a reasonable tradeoff in case the preparation takes very long.
+E.g. in complex GUI tests.
 
 ## Too Much Mocking
 
