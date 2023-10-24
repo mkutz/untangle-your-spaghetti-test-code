@@ -54,24 +54,16 @@
    - Which **code duplications** do you find?<br/>
      How would you reduce them?
 
-2. Let's untangle it!
+2. Ensemble: Let's untangle it!
 
-   - Apply a consistent naming scheme
+3. Have a look at the test at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest].
 
-     Suggestion: `<classUnderTest>Test.<methodUnderTest> [<happyCaseDiffStateUnderTest>]` (see [How to Name Tests for Maintainability](https://medium.com/@michakutz/how-to-name-tests-for-maintainability-c11af89f0f04))
-
-   - Create a `UnicornTestDataBuilder` to reduce the arranging code in all the test cases with it and to make the differences between the arrangements obvious.
-
-   - Replace the [data.sql] with arranging code in your test cases.
-
-   - Push the validation tests down to [UnicornControllerTest]
-
-     The "invalid unicorn test cases" can be tested far more efficiently on a lower level of the testing pyramid.
-     Keep only one happy and one invalid case in [UnicornServiceApplicationTest] to test the overall behavior.
+   Untangle them.
 
 [UnicornServiceApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
 [UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
+[UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornTest.java>
 [data.sql]: <src/test/resources/data.sql>
 
 [Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>

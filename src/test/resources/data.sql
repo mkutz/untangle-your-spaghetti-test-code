@@ -9,7 +9,7 @@ INSERT
             DATE_OF_BIRTH
         )
     VALUES(
-        uuid(),
+        '44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23',
         'Grace',
         'RAINBOW',
         42,
