@@ -23,7 +23,7 @@
 ## Setup
 
 1. Login to GitHub or create an account: [github.com/join](https://github.com/join).
-2. Follow [this link](https://gitpod.io/#https://github.com/christianbaumann/untangle-your-spaghetti-test-code) and follow the instructions.
+2. Follow [this link](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code) and follow the instructions.
 3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish.
 
 
