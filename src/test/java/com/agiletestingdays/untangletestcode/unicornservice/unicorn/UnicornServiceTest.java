@@ -22,7 +22,7 @@ class UnicornServiceTest {
   UnicornService unicornService = new UnicornService(repository);
 
   @Test
-  void getAllCallsRepository() {
+  void getAll() {
     var unicorns =
         List.of(
             new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11)),
@@ -36,7 +36,7 @@ class UnicornServiceTest {
   }
 
   @Test
-  void getByIdCallsRepository() {
+  void getById() {
     var gilly =
         new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
     when(repository.findById(any(UUID.class))).thenReturn(Optional.of(gilly));
@@ -48,7 +48,7 @@ class UnicornServiceTest {
   }
 
   @Test
-  void savingAUnicornWorks() {
+  void createNewUnicorn() {
     Unicorn garry =
         new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
 

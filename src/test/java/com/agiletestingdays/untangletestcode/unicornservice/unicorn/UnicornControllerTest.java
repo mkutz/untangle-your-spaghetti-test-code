@@ -26,7 +26,7 @@ class UnicornControllerTest {
   UnicornController unicornController = new UnicornController(service, validator);
 
   @Test
-  void getAllUnicornsReturnsAListOfUnicornDtos() {
+  void getAllUnicorns() {
     var gilly =
         new Unicorn(
             UUID.fromString("351d0356-6d5e-47d5-adbb-4909058fdf2f"),
@@ -66,7 +66,19 @@ class UnicornControllerTest {
   }
 
   @Test
-  void getSingleUnicornReturnsValidJson() {
+  void getAllUnicorns_empty() {
+    when(service.getAll()).thenReturn(List.of());
+
+    var unicornsResponse = unicornController.getAllUnicorns();
+
+    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(unicornsResponse.getBody()).isEmpty();
+
+    verify(service, times(1)).getAll();
+  }
+
+  @Test
+  void getUnicorn() {
     var gilly =
         new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
     when(service.getById(any(UUID.class))).thenReturn(Optional.of(gilly));
@@ -88,7 +100,7 @@ class UnicornControllerTest {
   }
 
   @Test
-  void getSingleUnicornsShouldReturnNullForUnknownId() {
+  void getUnicorn_unknown_ID() {
     when(service.getById(any(UUID.class))).thenReturn(Optional.empty());
 
     var unicornResponse = unicornController.getUnicorn(randomUUID());
@@ -98,7 +110,7 @@ class UnicornControllerTest {
   }
 
   @Test
-  void postingUnicornShouldReturnTheUnicornAndCreateItViaService() {
+  void postUnicorn() {
     var gillyDto = new UnicornDto(null, "Gilly", "RED", 111, 11, LocalDate.of(1911, 11, 11));
 
     var createResponse =
