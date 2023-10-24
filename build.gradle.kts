@@ -12,7 +12,7 @@ group = "com.agiletestingdays.untangletestcode"
 
 version = "0.0.1-SNAPSHOT"
 
-java { sourceCompatibility = JavaVersion.VERSION_21 }
+java { sourceCompatibility = JavaVersion.VERSION_17 }
 
 repositories { mavenCentral() }
 
