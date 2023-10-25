@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.util.UriComponentsBuilder;
 
 class UnicornControllerTest {
@@ -42,7 +42,7 @@ class UnicornControllerTest {
 
     var unicornsResponse = unicornController.getAllUnicorns();
 
-    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(unicornsResponse.getBody())
         .hasSize(2)
         .contains(
@@ -71,7 +71,7 @@ class UnicornControllerTest {
 
     var unicornsResponse = unicornController.getAllUnicorns();
 
-    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(unicornsResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(unicornsResponse.getBody()).isEmpty();
 
     verify(service, times(1)).getAll();
@@ -85,7 +85,7 @@ class UnicornControllerTest {
 
     var unicornResponse = unicornController.getUnicorn(gilly.id());
 
-    assertThat(unicornResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(unicornResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(unicornResponse.getBody())
         .isNotNull()
         .isEqualTo(
@@ -105,7 +105,7 @@ class UnicornControllerTest {
 
     var unicornResponse = unicornController.getUnicorn(randomUUID());
 
-    assertThat(unicornResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(404));
+    assertThat(unicornResponse.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     assertThat(unicornResponse.getBody()).isNull();
   }
 
@@ -116,7 +116,7 @@ class UnicornControllerTest {
     var createResponse =
         unicornController.postUnicorn(gillyDto, UriComponentsBuilder.newInstance());
 
-    assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(201));
+    assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     assertThat(createResponse.getBody())
         .isNotNull()
         .hasNoNullFieldsOrProperties()

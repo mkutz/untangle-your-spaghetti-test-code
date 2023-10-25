@@ -138,7 +138,7 @@ class UnicornServiceApplicationTests {
             requireNonNull(postResponse.getHeaders().get("Location")).get(0), String.class);
 
     // ASSERT
-    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
   }
 
   @Test
@@ -153,10 +153,10 @@ class UnicornServiceApplicationTests {
             List.class);
 
     // ASSERT
-    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
     assertThat(response.getBody())
-        .contains("hornLength must be between 1 and 100")
-        .contains("hornDiameter must be between 1 and 40");
+        .containsExactlyInAnyOrder(
+            "hornLength must be between 1 and 100", "hornDiameter must be between 1 and 40");
   }
 }
