@@ -21,7 +21,10 @@ gradle-app.setting
 .classpath
 
 # Ignore Idea project directory
-.idea
+.idea/*
+
+# Add icon
+!.idea/icon.svg
 
 # Ignore Gradle build output directory
 build
