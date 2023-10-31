@@ -8,16 +8,16 @@
 
 ## Agenda
 
-| When  | What                             |
-|-------|----------------------------------|
-| 14:45 | Welcome: what we do, setup, code |
-| 15:55 | Together: review the code base   |
-| 15:05 | Brainstorming: about problems    |
-| 15:20 | Untangle the code                |
-| 15:30 | Coffee break                     |
-| 16:00 | Untangle the code continued      |
-| 16:35 | Retro                            |
-| 16:45 | The end                          |
+| When  | What                             | Objective                                                |
+|-------|----------------------------------|----------------------------------------------------------|
+| 14:45 | Welcome: what we do, setup, code |                                                          |
+| 15:55 | Together: review the code base   |                                                          |
+| 15:00 | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].      |
+| 15:15 | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]  |
+| 15:30 | Coffee break                     |                                                          |
+| 16:00 | Untangle the code continued      |                                                          |
+| 16:35 | Retro                            |                                                          |
+| 16:45 | The end                          |                                                          |
 
 
 ## Setup
