@@ -8,16 +8,17 @@
 
 ## Agenda
 
-| When  | What                             | Objective                                                |
-|-------|----------------------------------|----------------------------------------------------------|
-| 14:45 | Welcome: what we do, setup, code |                                                          |
-| 15:55 | Together: review the code base   |                                                          |
-| 15:00 | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].      |
-| 15:15 | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]  |
-| 15:30 | Coffee break                     |                                                          |
-| 16:00 | Untangle the code continued      |                                                          |
-| 16:35 | Retro                            |                                                          |
-| 16:45 | The end                          |                                                          |
+| When   | What                             | Objective                                                | Notes/Hints                                          |
+|--------|----------------------------------|----------------------------------------------------------|------------------------------------------------------|
+| Before | Preparation                      |                                                          | Post Its, Pens, Flipchart (for problems & retro)     |
+| 14:45  | Welcome: what we do, setup, code |                                                          |                                                      |
+| 15:55  | Together: review the code base   |                                                          | Not going into details                               |
+| 15:00  | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].      | Post Its?                                            |
+| 15:15  | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]  | Timeboxed: 10 min untangling, 5 min present solution |
+| 15:30  | Coffee break                     |                                                          | Invite people to stay and continue                   |
+| 16:00  | Untangle the code continued      |                                                          | Timeboxed: 10 min untangling, 5 min present solution |
+| 16:35  | [Retro](RETROSPECTIVE.md)        |                                                          |                                                      |
+| 16:45  | The end                          |                                                          |                                                      |
 
 
 ## Setup
