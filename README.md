@@ -25,7 +25,7 @@
 
 1. [Login to GitHub](https://github.com/login) or create an account: [github.com/join](https://github.com/join).
 2. Follow [this link](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code) and follow the instructions. When the _New Workspace_ page appears, click _Continue_. (Creating the workspace takes a little while, just be patient)
-3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish. (A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.)  
+3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish. (A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.)
    After the installation is done, you can right click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
 
 
