@@ -51,6 +51,8 @@
    - Which **code duplications** do you find?
 
      How would you reduce them?
+
+   - Are the [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md) applied?
    </details>
 
 2. Ensemble: Let's untangle it!
