@@ -24,7 +24,8 @@ public class UnicornRepository {
 
   private final JdbcTemplate jdbcTemplate;
 
-  public UnicornRepository(JdbcTemplate jdbcTemplate) {
+  public UnicornRepository(JdbcTemplate jdbcTemplate) throws InterruptedException {
+    Thread.sleep(5_000);
     this.jdbcTemplate = Objects.requireNonNull(jdbcTemplate);
   }
 
