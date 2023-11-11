@@ -93,7 +93,7 @@ class UnicornServiceApplicationTests {
 
   @Test
   @DirtiesContext
-  void postUnicornWithInvalidHornLengthCausesA400Response() throws JsonProcessingException {
+  void testHLZero() throws JsonProcessingException {
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -104,7 +104,7 @@ class UnicornServiceApplicationTests {
                 "hornLength",
                 0,
                 "hornDiameter",
-                0,
+                18,
                 "dateOfBirth",
                 "1999-10-12"));
     var response =
@@ -116,25 +116,23 @@ class UnicornServiceApplicationTests {
 
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
-    assertThat(response.getBody())
-        .contains("hornLength must be between 1 and 100")
-        .contains("hornDiameter must be between 1 and 40");
+    assertThat(response.getBody()).contains("hornLength must be between 1 and 100");
   }
 
   @Test
   @DirtiesContext
-  void postUnicornWithInvalidHornDiameterCausesA400Response() throws JsonProcessingException {
+  void testHLTooMuch() throws JsonProcessingException {
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
                 "name",
-                "Larry",
+                "Barry",
                 "maneColor",
                 "BLUE",
                 "hornLength",
                 101,
                 "hornDiameter",
-                41,
+                18,
                 "dateOfBirth",
                 "1999-10-12"));
     var response =
@@ -146,19 +144,73 @@ class UnicornServiceApplicationTests {
 
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
-    assertThat(response.getBody())
-        .contains("hornLength must be between 1 and 100")
-        .contains("hornDiameter must be between 1 and 40");
+    assertThat(response.getBody()).contains("hornLength must be between 1 and 100");
   }
 
   @Test
   @DirtiesContext
-  void postUnicornWithInvalidDateOfBirthCausesA400Response() throws JsonProcessingException {
+  void testHDNotGiven() throws JsonProcessingException {
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
                 "name",
-                "Larry",
+                "Jerry",
+                "maneColor",
+                "BLUE",
+                "hornLength",
+                66,
+                "hornDiameter",
+                0,
+                "dateOfBirth",
+                "1999-10-12"));
+    var response =
+        restTemplate.exchange(
+            post("%s/unicorns/".formatted(baseUrl))
+                .header("Content-Type", "application/json")
+                .body(larryJson),
+            List.class);
+
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
+    assertThat(response.getHeaders().containsKey("Location")).isFalse();
+    assertThat(response.getBody()).contains("hornDiameter must be between 1 and 40");
+  }
+
+  @Test
+  @DirtiesContext
+  void testHDOver() throws JsonProcessingException {
+    var larryJson =
+        objectMapper.writeValueAsString(
+            Map.of(
+                "name",
+                "Harry",
+                "maneColor",
+                "BLUE",
+                "hornLength",
+                67,
+                "hornDiameter",
+                42,
+                "dateOfBirth",
+                "1999-10-12"));
+    var response =
+        restTemplate.exchange(
+            post("%s/unicorns/".formatted(baseUrl))
+                .header("Content-Type", "application/json")
+                .body(larryJson),
+            List.class);
+
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
+    assertThat(response.getHeaders().containsKey("Location")).isFalse();
+    assertThat(response.getBody()).contains("hornDiameter must be between 1 and 40");
+  }
+
+  @Test
+  @DirtiesContext
+  void testDOBFuture() throws JsonProcessingException {
+    var larryJson =
+        objectMapper.writeValueAsString(
+            Map.of(
+                "name",
+                "Mary",
                 "maneColor",
                 "BLUE",
                 "hornLength",
