@@ -1,4 +1,3 @@
-@@ -0,0 +1,51 @@
 # Testcode Quality Criteria
 
 ## Descriptive and Expressive Naming Conventions
