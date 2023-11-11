@@ -1,3 +1,6 @@
+TRUNCATE TABLE
+    UNICORNS;
+
 INSERT
     INTO
         UNICORNS(
