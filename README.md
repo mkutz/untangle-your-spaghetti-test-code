@@ -76,3 +76,8 @@
 
 [Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>
 [Instancio]: <https://www.instancio.org/>
+
+## References
+- [List of Tangles](TANGLES.md)
+- [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md)
+- [Cheat Sheet](cheat-sheet.pdf)
