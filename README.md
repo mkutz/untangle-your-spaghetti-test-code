@@ -8,16 +8,16 @@
 
 ## Agenda
 
-| When  | What                             | Objective                                                |
-|-------|----------------------------------|----------------------------------------------------------|
-| 14:45 | Welcome: what we do, setup, code |                                                          |
-| 15:55 | Together: review the code base   |                                                          |
-| 15:00 | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].      |
-| 15:15 | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]  |
-| 15:30 | Coffee break                     |                                                          |
-| 16:00 | Untangle the code continued      |                                                          |
-| 16:35 | Retro                            |                                                          |
-| 16:45 | The end                          |                                                          |
+| When  | What                             | Objective                                                                                                                  |
+|-------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 14:45 | Welcome: what we do, setup, code |                                                                                                                            |
+| 15:55 | Together: review the code base   |                                                                                                                            |
+| 15:00 | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].                                                                        |
+| 15:15 | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]                                                                    |
+| 15:30 | Coffee break                     |                                                                                                                            |
+| 16:00 | Untangle the code continued      | If you're already done, feel free a look at the tests at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest]. |
+| 16:35 | Retro                            |                                                                                                                            |
+| 16:45 | The end                          |                                                                                                                            |
 
 
 ## Setup
@@ -25,10 +25,12 @@
 1. [Login to GitHub](https://github.com/login) or create an account: [github.com/join](https://github.com/join).
 2. Follow [this link](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code) and follow the instructions. When the _New Workspace_ page appears, click _Continue_. (Creating the workspace takes a little while, just be patient)
 3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish. (A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.)
-   After the installation is done, you can right click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
+   After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
 
 
 ## Objectives
+
+Feel free to use the [Cheat Sheet] for inspiration.
 
 1. Have a look at the [UnicornServiceApplicationTest].
 
@@ -68,16 +70,19 @@
      </details>
 
 
+## References
+
+- [List of Tangles](TANGLES.md)
+- [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md)
+- [Cheat Sheet]
+
+
 [UnicornServiceApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
 [UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
 [UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornTest.java>
 [data.sql]: <src/test/resources/data.sql>
+[Cheat Sheet]: <cheat-sheet.pdf>
 
 [Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>
 [Instancio]: <https://www.instancio.org/>
-
-## References
-- [List of Tangles](TANGLES.md)
-- [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md)
-- [Cheat Sheet](cheat-sheet.pdf)
