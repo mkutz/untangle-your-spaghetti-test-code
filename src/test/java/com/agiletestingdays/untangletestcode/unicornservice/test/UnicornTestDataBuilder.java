@@ -1,4 +1,4 @@
-package com.agiletestingdays.untangletestcode.unicornservice;
+package com.agiletestingdays.untangletestcode.unicornservice.test;
 
 import static java.util.UUID.randomUUID;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;

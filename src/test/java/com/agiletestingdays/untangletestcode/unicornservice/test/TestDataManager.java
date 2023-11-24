@@ -1,4 +1,4 @@
-package com.agiletestingdays.untangletestcode.unicornservice;
+package com.agiletestingdays.untangletestcode.unicornservice.test;
 
 import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn;
 import javax.sql.DataSource;
