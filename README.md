@@ -28,6 +28,50 @@
    After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
 
 
+## Structure
+
+```mermaid
+classDiagram
+    direction LR
+    class UnicornServiceApplication {
+        <<spring-boot-application>>
+    }
+    namespace unicorn {
+       class Unicorn {
+           <<record>>
+          -id: UUID
+          -name: String
+          -maneColor: ManeColor
+          -hornLength: Integer
+          -hornDiameter: Integer
+          -dateOfBirth: LocalDate
+       }
+
+       class ManeColor {
+           <<enumeration>>
+       }
+
+       class UnicornController {
+           <<controller>>
+        }
+
+        class UnicornService {
+            <<service>>
+        }
+
+        class UnicornRepository {
+            <<repository>>
+        }
+    }
+    UnicornController --o UnicornService
+    UnicornService --o UnicornRepository
+    UnicornController -- Unicorn
+    UnicornService -- Unicorn
+    UnicornRepository -- Unicorn
+    Unicorn --* ManeColor
+```
+
+
 ## Objectives
 
 Feel free to use the [Cheat Sheet] for inspiration.
