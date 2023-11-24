@@ -1,4 +1,4 @@
-# Tangles
+# Tangles & Untangles
 
 ## Goal
 
@@ -10,7 +10,10 @@ Its functionality shouldn't be obscured.\
 Its results should be meaningful.\
 Its failure causes should be easy to find.
 
-## Hidden Arrange
+
+## Tangles
+
+### Hidden Arrange
 
 Sometimes our tests rely on a non-obvious setup.
 
@@ -27,7 +30,7 @@ Untangle with
 - [Test Data Manager](#test-data-manager)
 
 
-## Duplicate setup code
+### Duplicate setup code
 
 Creating and setting up test objects is duplicated in multiple tests.
 
@@ -41,7 +44,7 @@ Untangle with
 - [Test Data Builder](#test-data-builder)
 
 
-## Magic Values
+### Magic Values
 
 A magic value is basically some literal values appearing somewhere in the code without any hint why it was chosen or what it means.
 
@@ -76,7 +79,7 @@ Untangle with
 - [Test Data Builder](#test-data-builder)
 
 
-## Long Arrange
+### Long Arrange
 
 When dealing with big data objects, we need to construct these objects to arrange our tests.
 Quite often only few of the set properties are actually relevant for the test at hand.
@@ -103,7 +106,7 @@ Untangle with
 - [Test Data Builder](#test-data-builder)
 
 
-## Long Assert
+### Long Assert
 
 Verifying big data objects can lead to a lot of simple assertions, which make the intention of the test hard to understand.
 
@@ -134,7 +137,7 @@ Untangle with
 - [Test Data Builder](#test-data-builder) (asserting the result is equal to a built expected object)
 
 
-## Interdependent Test Cases
+### Interdependent Test Cases
 
 Test cases can be written in a way that they rely on other cases.
 Either by intention due to a very cumbersome setup, or accidentally when you assume the result of a series of test is actually the result of the arrange phase.
@@ -146,7 +149,7 @@ Untangle with
 - [Test Data Manger](#test-data-manager)
 
 
-## Multiple Acts
+### Multiple Acts
 
 When tests have multiple interactions with the unit under test, they usually have a lot of possible reasons to fail.
 This makes a failing test an ambiguous signal.
@@ -177,7 +180,7 @@ Untangle with
 - [Test Data Manager](#test-data-manager)
 
 
-## Lying Test Case Names
+### Lying Test Case Names
 
 Test case names are not executable code.
 Hence, their correctness is not checked automatically like the actual test code.
@@ -208,9 +211,9 @@ Untangle with
 - [Expressive Test Case Naming](#expressive--consistent-test-case-names)
 
 
-# Untangles
+## Untangles
 
-## Arrange Act Assert (Given When Then)
+### Arrange Act Assert (Given When Then)
 
 Tests should always have three parts (at most):
 
@@ -259,7 +262,7 @@ See also
 - [Michael Kutz on naming tests for maintainability](https://michakutz.medium.com/how-to-name-tests-for-maintainability-c11af89f0f04)
 
 
-## Split with Assumptions
+### Split with Assumptions
 
 If you find [Multiple Acts](#multiple-acts) in a test case, you might want to split it with Assumptions.
 Copy the test, remove the second act from the original, and replace the copy's assertion code with an assumption.
@@ -303,7 +306,7 @@ See also
 - [AssertJ Assumptions](https://assertj.github.io/doc/#assertj-core-assumptions)
 
 
-## Test Data Manager
+### Test Data Manager
 
 A test data manager directly interacts with the database to inject wanted test data.
 
@@ -350,7 +353,7 @@ You might want to keep these constants in a separate class (e.g. `TestDataConsta
 See also [Random Data Generators](#random-data-generators)
 
 
-## Random Data Generators
+### Random Data Generators
 
 Use random data generators for test data.
 
@@ -372,7 +375,7 @@ var someUnicorn =
 See also [Explicit Constants](#explicit-constants)
 
 
-## Test Setup Helper Method
+### Test Setup Helper Method
 
 Create test setup helper methods to avoid duplication of test object setup in a lot of tests.
 
@@ -398,7 +401,7 @@ void age() {
 See also [Test Data Builder](#test-data-builder)
 
 
-## Test Data Builder
+### Test Data Builder
 
 Create a builder class that allows to create whatever object is required for the test.
 That builder class should contain or use [random data generators](#random-data-generators) or [constants](#explicit-constants) to fill all the fields that are deemed irrelevant for the test at hand.
@@ -414,7 +417,7 @@ There might be also libraries that spare you the burden of writing these builder
 See also [Alberto López del Toro on why you should use Test Data Builders](https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1)
 
 
-## Verification Method
+### Verification Method
 
 Group long asserts that check one logical thing in verification methods.
 This reduces the amount of code in the test itself, and the method name makes the intention more obvious.
