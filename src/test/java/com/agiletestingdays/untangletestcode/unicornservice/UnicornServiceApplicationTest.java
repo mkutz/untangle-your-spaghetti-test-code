@@ -21,7 +21,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class UnicornServiceApplicationTests {
+class UnicornServiceApplicationTest {
 
   @Value("http://localhost:${local.server.port}")
   String baseUrl;
