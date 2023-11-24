@@ -1,5 +1,15 @@
 # Tangles
 
+## Goal
+
+Test code is code.\
+What's considered bad in production code, is bad in test code.
+
+Its intention should be immediately obvious.\
+Its functionality shouldn't be obscured.\
+Its results should be meaningful.\
+Its failure causes should be easy to find.
+
 ## Hidden Arrange
 
 Sometimes our tests rely on a non-obvious setup.
