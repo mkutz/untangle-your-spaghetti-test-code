@@ -23,43 +23,43 @@ public class UnicornTestDataBuilder {
 
   private Integer hornDiameter = random.nextInt(1, 41);
 
-  LocalDate dateOfBirth =
+  private LocalDate dateOfBirth =
       LocalDate.now()
           .minusDays(random.nextInt(0, 31))
           .minusMonths(random.nextInt(0, 13))
           .minusYears(random.nextInt(0, 101));
 
-  UnicornTestDataBuilder id(UUID id) {
+  public UnicornTestDataBuilder id(UUID id) {
     this.id = id;
     return this;
   }
 
-  UnicornTestDataBuilder name(String name) {
+  public UnicornTestDataBuilder name(String name) {
     this.name = name;
     return this;
   }
 
-  UnicornTestDataBuilder maneColor(ManeColor maneColor) {
+  public UnicornTestDataBuilder maneColor(ManeColor maneColor) {
     this.maneColor = maneColor;
     return this;
   }
 
-  UnicornTestDataBuilder hornLength(Integer hornLength) {
+  public UnicornTestDataBuilder hornLength(Integer hornLength) {
     this.hornLength = hornLength;
     return this;
   }
 
-  UnicornTestDataBuilder hornDiameter(Integer hornDiameter) {
+  public UnicornTestDataBuilder hornDiameter(Integer hornDiameter) {
     this.hornDiameter = hornDiameter;
     return this;
   }
 
-  UnicornTestDataBuilder dateOfBirth(LocalDate dateOfBirth) {
+  public UnicornTestDataBuilder dateOfBirth(LocalDate dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
     return this;
   }
 
-  UnicornTestDataBuilder age(int age) {
+  public UnicornTestDataBuilder age(int age) {
     this.dateOfBirth =
         LocalDate.now()
             .minusDays(random.nextInt(0, 31))
@@ -68,7 +68,7 @@ public class UnicornTestDataBuilder {
     return this;
   }
 
-  Unicorn build() {
+  public Unicorn build() {
     return new Unicorn(id, name, maneColor, hornLength, hornDiameter, dateOfBirth);
   }
 }

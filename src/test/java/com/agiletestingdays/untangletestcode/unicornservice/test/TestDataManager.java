@@ -14,7 +14,7 @@ public class TestDataManager {
     this.jdbcTemplate = new JdbcTemplate(daraSource);
   }
 
-  TestDataManager withUnicorn(Unicorn unicorn) {
+  public TestDataManager withUnicorn(Unicorn unicorn) {
     jdbcTemplate.update(
         """
             INSERT
@@ -45,7 +45,7 @@ public class TestDataManager {
     return this;
   }
 
-  TestDataManager clear() {
+  public TestDataManager clear() {
     jdbcTemplate.execute("TRUNCATE TABLE UNICORNS;");
     return this;
   }
