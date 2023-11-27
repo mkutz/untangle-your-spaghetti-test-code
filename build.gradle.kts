@@ -27,7 +27,7 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation(platform("org.mockito:mockito-bom:5.7.0"))
   testImplementation("org.mockito:mockito-core")
-  testImplementation("org.apache.commons:commons-lang3:3.13.0")
+  testImplementation("org.apache.commons:commons-lang3:3.14.0")
 
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
