@@ -7,7 +7,7 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
    sodipodi:docname="cheat-sheet-untangles.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,15 +24,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showguides="true"
-     inkscape:zoom="1.0175662"
-     inkscape:cx="809.28394"
-     inkscape:cy="443.2144"
-     inkscape:window-width="864"
+     inkscape:zoom="1.657257"
+     inkscape:cx="688.48706"
+     inkscape:cy="257.05126"
+     inkscape:window-width="1728"
      inkscape:window-height="1051"
-     inkscape:window-x="864"
+     inkscape:window-x="0"
      inkscape:window-y="38"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g81"
      showgrid="false"
      inkscape:lockguides="false">
     <sodipodi:guide
@@ -458,100 +458,111 @@
          id="text44-5"><tspan
            x="25.279297"
            y="250.20327"
-           id="tspan2"><tspan
+           id="tspan140"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan1">Tests should always have three parts (at most):&#10;</tspan></tspan><tspan
+             id="tspan27">Tests should always have three parts (at most):
+</tspan></tspan><tspan
            x="25.279297"
            y="253.02551"
-           id="tspan5"><tspan
+           id="tspan142"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan3">&#10;</tspan></tspan><tspan
+             id="tspan141">
+</tspan></tspan><tspan
            x="25.279297"
            y="255.84774"
-           id="tspan10"><tspan
+           id="tspan145"><tspan
              style="font-weight:bold;fill:#000000"
-             id="tspan8">1. Arrange</tspan><tspan
+             id="tspan143">1. Arrange</tspan><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan9"> (or given) sets everything up for the test.&#10;</tspan></tspan><tspan
+             id="tspan144"> (or given) sets everything up for the test.
+</tspan></tspan><tspan
            x="11.839844"
            y="258.66998"
-           id="tspan12"><tspan
+           id="tspan147"><tspan
              dx="0 0 0 0 0.59395301 0 0 0 0 0.59395254 0 0 0 0 0 0 0.59395158 0 0 0.59395349 0 0 0 0 0 0 0 0.59395349 0 0 0 0.59395349 0 0 0 0 0 0.59395349 0 0 0.59395349 0 0 0 0 0.59395349 0 0 0 0 0 0.59395349 0 0 0 0.59395349"
              style="text-align:justify;fill:#000000"
-             id="tspan11">The code should be concise and focus on what makes the test </tspan></tspan><tspan
+             id="tspan146">The code should be concise and focus on what makes the test </tspan></tspan><tspan
            x="11.839844"
            y="261.49221"
-           id="tspan14"><tspan
+           id="tspan149"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan13">case different from others.&#10;</tspan></tspan><tspan
+             id="tspan148">case different from others.
+</tspan></tspan><tspan
            x="11.839844"
            y="264.31445"
-           id="tspan17"><tspan
+           id="tspan151"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan16">&#10;</tspan></tspan><tspan
+             id="tspan150">
+</tspan></tspan><tspan
            x="11.839844"
            y="267.13668"
-           id="tspan20"><tspan
+           id="tspan154"><tspan
              style="font-weight:bold;fill:#000000"
-             id="tspan18">2. Act</tspan><tspan
+             id="tspan152">2. Act</tspan><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan19"> (or when) contains the actual test.&#10;</tspan></tspan><tspan
+             id="tspan153"> (or when) contains the actual test.
+</tspan></tspan><tspan
            x="11.839844"
            y="269.95892"
-           id="tspan23"><tspan
+           id="tspan156"><tspan
              dx="0 0 0 0 0 0.051881671 0 0 0 0 0.051881194 0 0 0 0 0 0 0.051881194 0 0 0.051881194 0 0 0 0.051881194 0 0 0 0 0 0 0 0 0.051881194 0 0 0 0 0 0 0 0 0 0 0 0.051881194 0 0 0 0 0.051881194 0 0 0 0.051885009 0 0 0 0 0.051885009 0 0 0 0 0 0.051885009"
              style="text-align:justify;fill:#000000"
-             id="tspan21">This part should be one line/one interaction with the unit under test. </tspan></tspan><tspan
+             id="tspan155">This part should be one line/one interaction with the unit under test. </tspan></tspan><tspan
            x="11.839844"
            y="272.78115"
-           id="tspan28"><tspan
+           id="tspan158"><tspan
              dx="0 0 0 0 0 0 0 0 0 0 0 1.1585659 0 0 0 1.1585668 0 0 0 0 0 0 1.1585649 0 0 1.1585668 0 0 0 0 0 0 0 0 0 1.1585668 0 0 0 0 0 0 0 0 1.1585668 0 0 0 0 0 0 0 1.1585668"
              style="text-align:justify;fill:#000000"
-             id="tspan24">Otherwise, the number of potential outcomes quickly become </tspan></tspan><tspan
+             id="tspan157">Otherwise, the number of potential outcomes quickly become </tspan></tspan><tspan
            x="11.839844"
            y="275.60339"
-           id="tspan36"><tspan
+           id="tspan160"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan29">confusing.&#10;</tspan></tspan><tspan
+             id="tspan159">confusing.
+</tspan></tspan><tspan
            x="11.839844"
            y="278.42562"
-           id="tspan38"><tspan
+           id="tspan162"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan37">&#10;</tspan></tspan><tspan
+             id="tspan161">
+</tspan></tspan><tspan
            x="11.839844"
            y="281.24786"
-           id="tspan41"><tspan
+           id="tspan300"><tspan
              style="font-weight:bold;fill:#000000"
-             id="tspan39">3. Assert</tspan><tspan
+             id="tspan163">3. Assert</tspan><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan40"> (or then) checks the effects of act.&#10;</tspan></tspan><tspan
+             id="tspan298"> (or then) checks the effects of act.
+</tspan></tspan><tspan
            x="11.839844"
            y="284.07009"
-           id="tspan43"><tspan
+           id="tspan307"><tspan
              dx="0 0 0 0 0 0 0 0 0.46636808 0 0 0 0 0.46636808 0 0 0 0 0.46636713 0 0 0 0 0 0 0.46636903 0 0 0 0.46636713 0 0 0 0 0 0 0.46636713 0 0 0.46637094 0 0 0 0.46637094 0 0 0 0 0 0 0 0.46637094 0 0 0.46636713 0 0 0 0.46636713 0 0 0 0 0.46637475"
              style="text-align:justify;fill:#000000"
-             id="tspan42">Ideally this only checks one aspect of the result, so the test can </tspan></tspan><tspan
+             id="tspan306">Ideally this only checks one aspect of the result, so the test can </tspan></tspan><tspan
            x="11.839844"
            y="286.89233"
-           id="tspan47"><tspan
+           id="tspan317"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan46">only fail for one obvious reason.&#10;</tspan></tspan><tspan
+             id="tspan310">only fail for one obvious reason.
+</tspan></tspan><tspan
            x="11.839844"
            y="289.71456"
-           id="tspan49"><tspan
+           id="tspan319"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan48">&#10;</tspan></tspan><tspan
+             id="tspan318">
+</tspan></tspan><tspan
            x="11.839844"
            y="292.5368"
-           id="tspan51"><tspan
+           id="tspan323"><tspan
              dx="0 0 0 0 0 0.39413726 0 0 0 0 0.39413679 0 0 0 0 0 0 0 0.39413774 0 0 0.39413583 0 0 0 0 0 0 0 0 0 0.39413482 0 0 0 0.39413583 0 0 0 0.39413583 0 0 0 0 0 0 0.39413583 0 0 0 0.39413965 0 0 0.39413965 0 0 0 0 0 0 0 0 0.39413202"
              style="text-align:justify;fill:#000000"
-             id="tspan50">Note that arrange is optional. Act and assert can be combined in </tspan></tspan><tspan
+             id="tspan322">Note that arrange is optional. Act and assert can be combined in </tspan></tspan><tspan
            x="11.839844"
            y="295.35903"
-           id="tspan53"><tspan
+           id="tspan325"><tspan
              style="text-align:justify;fill:#000000"
-             id="tspan52">one line of code.</tspan></tspan></text>
+             id="tspan324">one line of code.</tspan></tspan></text>
     </g>
     <g
        id="g115-8"
@@ -670,50 +681,55 @@
          id="text95-0-7"><tspan
            x="25.628906"
            y="314.10757"
-           id="tspan55"><tspan
+           id="tspan327"><tspan
              dx="0 0 0 0 0 0 0 0.26682222 0 0.26682222 0 0 0 0 0 0 0.26682222 0 0 0 0 0 0 0.26682031 0 0 0 0 0.26682031 0 0 0 0 0 0.26682031 0 0 0 0 0.26682413 0 0 0 0 0.26682031"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan54">Choose a naming scheme that makes test case names </tspan></tspan><tspan
+             id="tspan326">Choose a naming scheme that makes test case names </tspan></tspan><tspan
            x="25.628906"
            y="316.9298"
-           id="tspan57"><tspan
+           id="tspan329"><tspan
              dx="0 0 0 0 0 0 0 1.1790498 0 0 0 0 0 0 0 0 0 0 0 1.1790498 0 0 0 0 0 0 0 0 1.1790518 0 0 0 0 0 0 0 0 0 0 0 0 1.1790479 0 0 0 1.1790518"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan56">clear, expressive, concise, unambiguous, and easily </tspan></tspan><tspan
+             id="tspan328">clear, expressive, concise, unambiguous, and easily </tspan></tspan><tspan
            x="12.097656"
            y="319.75204"
-           id="tspan59"><tspan
+           id="tspan333"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan58">understandable.&#10;</tspan></tspan><tspan
+             id="tspan332">understandable.
+</tspan></tspan><tspan
            x="12.097656"
            y="322.57427"
-           id="tspan61"><tspan
+           id="tspan337"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan60">&#10;</tspan></tspan><tspan
+             id="tspan336">
+</tspan></tspan><tspan
            x="12.097656"
            y="325.39651"
-           id="tspan65"><tspan
+           id="tspan342"><tspan
              dx="0 0 0 0 0 0 0 0.98257864 0 0 0 0 0 0 0 0 0 0 0.98257768 0 0 0.98257768 0 0.98257959 0 0 0 0 0 0 0.98257577 0 0 0 0 0 0 0.98257959"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan62">Useful components of a naming scheme are </tspan><tspan
+             id="tspan340">Useful components of a naming scheme are </tspan><tspan
              dx="0.98257577"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan63">&lt;unitUnderTest&gt;, </tspan></tspan><tspan
+             id="tspan341">&lt;unitUnderTest&gt;, </tspan></tspan><tspan
            x="12.097656"
            y="328.21874"
-           id="tspan68"><tspan
+           id="tspan344"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan67">&lt;stateUnderTest&gt;, and &lt;expectedBehavior&gt;.&#10;</tspan></tspan><tspan
+             id="tspan343">&lt;stateUnderTest&gt;, and &lt;expectedBehavior&gt;.
+</tspan></tspan><tspan
            x="12.097656"
            y="331.04098"
-           id="tspan70"><tspan
+           id="tspan346"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan69">&#10;</tspan></tspan><tspan
+             id="tspan345">
+</tspan></tspan><tspan
            x="12.097656"
            y="333.86321"
-           id="tspan72"><tspan
+           id="tspan348"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan71">Any naming scheme is better than no naming scheme at all!&#10;</tspan></tspan></text>
+             id="tspan347">Any naming scheme is better than no naming scheme at all!
+</tspan></tspan></text>
       <g
          id="g3"
          transform="translate(-3.2844183e-4,-2.076569)">
@@ -739,30 +755,34 @@
            id="text171-2"><tspan
              x="13.900391"
              y="341.96206"
-             id="tspan74"><tspan
+             id="tspan350"><tspan
    style="text-align:start;fill:#7eaef5"
-   id="tspan73">class</tspan> &lt;ClassUnderTest&gt;Test {&#10;</tspan><tspan
+   id="tspan349">class</tspan> &lt;ClassUnderTest&gt;Test {
+</tspan><tspan
              x="13.900391"
              y="344.7843"
-             id="tspan76">  <tspan
+             id="tspan352">  <tspan
    style="fill:#7eaef5"
-   id="tspan75">void</tspan> &lt;methodUnderTest&gt;_&lt;stateUnderTest&gt;() {&#10;</tspan><tspan
+   id="tspan351">void</tspan> &lt;methodUnderTest&gt;_&lt;stateUnderTest&gt;() {
+</tspan><tspan
              x="13.900391"
              y="347.60653"
-             id="tspan78">    … <tspan
+             id="tspan354">    … <tspan
    style="fill:#808080"
-   id="tspan77">// see code for &lt;expectedBehavior&gt;</tspan>&#10;</tspan><tspan
+   id="tspan353">// see code for &lt;expectedBehavior&gt;</tspan>
+</tspan><tspan
              x="13.900391"
              y="350.42877"
-             id="tspan79">  }&#10;</tspan><tspan
+             id="tspan358">  }
+</tspan><tspan
              x="13.900391"
              y="353.251"
-             id="tspan80">}</tspan></text>
+             id="tspan359">}</tspan></text>
       </g>
     </g>
     <g
        id="g49"
-       transform="translate(0.05969979,-139.67859)">
+       transform="translate(-96.424069,-66.358261)">
       <g
          id="g1"
          transform="translate(-22.083973,-66.733299)">
@@ -919,27 +939,28 @@
            id="text112-7"><tspan
              x="25.279297"
              y="250.20327"
-             id="tspan82"><tspan
+             id="tspan361"><tspan
                dx="0 0 0 0 0 0 0 0.70651567 0 0.70651567 0 0 0 0 0 0 0 0.70651567 0 0 0 0 0 0.70651567 0 0 0 0 0.70651758 0 0 0 0 0 0 0.70651758 0 0 0.70651376 0 0 0 0 0 0 0.70651758"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan81">Create a builder class that allows to create whatever </tspan></tspan><tspan
+               id="tspan360">Create a builder class that allows to create whatever </tspan></tspan><tspan
              x="25.279297"
              y="253.02551"
-             id="tspan84"><tspan
+             id="tspan363"><tspan
                dx="0 0 0 0 0 0 0 0.30218399 0 0 0.30218351 0 0 0 0 0 0 0 0 0.30218446 0 0 0 0.30218446 0 0 0 0.30218446 0 0 0 0 0 0.3021841 0 0 0 0 0.30218637 0 0 0 0 0 0 0 0.30218256 0 0 0 0 0 0.30218637"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan83">object is required for the test. That builder class should </tspan></tspan><tspan
+               id="tspan362">object is required for the test. That builder class should </tspan></tspan><tspan
              x="25.279297"
              y="255.84774"
-             id="tspan86"><tspan
+             id="tspan365"><tspan
                dx="0 0 0 0 0 0 0 0 0.39197767 0 0 0.39197767 0 0 0 0.39197862 0 0 0 0 0 0 0.39197671 0 0 0 0 0.39198053 0 0 0 0 0 0 0 0 0 0 0.39197671 0 0 0.39198053 0 0 0 0 0 0 0 0 0 0.3919729"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan85">contain or use random data generators or constants to </tspan></tspan><tspan
+               id="tspan364">contain or use random data generators or constants to </tspan></tspan><tspan
              x="11.839844"
              y="258.66998"
-             id="tspan88"><tspan
+             id="tspan367"><tspan
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan87">fill all the fields that are deemed irrelevant for the test at hand.&#10;</tspan></tspan></text>
+               id="tspan366">fill all the fields that are deemed irrelevant for the test at hand.
+</tspan></tspan></text>
       </g>
       <g
          id="g3-9"
@@ -966,48 +987,54 @@
            id="text171-2-5"><tspan
              x="13.900391"
              y="342.08218"
-             id="tspan93"><tspan
+             id="tspan372"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-               id="tspan89">var</tspan><tspan
+               id="tspan368">var</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan90"> unicorn = </tspan><tspan
+               id="tspan369"> unicorn = </tspan><tspan
                style="fill:#7eaef5"
-               id="tspan91">new</tspan><tspan
+               id="tspan370">new</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan92"> UnicornTestDataBuilder()&#10;</tspan></tspan><tspan
+               id="tspan371"> UnicornTestDataBuilder()
+</tspan></tspan><tspan
              x="13.900391"
              y="345.02453"
-             id="tspan97"><tspan
+             id="tspan376"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan94">    .dateOfBirth(today.minusYears(</tspan><tspan
+               id="tspan373">    .dateOfBirth(today.minusYears(</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-               id="tspan95">62</tspan><tspan
+               id="tspan374">62</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan96">))&#10;</tspan></tspan><tspan
+               id="tspan375">))
+</tspan></tspan><tspan
              x="13.900391"
              y="347.96688"
-             id="tspan99"><tspan
+             id="tspan378"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan98">    .build();&#10;</tspan></tspan><tspan
+               id="tspan377">    .build();
+</tspan></tspan><tspan
              x="13.900391"
              y="350.90923"
-             id="tspan101"><tspan
+             id="tspan380"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan100">&#10;</tspan></tspan><tspan
+               id="tspan379">
+</tspan></tspan><tspan
              x="13.900391"
              y="353.85159"
-             id="tspan103"><tspan
+             id="tspan382"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan102">assertThat(unicorn.age())&#10;</tspan></tspan><tspan
+               id="tspan381">assertThat(unicorn.age())
+</tspan></tspan><tspan
              x="13.900391"
              y="356.79394"
-             id="tspan107"><tspan
+             id="tspan386"><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan104">  .isEqualTo(</tspan><tspan
+               id="tspan383">  .isEqualTo(</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-               id="tspan105">62</tspan><tspan
+               id="tspan384">62</tspan><tspan
                style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-               id="tspan106">);&#10;</tspan></tspan></text>
+               id="tspan385">);
+</tspan></tspan></text>
       </g>
     </g>
     <g
@@ -1188,15 +1215,15 @@
            id="text112"><tspan
              x="25.279297"
              y="250.20327"
-             id="tspan110"><tspan
+             id="tspan388"><tspan
                dx="0 0 0.21558851 0 0 0 0 0.21558845 0 0 0 0 0.21558797 0 0 0 0 0 0 0 0.21558893 0 0 0 0 0 0 0 0 0.21558893 0 0 0 0 0 0 0 0 0 0.21558893 0 0 0 0 0.21558893 0 0 0 0.21558893"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan108">A test data manager directly interacts with the database </tspan></tspan><tspan
+               id="tspan387">A test data manager directly interacts with the database </tspan></tspan><tspan
              x="25.279297"
              y="253.02551"
-             id="tspan112"><tspan
+             id="tspan390"><tspan
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan111">to inject wanted test data:</tspan></tspan></text>
+               id="tspan389">to inject wanted test data:</tspan></tspan></text>
       </g>
       <g
          id="g64"
@@ -1215,15 +1242,15 @@
            id="text63"><tspan
              x="11.839844"
              y="250.20327"
-             id="tspan114"><tspan
+             id="tspan392"><tspan
                dx="0 0 0 0.3541702 0 0 0 0.3541702 0 0 0 0 0.3541702 0 0 0.35416925 0 0 0 0 0.35417116 0 0 0.35417116 0 0 0 0 0 0.35417306 0 0 0.35416925 0 0 0 0.35416925 0 0 0 0 0 0.35416925 0 0 0 0 0 0 0.35416925 0 0 0.35416925 0 0 0 0 0.35416925 0 0 0.35416925"
                style="fill:#000000;stroke:none"
-               id="tspan113">It can also be used to clean up and hence allows to test no data </tspan></tspan><tspan
+               id="tspan391">It can also be used to clean up and hence allows to test no data </tspan></tspan><tspan
              x="11.839844"
              y="253.02551"
-             id="tspan116"><tspan
+             id="tspan394"><tspan
                style="fill:#000000;stroke:none"
-               id="tspan115">scenarios.</tspan></tspan></text>
+               id="tspan393">scenarios.</tspan></tspan></text>
       </g>
       <rect
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
@@ -1247,41 +1274,47 @@
          id="text171-2-5-4"><tspan
            x="110.00586"
            y="241.56069"
-           id="tspan118"><tspan
+           id="tspan396"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan117">testDataManager.withUnicorn(unicorn);&#10;</tspan></tspan><tspan
+             id="tspan395">testDataManager.withUnicorn(unicorn);
+</tspan></tspan><tspan
            x="110.00586"
            y="244.50303"
-           id="tspan120"><tspan
+           id="tspan398"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan119">&#10;</tspan></tspan><tspan
+             id="tspan397">
+</tspan></tspan><tspan
            x="110.00586"
            y="247.44537"
-           id="tspan123"><tspan
+           id="tspan401"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-             id="tspan121">var</tspan><tspan
+             id="tspan399">var</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan122"> respose = restTemplate&#10;</tspan></tspan><tspan
+             id="tspan400"> respose = restTemplate
+</tspan></tspan><tspan
            x="110.00586"
            y="250.3877"
-           id="tspan125"><tspan
+           id="tspan403"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan124">  .getForEnitiy(url, String.class);&#10;</tspan></tspan><tspan
+             id="tspan402">  .getForEnitiy(url, String.class);
+</tspan></tspan><tspan
            x="110.00586"
            y="253.33004"
-           id="tspan127"><tspan
+           id="tspan405"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan126">&#10;</tspan></tspan><tspan
+             id="tspan404">
+</tspan></tspan><tspan
            x="110.00586"
            y="256.27238"
-           id="tspan129"><tspan
+           id="tspan407"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan128">assertThat(response.getBody())&#10;</tspan></tspan><tspan
+             id="tspan406">assertThat(response.getBody())
+</tspan></tspan><tspan
            x="110.00586"
            y="259.21471"
-           id="tspan131"><tspan
+           id="tspan409"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan130">  .contains(unicorn.name());</tspan></tspan></text>
+             id="tspan408">  .contains(unicorn.name());</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
@@ -1301,60 +1334,55 @@
          id="g110"
          transform="translate(0,-26.145834)">
         <g
-           id="g133"
-           transform="translate(0.05091609,-210.06469)">
-          <g
-             id="g92"
-             transform="translate(-0.01115407,-51.410542)">
-            <path
-               id="path91"
-               style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-               d="m 121.636,358.61414 v 7.88064 h -13.44097 v 32.6776 h 84.50587 v -40.55824 z"
-               sodipodi:nodetypes="ccccccc" />
-            <text
-               xml:space="preserve"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:end;white-space:pre;shape-inside:url(#path91);shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-               x="-124.60493"
-               y="25.642857"
-               id="text92"><tspan
-                 x="121.63672"
-                 y="360.91421"
-                 id="tspan133"><tspan
-                   dx="0 0 0 0 0 0 0 0 0 0 0 1.6582073 0 0 0 0 0 1.6582083 0 0 0 0 1.6582083 0 0 0 0 1.6582083 0 0 0 0 0 0 0 0 0 1.6582083 0 0 0 1.6582044 0 0 0 0 1.6582083"
-                   style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan132">Explicitly named test data constants can help to </tspan></tspan><tspan
-                 x="121.63672"
-                 y="363.73644"
-                 id="tspan135"><tspan
-                   dx="0 0 0 0 0 0 0 0 0 0 0 0.78327024 0 0 0 0.78326929 0 0 0 0 0.78327119 0 0 0 0 0.78326929 0 0.78326929 0 0 0 0 0.7832731 0 0 0 0 0 0 0.78326929 0 0 0 0 0.78326929"
-                   style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan134">understand the test code a lot. Choose good names </tspan></tspan><tspan
-                 x="121.63672"
-                 y="366.55868"
-                 id="tspan137"><tspan
-                   dx="0 0 0 0 0 0 0.10904109 0 0 0 0 0 0 0.10904062 0 0 0 0 0.10904253 0 0 0 0 0 0 0.10904062 0 0 0.10904062 0 0 0 0 0 0 0 0.10904062 0 0 0 0 0.10904062 0 0 0 0.10904443 0 0 0 0 0 0 0.10904062"
-                   style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan136">(e.g. prefix with &quot;SOME&quot; to express that the actual value </tspan></tspan><tspan
-                 x="108.19531"
-                 y="369.38091"
-                 id="tspan139"><tspan
-                   style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan138">doesn't matter).</tspan></tspan></text>
-          </g>
+           id="g356">
+          <path
+             id="path91"
+             style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             d="m 121.67576,97.13891 v 7.88064 h -13.44097 v 3.57343 h 84.50587 V 97.13891 Z"
+             sodipodi:nodetypes="ccccccc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:end;white-space:pre;shape-inside:url(#path91);shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+             x="-124.60493"
+             y="25.642857"
+             id="text92"><tspan
+               x="121.67578"
+               y="99.439598"
+               id="tspan411"><tspan
+                 dx="0 0 0 0 0 0 0 0 0 0 0 1.6582073 0 0 0 0 0 1.6582083 0 0 0 0 1.6582083 0 0 0 0 1.6582083 0 0 0 0 0 0 0 0 0 1.6582083 0 0 0 1.6582044 0 0 0 0 1.6582083"
+                 style="text-align:justify;fill:#000000;stroke:none"
+                 id="tspan410">Explicitly named test data constants can help to </tspan></tspan><tspan
+               x="121.67578"
+               y="102.26183"
+               id="tspan413"><tspan
+                 dx="0 0 0 0 0 0 0 0 0 0 0 0.78327024 0 0 0 0.78326929 0 0 0 0 0.78327119 0 0 0 0 0.78326929 0 0.78326929 0 0 0 0 0.7832731 0 0 0 0 0 0 0.78326929 0 0 0 0 0.78326929"
+                 style="text-align:justify;fill:#000000;stroke:none"
+                 id="tspan412">understand the test code a lot. Choose good names </tspan></tspan><tspan
+               x="121.67578"
+               y="105.08405"
+               id="tspan415"><tspan
+                 dx="0 0 0 0 0 0 0.10904109 0 0 0 0 0 0 0.10904062 0 0 0 0 0.10904253 0 0 0 0 0 0 0.10904062 0 0 0.10904062 0 0 0 0 0 0 0 0.10904062 0 0 0 0 0.10904062 0 0 0 0.10904443 0 0 0 0 0 0 0.10904062"
+                 style="text-align:justify;fill:#000000;stroke:none"
+                 id="tspan414">(e.g. prefix with &quot;SOME&quot; to express that the actual value </tspan></tspan><tspan
+               x="108.23438"
+               y="107.90628"
+               id="tspan417"><tspan
+                 style="text-align:justify;fill:#000000;stroke:none"
+                 id="tspan416">doesn't matter).</tspan></tspan></text>
           <text
              xml:space="preserve"
              style="font-size:5.64443px;line-height:0.8;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.899999, 0.899999"
-             x="121.01552"
-             y="305.49759"
+             x="121.06644"
+             y="95.432899"
              id="text32"><tspan
                style="font-size:5.64443px;text-align:start;text-anchor:start;stroke-width:0.3"
-               x="121.01552"
-               y="305.49759"
+               x="121.06644"
+               y="95.432899"
                sodipodi:role="line"
                id="tspan32">Explicit Constants</tspan></text>
           <g
              id="g212"
-             transform="matrix(0.99999877,0,0,0.99999877,100.16479,-25.253809)"
+             transform="matrix(0.99999877,0,0,0.99999877,100.21571,-235.3185)"
              style="stroke-width:1">
             <rect
                style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
@@ -1412,104 +1440,13 @@
                  y="330.34164"
                  id="tspan7">  &quot;abc&quot;</tspan></text>
           </g>
-          <g
-             id="g94"
-             transform="translate(0,4.7625002)">
-            <rect
-               style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
-               id="rect132-5-1-6-3"
-               width="84.440376"
-               height="27.485592"
-               x="108.21676"
-               y="315.44363"
-               rx="0.49999997"
-               ry="0.49999997" />
-            <path
-               id="rect176-0-7-0-6"
-               style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
-               d="m 110.01886,317.03112 h 80.63427 v 23.50903 h -80.63427 z"
-               sodipodi:nodetypes="ccccc" />
-            <text
-               xml:space="preserve"
-               style="font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:justify;white-space:pre;shape-inside:url(#rect176-0-7-0-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17"
-               x="215.5425"
-               y="70.348732"
-               id="text171-2-5-4-6"><tspan
-                 x="110.01953"
-                 y="319.33218"
-                 id="tspan142"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-                   id="tspan140">var</tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan141"> someUnicorn =&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="322.27453"
-                 id="tspan146"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan143">  </tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-                   id="tspan144">new</tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan145"> Unicorn(&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="325.21688"
-                 id="tspan150"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan147">    SOME_ID, </tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
-                   id="tspan148">// &quot;some&quot; value =&gt; doesn't matter </tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan149">&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="328.15923"
-                 id="tspan152"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan151">    SOME_UNICORN_NAME,&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="331.10159"
-                 id="tspan154"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan153">    SOME_MANE_COLOR,&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="334.04394"
-                 id="tspan156"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan155">    SOME_VALID_HORN_LENGTH,&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="336.98629"
-                 id="tspan158"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan157">    SOME_VALID_HORN_DIAMETER,&#10;</tspan></tspan><tspan
-                 x="110.01953"
-                 y="339.92864"
-                 id="tspan163"><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan159">    today.minusYears(</tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-                   id="tspan160">62</tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan161">)); </tspan><tspan
-                   style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
-                   id="tspan162">// this matters</tspan></tspan></text>
-            <text
-               xml:space="preserve"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
-               x="166.55844"
-               y="329.79584"
-               id="text64-4"><tspan
-                 sodipodi:role="line"
-                 id="tspan64-2"
-                 style="stroke-width:0.3"
-                 x="166.55844"
-                 y="329.79584">n</tspan></text>
-          </g>
         </g>
         <g
            id="g93"
-           transform="translate(0.55248774,4.7292364)">
+           transform="translate(0.55248774,-24.399749)">
           <g
              id="g230-8"
-             transform="matrix(0.49999938,-0.86602432,0.86602432,0.49999938,-154.46419,15.746412)"
+             transform="matrix(0.49999938,-0.86602432,0.86602432,0.49999938,-154.99336,15.746412)"
              style="stroke-width:1">
             <g
                id="g243-3"
@@ -1658,41 +1595,45 @@
                id="text112-1"><tspan
                  x="121.63672"
                  y="360.91421"
-                 id="tspan165"><tspan
+                 id="tspan419"><tspan
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan164">Use random data generators for test data.&#10;</tspan></tspan><tspan
+                   id="tspan418">Use random data generators for test data.
+</tspan></tspan><tspan
                  x="121.63672"
                  y="363.73644"
-                 id="tspan167"><tspan
+                 id="tspan421"><tspan
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan166">&#10;</tspan></tspan><tspan
+                   id="tspan420">
+</tspan></tspan><tspan
                  x="121.63672"
                  y="366.55868"
-                 id="tspan169"><tspan
+                 id="tspan423"><tspan
                    dx="0 0 0 0 0 1.7779378 0 0 0 1.7779373 0 0 1.7779382 0 0 0 0 0 0 0 0 0 1.7779363 0 0 1.7779402 0 0 0 0 0 0 0 1.7779363"
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan168">This may be necessary to resolve dependencies </tspan></tspan><tspan
+                   id="tspan422">This may be necessary to resolve dependencies </tspan></tspan><tspan
                  x="108.19531"
                  y="369.38091"
-                 id="tspan171"><tspan
+                 id="tspan425"><tspan
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan170">between tests (e.g. to ensure uniqueness of IDs).&#10;</tspan></tspan><tspan
+                   id="tspan424">between tests (e.g. to ensure uniqueness of IDs).
+</tspan></tspan><tspan
                  x="108.19531"
                  y="372.20315"
-                 id="tspan173"><tspan
+                 id="tspan427"><tspan
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan172">&#10;</tspan></tspan><tspan
+                   id="tspan426">
+</tspan></tspan><tspan
                  x="108.19531"
                  y="375.02538"
-                 id="tspan175"><tspan
+                 id="tspan429"><tspan
                    dx="0 0 0 0.21389091 0 0 0 0.21389091 0 0 0 0 0.21389043 0 0 0 0 0 0 0 0 0 0 0 0.21389139 0 0 0 0 0 0 0 0 0 0.21388757 0 0 0 0 0.21389139 0 0 0 0.21389139 0 0 0 0 0 0 0 0 0.21389139 0 0 0 0 0 0.21388757 0 0 0 0 0 0 0.21388757"
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan174">It can also technically underline that the concrete value should not </tspan></tspan><tspan
+                   id="tspan428">It can also technically underline that the concrete value should not </tspan></tspan><tspan
                  x="108.19531"
                  y="377.84762"
-                 id="tspan177"><tspan
+                 id="tspan431"><tspan
                    style="text-align:justify;fill:#000000;stroke:none"
-                   id="tspan176">matter for the test.</tspan></tspan></text>
+                   id="tspan430">matter for the test.</tspan></tspan></text>
           </g>
           <g
              id="g81">
@@ -1718,64 +1659,71 @@
                id="text171-2-5-4-6-4"><tspan
                  x="109.51758"
                  y="173.77944"
-                 id="tspan182"><tspan
+                 id="tspan434"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-                   id="tspan179">var</tspan><tspan
+                   id="tspan432">var</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan180"> someUnicorn =&#10;</tspan></tspan><tspan
+                   id="tspan433"> someUnicorn =
+</tspan></tspan><tspan
                  x="109.51758"
                  y="176.72178"
-                 id="tspan187"><tspan
+                 id="tspan438"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan183">  </tspan><tspan
+                   id="tspan435">  </tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-                   id="tspan184">new</tspan><tspan
+                   id="tspan436">new</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan185"> Unicorn(&#10;</tspan></tspan><tspan
+                   id="tspan437"> Unicorn(
+</tspan></tspan><tspan
                  x="109.51758"
                  y="179.66412"
-                 id="tspan191"><tspan
+                 id="tspan442"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan188">    randomUUID(), </tspan><tspan
+                   id="tspan439">    randomUUID(), </tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
-                   id="tspan189">// needs to be unique</tspan><tspan
+                   id="tspan440">// needs to be unique</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan190">&#10;</tspan></tspan><tspan
+                   id="tspan441">
+</tspan></tspan><tspan
                  x="109.51758"
                  y="182.60645"
-                 id="tspan196"><tspan
+                 id="tspan446"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan192">    someValidName(), </tspan><tspan
+                   id="tspan443">    SOME_VALID_NAME, </tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
-                   id="tspan194">// value doesn't matter</tspan><tspan
+                   id="tspan444">// value doesn't matter</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan195">&#10;</tspan></tspan><tspan
+                   id="tspan445">
+</tspan></tspan><tspan
                  x="109.51758"
                  y="185.54879"
-                 id="tspan198"><tspan
+                 id="tspan448"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan197">    someManeColor(),&#10;</tspan></tspan><tspan
+                   id="tspan447">    randomManeColor(),
+</tspan></tspan><tspan
                  x="109.51758"
                  y="188.49113"
-                 id="tspan200"><tspan
+                 id="tspan450"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan199">    someValidHornLength(),&#10;</tspan></tspan><tspan
+                   id="tspan449">    SOME_VALID_HORN_LENGTH,
+</tspan></tspan><tspan
                  x="109.51758"
                  y="191.43346"
-                 id="tspan202"><tspan
+                 id="tspan452"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan201">    someValidHornDiameter(),&#10;</tspan></tspan><tspan
+                   id="tspan451">    randomValidHornDiameter(),
+</tspan></tspan><tspan
                  x="109.51758"
                  y="194.3758"
-                 id="tspan207"><tspan
+                 id="tspan457"><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan203">    today.minusYears(</tspan><tspan
+                   id="tspan453">    today.minusYears(</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-                   id="tspan204">62</tspan><tspan
+                   id="tspan454">62</tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-                   id="tspan205">)); </tspan><tspan
+                   id="tspan455">)); </tspan><tspan
                    style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
-                   id="tspan206">// this matters</tspan></tspan></text>
+                   id="tspan456">// this matters</tspan></tspan></text>
             <text
                xml:space="preserve"
                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
@@ -1792,11 +1740,11 @@
       </g>
     </g>
     <g
-       id="g125"
-       transform="translate(0.16321375,-193.19486)">
+       id="g358"
+       transform="translate(0,-3.0899144)">
       <g
          id="g117"
-         transform="translate(96.323965,45.731307)">
+         transform="translate(96.441549,-127.85159)">
         <text
            xml:space="preserve"
            style="font-size:5.64443px;line-height:0.8;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.899999, 0.899999"
@@ -1807,7 +1755,7 @@
              x="121.50919"
              y="280.78784"
              sodipodi:role="line"
-             id="tspan178">Verification Method</tspan></text>
+             id="tspan178">Assert Helper Method</tspan></text>
         <g
            id="g203"
            transform="matrix(0.99999876,0,0,0.99999876,100.28978,8.703426)"
@@ -1886,7 +1834,7 @@
       </g>
       <g
          id="g92-3"
-         transform="translate(96.268791,-30.329842)">
+         transform="translate(96.386375,-203.91274)">
         <path
            id="path91-5"
            style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -1900,47 +1848,47 @@
            id="text92-9"><tspan
              x="121.63672"
              y="360.91421"
-             id="tspan209"><tspan
+             id="tspan459"><tspan
                dx="0 0 0 0 0 0 1.1761845 0 0 0 0 1.1761841 0 0 0 0 0 0 0 1.1761831 0 0 0 0 1.1761831 0 0 0 0 0 1.1761831 0 0 0 1.1761869 0 0 0 0 0 0 0 1.1761831 0 0 0 0 0 1.1761831"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan208">Group long asserts that check one logical thing in </tspan></tspan><tspan
+               id="tspan458">Group long asserts that check one logical thing in </tspan></tspan><tspan
              x="121.63672"
              y="363.73644"
-             id="tspan212"><tspan
+             id="tspan462"><tspan
                dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0.045501113 0 0 0 0 0 0 0 0 0.045500755 0 0 0 0 0.045499206 0 0 0 0 0 0 0 0.045499206 0 0 0 0.045499206 0 0 0 0 0 0 0.045499206 0 0 0.045499206"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan210">verification methods. This reduces the amount of code </tspan><tspan
+               id="tspan460">verification methods. This reduces the amount of code </tspan><tspan
                dx="0.045499206"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan211">in </tspan></tspan><tspan
+               id="tspan461">in </tspan></tspan><tspan
              x="121.63672"
              y="366.55868"
-             id="tspan215"><tspan
+             id="tspan465"><tspan
                dx="0 0 0 0 0.10414159 0 0 0 0 0.10414064 0 0 0 0 0 0 0 0.10414255 0 0 0 0.10414064 0 0 0 0.10414064 0 0 0 0 0 0 0.10413873 0 0 0 0 0.10414255 0 0 0 0 0 0.10414255"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan213">the test itself, and the method name makes the </tspan><tspan
+               id="tspan463">the test itself, and the method name makes the </tspan><tspan
                dx="0.10413873"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan214">intention </tspan></tspan><tspan
+               id="tspan464">intention </tspan></tspan><tspan
              x="108.19531"
              y="369.38091"
-             id="tspan217"><tspan
+             id="tspan467"><tspan
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan216">more obvious.</tspan></tspan></text>
+               id="tspan466">more obvious.</tspan></tspan></text>
       </g>
       <rect
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
          id="rect132-5-1-6-3-7"
          width="84.440369"
          height="9.0498829"
-         x="204.45377"
-         y="341.28683"
+         x="204.57135"
+         y="167.70393"
          rx="0.49999997"
          ry="0.49999997" />
       <path
          id="rect176-0-7-0-6-1"
          style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
-         d="m 206.25586,342.87432 h 80.63427 v 5.80289 h -80.63427 z"
+         d="m 206.37344,169.29142 h 80.63427 v 5.80289 h -80.63427 z"
          sodipodi:nodetypes="ccccc" />
       <text
          xml:space="preserve"
@@ -1948,15 +1896,16 @@
          x="215.5425"
          y="70.348732"
          id="text171-2-5-4-6-3"><tspan
-           x="206.25586"
-           y="345.05581"
-           id="tspan218">assertThat(jsonContainsUnicorn(&#10;</tspan><tspan
-           x="206.25586"
-           y="347.87805"
-           id="tspan219">  response.body(), unicorn)).isTrue();</tspan></text>
+           x="206.37305"
+           y="171.47183"
+           id="tspan468">assertThat(jsonContainsUnicorn(
+</tspan><tspan
+           x="206.37305"
+           y="174.29406"
+           id="tspan469">  response.body(), unicorn)).isTrue();</tspan></text>
       <g
          id="g92-3-6"
-         transform="translate(96.268787,-6.5248304)">
+         transform="translate(96.386371,-180.10773)">
         <path
            id="path91-5-8"
            style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -1970,35 +1919,35 @@
            id="text92-9-4"><tspan
              x="108.19531"
              y="360.91421"
-             id="tspan221"><tspan
+             id="tspan471"><tspan
                dx="0 0 0 0 0 0 0 0 1.0756592 0 0 0 0 1.0756582 0 0 0 0 0 0 1.0756582 0 0 1.0756582 0 0 0 1.0756582 0 0 0 0 1.0756582 0 0 0 1.0756582 0 0 0 0 0 0 0 0 0 0 1.0756582 0 0 0 1.0756582"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan220">AssertJ also allows to use your own Conditions and Custom </tspan></tspan><tspan
+               id="tspan470">AssertJ also allows to use your own Conditions and Custom </tspan></tspan><tspan
              x="108.19531"
              y="363.73644"
-             id="tspan223"><tspan
+             id="tspan473"><tspan
                dx="0 0 0 0 0 0 0 0 0 0 0 0 1.1904787 0 0 0 0 0 1.1904787 0 0 0 1.1904787 0 0 0 0 1.1904806 0 0 0 1.1904806 0 0 0 0 0 0 0 0 0 0 0 0 1.1904806 0 0 0 0 1.1904806 0 0 0 0 1.1904806"
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan222">Assertions, which can make the verification code even more </tspan></tspan><tspan
+               id="tspan472">Assertions, which can make the verification code even more </tspan></tspan><tspan
              x="108.19531"
              y="366.55868"
-             id="tspan225"><tspan
+             id="tspan475"><tspan
                style="text-align:justify;fill:#000000;stroke:none"
-               id="tspan224">elegant.</tspan></tspan></text>
+               id="tspan474">elegant.</tspan></tspan></text>
       </g>
       <rect
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
          id="rect132-5-1-6-3-7-6"
          width="84.440384"
          height="12.030986"
-         x="204.42772"
-         y="362.09573"
+         x="204.5453"
+         y="188.51283"
          rx="0.49999997"
          ry="0.49999997" />
       <path
          id="rect176-0-7-0-6-1-8"
          style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
-         d="m 206.22982,363.50434 h 80.63427 v 8.97789 h -80.63427 z"
+         d="m 206.3474,189.92144 h 80.63427 v 8.97789 H 206.3474 Z"
          sodipodi:nodetypes="ccccc" />
       <text
          xml:space="preserve"
@@ -2006,284 +1955,304 @@
          x="215.5425"
          y="70.348732"
          id="text171-2-5-4-6-3-9"><tspan
-           x="206.23047"
-           y="365.80483"
-           id="tspan230"><tspan
+           x="206.34766"
+           y="192.2228"
+           id="tspan477"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan226">UnicornAssert.assertThat(unicorn))&#10;</tspan></tspan><tspan
-           x="206.23047"
-           y="368.74718"
-           id="tspan232"><tspan
+             id="tspan476">UnicornAssert.assertThat(unicorn))
+</tspan></tspan><tspan
+           x="206.34766"
+           y="195.16514"
+           id="tspan479"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan231">  .isValid()&#10;</tspan></tspan><tspan
-           x="206.23047"
-           y="371.68954"
-           id="tspan236"><tspan
+             id="tspan478">  .isValid()
+</tspan></tspan><tspan
+           x="206.34766"
+           y="198.10748"
+           id="tspan483"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan233">  .isOlderThan(</tspan><tspan
+             id="tspan480">  .isOlderThan(</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-             id="tspan234">62</tspan><tspan
+             id="tspan481">62</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-             id="tspan235">);</tspan></tspan></text>
+             id="tspan482">);</tspan></tspan></text>
     </g>
     <g
-       id="g2"
-       transform="translate(-22.075269,-251.21708)">
-      <text
-         xml:space="preserve"
-         style="font-size:5.64443px;line-height:0.8;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.899999, 0.899999"
-         x="239.98764"
-         y="263.31662"
-         id="text15"><tspan
-           style="font-size:5.64443px;text-align:start;text-anchor:start;stroke-width:0.3"
+       id="g5">
+      <g
+         id="g2"
+         transform="translate(-22.075269,-251.21708)">
+        <text
+           xml:space="preserve"
+           style="font-size:5.64443px;line-height:0.8;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.899999, 0.899999"
            x="239.98764"
            y="263.31662"
-           sodipodi:role="line"
-           id="tspan22">Test Setup Helper Method</tspan></text>
-      <g
-         id="g211"
-         transform="matrix(0.99999876,0,0,0.99999876,218.76823,-8.7678102)"
-         style="stroke-width:1">
-        <rect
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
-           id="rect182"
-           width="12"
-           height="12"
-           x="7.9248657"
-           y="268.02902"
-           rx="0.5000006"
-           ry="0.5000006" />
-        <path
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 8.704033,268.80819 h 8.18051"
-           id="path182"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 8.7040289,274.09989 H 8.9470386"
-           id="path183"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#8dd35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 10.291531,271.9832 h 4.476344"
-           id="path184"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#d1d35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 10.291531,273.04154 h 2.888845"
-           id="path185"
-           sodipodi:nodetypes="cc" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           x="9.9039478"
-           y="271.15768"
-           id="text186"><tspan
+           id="text15"><tspan
+             style="font-size:5.64443px;text-align:start;text-anchor:start;stroke-width:0.3"
+             x="239.98764"
+             y="263.31662"
              sodipodi:role="line"
-             id="tspan186"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+             id="tspan22">Arrange Helper Method</tspan></text>
+        <g
+           id="g211"
+           transform="matrix(0.99999876,0,0,0.99999876,218.76823,-8.7678102)"
+           style="stroke-width:1">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+             id="rect182"
+             width="12"
+             height="12"
+             x="7.9248657"
+             y="268.02902"
+             rx="0.5000006"
+             ry="0.5000006" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 8.704033,268.80819 h 8.18051"
+             id="path182"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="M 8.7040289,274.09989 H 8.9470386"
+             id="path183"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#8dd35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,271.9832 h 4.476344"
+             id="path184"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#d1d35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,273.04154 h 2.888845"
+             id="path185"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              x="9.9039478"
-             y="271.15768">setup()</tspan></text>
-        <path
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 17.699867,268.80819 h 0.24301"
-           id="path188"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:#000000;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 8.704033,276.21657 h 8.18051"
-           id="path189"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 8.7040289,279.39159 H 8.9470386"
-           id="path190"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 10.291531,277.2749 h 4.476344"
-           id="path191"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 17.699867,276.21657 h 0.24301"
-           id="path192"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 10.291531,278.33324 h 6.593011"
-           id="path193"
-           sodipodi:nodetypes="cc" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           x="9.9039478"
-           y="271.15768"
-           id="text193"><tspan
-             sodipodi:role="line"
-             id="tspan193"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+             y="271.15768"
+             id="text186"><tspan
+               sodipodi:role="line"
+               id="tspan186"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+               x="9.9039478"
+               y="271.15768">setup()</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 17.699867,268.80819 h 0.24301"
+             id="path188"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 8.704033,276.21657 h 8.18051"
+             id="path189"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="M 8.7040289,279.39159 H 8.9470386"
+             id="path190"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,277.2749 h 4.476344"
+             id="path191"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 17.699867,276.21657 h 0.24301"
+             id="path192"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,278.33324 h 6.593011"
+             id="path193"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
              x="9.9039478"
-             y="271.15768">setup()</tspan></text>
+             y="271.15768"
+             id="text193"><tspan
+               sodipodi:role="line"
+               id="tspan193"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+               x="9.9039478"
+               y="271.15768">setup()</tspan></text>
+        </g>
       </g>
-    </g>
-    <g
-       id="g92-8"
-       transform="translate(96.4438,-344.74949)">
+      <g
+         id="g92-8"
+         transform="translate(96.4438,-344.74949)">
+        <path
+           id="path91-8"
+           style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 121.636,358.61414 v 7.88064 h -13.44097 v 27.74025 h 84.50587 v -35.62089 z"
+           sodipodi:nodetypes="ccccccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:end;white-space:pre;shape-inside:url(#path91-8);shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="-124.60493"
+           y="25.642857"
+           id="text92-7"><tspan
+             x="121.63672"
+             y="360.91421"
+             id="tspan485"><tspan
+               dx="0 0 0 0 0 0 0 0.15626085 0 0 0 0 0.15626085 0 0 0 0 0 0.15626085 0 0 0 0 0 0 0.15626085 0 0 0 0 0 0 0 0.15626276 0 0 0.15625894 0 0 0 0 0 0.15626276 0 0 0 0 0 0 0 0 0 0 0 0.15626276"
+               style="text-align:justify;fill:#000000;stroke:none"
+               id="tspan484">Create test setup helper methods to avoid duplication of </tspan></tspan><tspan
+             x="121.63672"
+             y="363.73644"
+             id="tspan487"><tspan
+               style="text-align:justify;fill:#000000;stroke:none"
+               id="tspan486">test object setup in a lot of tests.</tspan></tspan></text>
+      </g>
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect132-5-1-6-3-70"
+         width="84.566437"
+         height="51.050793"
+         x="204.57903"
+         y="21.92984"
+         rx="0.49999997"
+         ry="0.49999997" />
       <path
-         id="path91-8"
-         style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-         d="m 121.636,358.61414 v 7.88064 h -13.44097 v 27.74025 h 84.50587 v -35.62089 z"
-         sodipodi:nodetypes="ccccccc" />
+         id="rect176-0-7-0-6-7"
+         style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
+         d="m 206.47382,23.51731 h 80.63427 v 47.32153 h -80.63427 z"
+         sodipodi:nodetypes="ccccc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:end;white-space:pre;shape-inside:url(#path91-8);shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-         x="-124.60493"
-         y="25.642857"
-         id="text92-7"><tspan
-           x="121.63672"
-           y="360.91421"
-           id="tspan238"><tspan
-             dx="0 0 0 0 0 0 0 0.15626085 0 0 0 0 0.15626085 0 0 0 0 0 0.15626085 0 0 0 0 0 0 0.15626085 0 0 0 0 0 0 0 0.15626276 0 0 0.15625894 0 0 0 0 0 0.15626276 0 0 0 0 0 0 0 0 0 0 0 0.15626276"
-             style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan237">Create test setup helper methods to avoid duplication of </tspan></tspan><tspan
-           x="121.63672"
-           y="363.73644"
-           id="tspan240"><tspan
-             style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan239">test object setup in a lot of tests.</tspan></tspan></text>
-    </g>
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect132-5-1-6-3-70"
-       width="84.566437"
-       height="51.050793"
-       x="204.57903"
-       y="21.92984"
-       rx="0.49999997"
-       ry="0.49999997" />
-    <path
-       id="rect176-0-7-0-6-7"
-       style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
-       d="m 206.47382,23.51731 h 80.63427 v 47.32153 h -80.63427 z"
-       sodipodi:nodetypes="ccccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:justify;white-space:pre;shape-inside:url(#rect176-0-7-0-6-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17"
-       x="215.5425"
-       y="70.348732"
-       id="text171-2-5-4-6-35"><tspan
-         x="206.47461"
-         y="25.818505"
-         id="tspan244"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-           id="tspan241">private</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan242"> Unicorn createUnicornBornAt(&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="28.760847"
-         id="tspan246"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan245">  LocalDate dateOfBirth) {&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="31.70319"
-         id="tspan250"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan247">  </tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-           id="tspan248">return</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan249"> new Unicorn(&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="34.645531"
-         id="tspan252"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan251">    randomUUID(), SOME_NAME, SOME_MANE_COLOR,&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="37.587872"
-         id="tspan254"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan253">    SOME_HORN_LENGTH, SOME_HORN_DIAMETER,&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="40.530213"
-         id="tspan256"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan255">    dateOfBirth);&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="43.472553"
-         id="tspan258"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan257">}&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="46.414894"
-         id="tspan260"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan259">&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="49.357235"
-         id="tspan262"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan261">@Test&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="52.299576"
-         id="tspan265"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-           id="tspan263">void</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan264"> age() {&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="55.241917"
-         id="tspan269"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan266">  </tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-           id="tspan267">var</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan268"> gilly = createUnicornBornAt(&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="58.184258"
-         id="tspan273"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan270">    today.minusYears(</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-           id="tspan271">62</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan272">));&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="61.126599"
-         id="tspan275"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan274">&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="64.068939"
-         id="tspan277"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan276">  assertThat(gilly.age())&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="67.011284"
-         id="tspan281"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan278">    .isEqualTo(</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-           id="tspan279">62</tspan><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan280">);&#10;</tspan></tspan><tspan
-         x="206.47461"
-         y="69.953629"
-         id="tspan283"><tspan
-           style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
-           id="tspan282">}</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
-       x="263.0134"
-       y="36.282043"
-       id="text64-4-0"><tspan
-         sodipodi:role="line"
-         id="tspan64-2-0"
-         style="stroke-width:0.3"
+         style="font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:justify;white-space:pre;shape-inside:url(#rect176-0-7-0-6-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17"
+         x="215.5425"
+         y="70.348732"
+         id="text171-2-5-4-6-35"><tspan
+           x="206.47461"
+           y="25.818505"
+           id="tspan490"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan488">private</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan489"> Unicorn createUnicornBornAt(
+</tspan></tspan><tspan
+           x="206.47461"
+           y="28.760847"
+           id="tspan492"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan491">  LocalDate dateOfBirth) {
+</tspan></tspan><tspan
+           x="206.47461"
+           y="31.70319"
+           id="tspan496"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan493">  </tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan494">return</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan495"> new Unicorn(
+</tspan></tspan><tspan
+           x="206.47461"
+           y="34.645531"
+           id="tspan498"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan497">    randomUUID(), SOME_NAME, SOME_MANE_COLOR,
+</tspan></tspan><tspan
+           x="206.47461"
+           y="37.587872"
+           id="tspan500"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan499">    SOME_HORN_LENGTH, SOME_HORN_DIAMETER,
+</tspan></tspan><tspan
+           x="206.47461"
+           y="40.530213"
+           id="tspan502"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan501">    dateOfBirth);
+</tspan></tspan><tspan
+           x="206.47461"
+           y="43.472553"
+           id="tspan504"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan503">}
+</tspan></tspan><tspan
+           x="206.47461"
+           y="46.414894"
+           id="tspan506"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan505">
+</tspan></tspan><tspan
+           x="206.47461"
+           y="49.357235"
+           id="tspan508"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan507">@Test
+</tspan></tspan><tspan
+           x="206.47461"
+           y="52.299576"
+           id="tspan511"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan509">void</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan510"> age() {
+</tspan></tspan><tspan
+           x="206.47461"
+           y="55.241917"
+           id="tspan515"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan512">  </tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan513">var</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan514"> gilly = createUnicornBornAt(
+</tspan></tspan><tspan
+           x="206.47461"
+           y="58.184258"
+           id="tspan519"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan516">    today.minusYears(</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
+             id="tspan517">62</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan518">));
+</tspan></tspan><tspan
+           x="206.47461"
+           y="61.126599"
+           id="tspan521"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan520">
+</tspan></tspan><tspan
+           x="206.47461"
+           y="64.068939"
+           id="tspan523"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan522">  assertThat(gilly.age())
+</tspan></tspan><tspan
+           x="206.47461"
+           y="67.011284"
+           id="tspan527"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan524">    .isEqualTo(</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
+             id="tspan525">62</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan526">);
+</tspan></tspan><tspan
+           x="206.47461"
+           y="69.953629"
+           id="tspan529"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan528">}</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
          x="263.0134"
-         y="36.282043">n</tspan></text>
+         y="36.282043"
+         id="text64-4-0"><tspan
+           sodipodi:role="line"
+           id="tspan64-2-0"
+           style="stroke-width:0.3"
+           x="263.0134"
+           y="36.282043">n</tspan></text>
+    </g>
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 99.1,-2.6438632e-6 V 3.9999974"
@@ -2328,33 +2297,33 @@
          id="text104"><tspan
            x="25.279297"
            y="250.20327"
-           id="tspan287"><tspan
+           id="tspan533"><tspan
              dx="0 0 0 0.23859727 0 0 0 0.23859727"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan284">If you find </tspan><tspan
+             id="tspan530">If you find </tspan><tspan
              dx="0.23859727 0 0 0 0 0 0 0 0 0.23859614"
              style="font-weight:bold;fill:#000000;stroke:none"
-             id="tspan285">Multiple Acts</tspan><tspan
+             id="tspan531">Multiple Acts</tspan><tspan
              dx="0 0.23859918 0 0 0.23859537 0 0.23859537 0 0 0 0 0.23859918 0 0 0 0 0 0.23859918 0 0 0 0.23859918 0 0 0 0 0 0.23859918"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan286"> in a test case, you might want </tspan></tspan><tspan
+             id="tspan532"> in a test case, you might want </tspan></tspan><tspan
            x="25.279297"
            y="253.02551"
-           id="tspan289"><tspan
+           id="tspan535"><tspan
              dx="0 0 0 0.47137678 0 0 0 0 0 0.47137678 0 0 0.47137678 0 0 0 0 0.47137672 0 0 0 0 0 0 0 0 0 0 0 0 0.47137964 0 0 0 0 0.47137582 0 0 0 0.47137582 0 0 0 0 0 0.47137582 0 0 0 0 0 0 0.47137964"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan288">to split it with Assumptions. Copy the test, remove the </tspan></tspan><tspan
+             id="tspan534">to split it with Assumptions. Copy the test, remove the </tspan></tspan><tspan
            x="25.279297"
            y="255.84774"
-           id="tspan291"><tspan
+           id="tspan537"><tspan
              dx="0 0 0 0 0 0 0 0.83467329 0 0 0 0.83467424 0 0 0 0 0.83467424 0 0 0 0.83467424 0 0 0 0 0 0 0 0 0 0.83467233 0 0 0 0.83467233 0 0 0 0 0 0 0 0.83467233 0 0 0 0.83467615"
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan290">second act from the original, and replace the copy's </tspan></tspan><tspan
+             id="tspan536">second act from the original, and replace the copy's </tspan></tspan><tspan
            x="11.839844"
            y="258.66998"
-           id="tspan293"><tspan
+           id="tspan539"><tspan
              style="text-align:justify;fill:#000000;stroke:none"
-             id="tspan292">assertion code with an assumption.</tspan></tspan></text>
+             id="tspan538">assertion code with an assumption.</tspan></tspan></text>
     </g>
     <g
        id="g1-0"
@@ -2381,95 +2350,104 @@
          id="text96-1"><tspan
            x="206.2793"
            y="60.205223"
-           id="tspan296"><tspan
+           id="tspan542"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-             id="tspan294">var</tspan><tspan
+             id="tspan540">var</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan295"> postResponse = restTemplate&#10;</tspan></tspan><tspan
+             id="tspan541"> postResponse = restTemplate
+</tspan></tspan><tspan
            x="206.2793"
            y="63.147564"
-           id="tspan298"><tspan
+           id="tspan544"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan297">  .postForEntity(url, unicorn, String.class);&#10;</tspan></tspan><tspan
+             id="tspan543">  .postForEntity(url, unicorn, String.class);
+</tspan></tspan><tspan
            x="206.2793"
            y="66.089905"
-           id="tspan304"><tspan
-             style="fill:#808080"
-             id="tspan299">// </tspan><tspan
-             style="fill:#808080"
-             id="tspan300">↓</tspan><tspan
-             style="fill:#808080"
-             id="tspan301"> this is asserted somewhere else</tspan><tspan
+           id="tspan548"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#808080"
+             id="tspan545">// ↓ this is asserted somewhere else</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#d1d35f"
-             id="tspan302"> </tspan><tspan
+             id="tspan546"> </tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan303">&#10;</tspan></tspan><tspan
+             id="tspan547">
+</tspan></tspan><tspan
            x="206.2793"
            y="69.03225"
-           id="tspan306"><tspan
+           id="tspan550"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan305">assumeThat(postResponse.getStatusCode())&#10;</tspan></tspan><tspan
+             id="tspan549">assumeThat(postResponse.getStatusCode())
+</tspan></tspan><tspan
            x="206.2793"
            y="71.974594"
-           id="tspan310"><tspan
+           id="tspan554"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan307">  .isEqualTo(HttpStatusCode.valueOf(</tspan><tspan
+             id="tspan551">  .isEqualTo(HttpStatusCode.valueOf(</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-             id="tspan308">201</tspan><tspan
+             id="tspan552">201</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan309">));&#10;</tspan></tspan><tspan
+             id="tspan553">));
+</tspan></tspan><tspan
            x="206.2793"
            y="74.916939"
-           id="tspan313"><tspan
+           id="tspan557"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-             id="tspan311">var</tspan><tspan
+             id="tspan555">var</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan312"> location = postResponse&#10;</tspan></tspan><tspan
+             id="tspan556"> location = postResponse
+</tspan></tspan><tspan
            x="206.2793"
            y="77.859284"
-           id="tspan317"><tspan
+           id="tspan561"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan314">  .getHeaders().get(&quot;Location&quot;)).get(</tspan><tspan
+             id="tspan558">  .getHeaders().get(&quot;Location&quot;)).get(</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-             id="tspan315">0</tspan><tspan
+             id="tspan559">0</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan316">);&#10;</tspan></tspan><tspan
+             id="tspan560">);
+</tspan></tspan><tspan
            x="206.2793"
            y="80.801628"
-           id="tspan319"><tspan
+           id="tspan563"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan318">&#10;</tspan></tspan><tspan
+             id="tspan562">
+</tspan></tspan><tspan
            x="206.2793"
            y="83.743973"
-           id="tspan322"><tspan
+           id="tspan566"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
-             id="tspan320">var</tspan><tspan
+             id="tspan564">var</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan321"> getResponse = restTemplate&#10;</tspan></tspan><tspan
+             id="tspan565"> getResponse = restTemplate
+</tspan></tspan><tspan
            x="206.2793"
            y="86.686318"
-           id="tspan324"><tspan
+           id="tspan568"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan323">  .getForEntity(location, String.class);&#10;</tspan></tspan><tspan
+             id="tspan567">  .getForEntity(location, String.class);
+</tspan></tspan><tspan
            x="206.2793"
            y="89.628662"
-           id="tspan326"><tspan
+           id="tspan570"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan325">&#10;</tspan></tspan><tspan
+             id="tspan569">
+</tspan></tspan><tspan
            x="206.2793"
            y="92.571007"
-           id="tspan328"><tspan
+           id="tspan572"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan327">assertThat(getResponse.getStatusCode())&#10;</tspan></tspan><tspan
+             id="tspan571">assertThat(getResponse.getStatusCode())
+</tspan></tspan><tspan
            x="206.2793"
            y="95.513352"
-           id="tspan332"><tspan
+           id="tspan576"><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan329">  .isEqualTo(HttpStatusCode.valueOf(</tspan><tspan
+             id="tspan573">  .isEqualTo(HttpStatusCode.valueOf(</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#8dd35f"
-             id="tspan330">200</tspan><tspan
+             id="tspan574">200</tspan><tspan
              style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#000000"
-             id="tspan331">));&#10;</tspan></tspan></text>
+             id="tspan575">));
+</tspan></tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -2561,6 +2539,276 @@
          d="m 14.085746,142.24665 h 6.593002"
          id="path119"
          sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g357">
+      <g
+         id="g45"
+         transform="translate(-22.075269,-180.79872)">
+        <text
+           xml:space="preserve"
+           style="font-size:5.64443px;line-height:0.8;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:center;text-anchor:middle;fill:#1a1a1a;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.899999, 0.899999"
+           x="239.98764"
+           y="263.31662"
+           id="text16"><tspan
+             style="font-size:5.64443px;text-align:start;text-anchor:start;stroke-width:0.3"
+             x="239.98764"
+             y="263.31662"
+             sodipodi:role="line"
+             id="tspan15">Act Helper Method</tspan></text>
+        <g
+           id="g44"
+           transform="matrix(0.99999876,0,0,0.99999876,218.76823,-8.7678102)"
+           style="stroke-width:1">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+             id="rect16"
+             width="12"
+             height="12"
+             x="7.9248657"
+             y="268.02902"
+             rx="0.5000006"
+             ry="0.5000006" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 8.704033,268.80819 h 8.18051"
+             id="path16"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="M 8.7040289,274.09989 H 8.9470386"
+             id="path17"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#8dd35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,271.9832 h 4.476344"
+             id="path21"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#d1d35f;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,273.04154 h 2.888845"
+             id="path22"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             x="9.9039478"
+             y="271.15768"
+             id="text25"><tspan
+               sodipodi:role="line"
+               id="tspan25"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+               x="9.9039478"
+               y="271.15768">setup()</tspan></text>
+          <path
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 17.699867,268.80819 h 0.24301"
+             id="path25"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:#000000;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 8.704033,276.21657 h 8.18051"
+             id="path26"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="M 8.7040289,279.39159 H 8.9470386"
+             id="path27"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,277.2749 h 4.476344"
+             id="path28"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 17.699867,276.21657 h 0.24301"
+             id="path29"
+             sodipodi:nodetypes="cc" />
+          <path
+             style="fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.500001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 10.291531,278.33324 h 6.593011"
+             id="path36"
+             sodipodi:nodetypes="cc" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:0.8;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:center;text-anchor:middle;fill:#80b3ff;fill-opacity:1;stroke:#d1d35f;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             x="9.9039478"
+             y="271.15768"
+             id="text44"><tspan
+               sodipodi:role="line"
+               id="tspan44"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:start;text-anchor:start;fill:#80b3ff;fill-opacity:1;stroke:none;stroke-width:0.500001"
+               x="9.9039478"
+               y="271.15768">setup()</tspan></text>
+        </g>
+      </g>
+      <g
+         id="g300"
+         transform="translate(96.4438,-274.33113)">
+        <path
+           id="path45"
+           style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 121.636,358.61414 v 7.88064 h -13.44097 v 27.74025 h 84.50587 v -35.62089 z"
+           sodipodi:nodetypes="ccccccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:end;white-space:pre;shape-inside:url(#path45);shape-padding:0;display:inline;fill:none;fill-opacity:1;stroke:#80b3ff;stroke-width:0.17;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           x="-124.60493"
+           y="25.642857"
+           id="text300"><tspan
+             x="121.63672"
+             y="360.91421"
+             id="tspan578"><tspan
+               dx="0 0 0 0 0.48940265 0 0 0 0.48940313 0 0 0 0 0 0 0.48940217 0 0 0 0 0 0 0 0.48940217 0 0 0.48940408 0 0 0 0 0 0.48940027 0 0 0 0 0.48940408 0 0 0 0 0 0 0 0 0 0 0 0.48940027"
+               style="text-align:justify;fill:#000000;stroke:none"
+               id="tspan577">Use act helper methods to avoid code duplication and </tspan></tspan><tspan
+             x="121.63672"
+             y="363.73644"
+             id="tspan580"><tspan
+               style="text-align:justify;fill:#000000;stroke:none"
+               id="tspan579">make the unit under test more obvious.</tspan></tspan></text>
+      </g>
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect300"
+         width="84.566422"
+         height="47.960888"
+         x="204.57903"
+         y="92.348198"
+         rx="0.49999997"
+         ry="0.49999997" />
+      <path
+         id="path300"
+         style="fill:none;stroke-width:0.189859;stroke-linecap:round;stroke-linejoin:round"
+         d="m 206.47382,93.935669 h 80.63427 V 139.6697 h -80.63427 z"
+         sodipodi:nodetypes="ccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:2.82223px;line-height:1;font-family:Helvetica;-inkscape-font-specification:Helvetica;text-align:justify;white-space:pre;shape-inside:url(#path300);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17"
+         x="215.5425"
+         y="70.348732"
+         id="text354"><tspan
+           x="206.47461"
+           y="96.236473"
+           id="tspan583"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan581">private</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan582"> Unicorn postUnicorn(String body) {
+</tspan></tspan><tspan
+           x="206.47461"
+           y="99.178818"
+           id="tspan587"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan584">  </tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan585">return</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan586"> restTemplate.exchange(post(url)
+</tspan></tspan><tspan
+           x="206.47461"
+           y="102.12116"
+           id="tspan589"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan588">    .header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+</tspan></tspan><tspan
+           x="206.47461"
+           y="105.06351"
+           id="tspan591"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan590">    .body(larryJson), List.class);
+</tspan></tspan><tspan
+           x="206.47461"
+           y="108.00585"
+           id="tspan593"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan592">}
+</tspan></tspan><tspan
+           x="206.47461"
+           y="110.9482"
+           id="tspan595"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan594">
+</tspan></tspan><tspan
+           x="206.47461"
+           y="113.89054"
+           id="tspan597"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan596">@Test
+</tspan></tspan><tspan
+           x="206.47461"
+           y="116.83289"
+           id="tspan600"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan598">void</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan599"> post_unicorn() {
+</tspan></tspan><tspan
+           x="206.47461"
+           y="119.77523"
+           id="tspan604"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan601">  </tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';fill:#7eaef5"
+             id="tspan602">var</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan603"> gillyJson = &quot;…&quot;;
+</tspan></tspan><tspan
+           x="206.47461"
+           y="122.71758"
+           id="tspan606"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan605">
+</tspan></tspan><tspan
+           x="206.47461"
+           y="125.65992"
+           id="tspan610"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan607">  </tspan><tspan
+             style="fill:#80b3ff"
+             id="tspan608">var</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan609"> response = postUnicorn(gillyJson);
+</tspan></tspan><tspan
+           x="206.47461"
+           y="128.60226"
+           id="tspan612"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan611">
+</tspan></tspan><tspan
+           x="206.47461"
+           y="131.54461"
+           id="tspan614"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan613">  assertThat(getResponse.getStatusCode())
+</tspan></tspan><tspan
+           x="206.47461"
+           y="134.48695"
+           id="tspan618"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan615">    .isEqualTo(HttpStatusCode.valueOf(</tspan><tspan
+             style="fill:#8dd35f"
+             id="tspan616">200</tspan><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan617">));
+</tspan></tspan><tspan
+           x="206.47461"
+           y="137.42928"
+           id="tspan620"><tspan
+             style="font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono'"
+             id="tspan619">}</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;line-height:1;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono';text-align:justify;text-anchor:start;fill:none;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:0.600001, 0.3"
+         x="263.0134"
+         y="106.7004"
+         id="text355"><tspan
+           sodipodi:role="line"
+           id="tspan355"
+           style="stroke-width:0.3"
+           x="263.0134"
+           y="106.7004">n</tspan></text>
     </g>
   </g>
 </svg>
