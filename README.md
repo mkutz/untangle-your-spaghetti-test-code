@@ -34,7 +34,7 @@
 classDiagram
     direction LR
     class UnicornServiceApplication {
-        <<spring-boot-application>>
+        <<springBootApplication>>
     }
     namespace unicorn {
        class Unicorn {
