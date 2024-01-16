@@ -9,14 +9,14 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @SpringBootApplication
 @EnableJdbcRepositories
-public class UnicornServiceApplication {
+public class Application {
 
   static {
     Locale.setDefault(Locale.ENGLISH);
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(UnicornServiceApplication.class, args);
+    SpringApplication.run(Application.class, args);
   }
 
   @Bean
