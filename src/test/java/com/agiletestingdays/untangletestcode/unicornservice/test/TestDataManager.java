@@ -11,7 +11,7 @@ public class TestDataManager {
   private final JdbcTemplate jdbcTemplate;
 
   public TestDataManager(DataSource daraSource) {
-    this.jdbcTemplate = new JdbcTemplate(daraSource);
+    jdbcTemplate = new JdbcTemplate(daraSource);
   }
 
   public TestDataManager withUnicorn(Unicorn unicorn) {
@@ -19,13 +19,13 @@ public class TestDataManager {
         """
             INSERT
               INTO
-                  UNICORNS(
-                      ID,
-                      NAME,
-                      MANE_COLOR,
-                      HORN_LENGTH,
-                      HORN_DIAMETER,
-                      DATE_OF_BIRTH
+                  unicorns(
+                      id,
+                      name,
+                      mane_color,
+                      horn_length,
+                      horn_diameter,
+                      date_of_birth
                   )
               VALUES(
                   ?,
@@ -46,7 +46,7 @@ public class TestDataManager {
   }
 
   public TestDataManager clear() {
-    jdbcTemplate.execute("TRUNCATE TABLE UNICORNS;");
+    jdbcTemplate.execute("TRUNCATE TABLE unicorns;");
     return this;
   }
 }
