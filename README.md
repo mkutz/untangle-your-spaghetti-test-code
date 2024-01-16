@@ -12,8 +12,8 @@
 |-------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 14:45 | Welcome: what we do, setup, code |                                                                                                                            |
 | 15:55 | Together: review the code base   |                                                                                                                            |
-| 15:00 | Brainstorming: about problems    | Have a look at the [UnicornServiceApplicationTest].                                                                        |
-| 15:15 | Untangle the code                | Fix some tangles in the [UnicornServiceApplicationTest]                                                                    |
+| 15:00 | Brainstorming: about problems    | Have a look at the [ApplicationTest].                                                                                      |
+| 15:15 | Untangle the code                | Fix some tangles in the [ApplicationTest]                                                                                  |
 | 15:30 | Coffee break                     |                                                                                                                            |
 | 16:00 | Untangle the code continued      | If you're already done, feel free a look at the tests at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest]. |
 | 16:35 | Retro                            |                                                                                                                            |
@@ -22,10 +22,16 @@
 
 ## Setup
 
-1. [Login to GitHub](https://github.com/login) or create an account: [github.com/join](https://github.com/join).
-2. Follow [this link](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code) and follow the instructions. When the _New Workspace_ page appears, click _Continue_. (Creating the workspace takes a little while, just be patient)
-3. Open [UnicornServiceApplicationTests.java](src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java) from the file tree on the left and wait for the Java installation to finish. (A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.)
-   After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
+1. [Login to GitHub](https://github.com/login) or [create an account](https://github.com/join).
+
+2. [Create a new workspace at Gitpod](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code).
+   This usually takes a little while, just be patient.
+
+3. Open [ApplicationTest] from the file tree on the left and wait for the Java installation to finish.
+
+   A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.
+
+4. After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
 
 
 ## Structure
@@ -33,7 +39,7 @@
 ```mermaid
 classDiagram
     direction LR
-    class UnicornServiceApplication {
+    class Application {
         <<springBootApplication>>
     }
     namespace unicorn {
@@ -76,7 +82,7 @@ classDiagram
 
 Feel free to use the [Cheat Sheet] for inspiration.
 
-1. Have a look at the [UnicornServiceApplicationTest].
+1. Have a look at the [ApplicationTest].
 
    <details><summary>Brainstorm: Which problems do you see?</summary>
 
@@ -121,7 +127,7 @@ Feel free to use the [Cheat Sheet] for inspiration.
 - [Cheat Sheet]
 
 
-[UnicornServiceApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/UnicornServiceApplicationTests.java>
+[ApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/ApplicationTest.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
 [UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
 [UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornTest.java>
