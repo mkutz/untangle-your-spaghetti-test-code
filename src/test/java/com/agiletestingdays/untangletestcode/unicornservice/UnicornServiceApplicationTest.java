@@ -16,12 +16,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.test.annotation.DirtiesContext;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@Testcontainers
 class UnicornServiceApplicationTest {
+
+  @Container @ServiceConnection
+  static PostgreSQLContainer<?> dbContainer = new PostgreSQLContainer<>("postgres:16");
 
   @Value("http://localhost:${local.server.port}")
   String baseUrl;
@@ -86,7 +94,7 @@ class UnicornServiceApplicationTest {
 
     var anotherResponse =
         restTemplate.getForEntity(
-            requireNonNull(response.getHeaders().get("Location")).get(0), String.class);
+            requireNonNull(response.getHeaders().get("Location")).getFirst(), String.class);
 
     assertThat(anotherResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
   }

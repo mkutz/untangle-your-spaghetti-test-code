@@ -1,10 +1,11 @@
 CREATE
     TABLE
-        IF NOT EXISTS PUBLIC.UNICORNS(
-            ID UUID PRIMARY KEY,
-            NAME VARCHAR NOT NULL,
-            MANE_COLOR VARCHAR,
-            HORN_LENGTH NUMBER,
-            HORN_DIAMETER NUMBER,
-            DATE_OF_BIRTH DATE
+        IF NOT EXISTS unicorns(
+            id uuid NOT NULL,
+            name VARCHAR NOT NULL,
+            mane_color VARCHAR,
+            horn_length INT,
+            horn_diameter INT,
+            date_of_birth DATE,
+            PRIMARY KEY(id)
         );

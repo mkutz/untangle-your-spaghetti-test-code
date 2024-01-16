@@ -1,15 +1,15 @@
 TRUNCATE TABLE
-    UNICORNS;
+    unicorns;
 
 INSERT
     INTO
-        UNICORNS(
-            ID,
-            NAME,
-            MANE_COLOR,
-            HORN_LENGTH,
-            HORN_DIAMETER,
-            DATE_OF_BIRTH
+        unicorns(
+            id,
+            name,
+            mane_color,
+            horn_length,
+            horn_diameter,
+            date_of_birth
         )
     VALUES(
         '44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23',
@@ -17,5 +17,5 @@ INSERT
         'RAINBOW',
         42,
         10,
-        DATE '1982-2-19'
+        '1982-2-19'
     );
