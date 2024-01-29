@@ -23,7 +23,7 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter-params")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.springframework.boot:spring-boot-testcontainers")
-  testImplementation(platform("org.mockito:mockito-bom:5.9.0"))
+  testImplementation(platform("org.mockito:mockito-bom:5.10.0"))
   testImplementation("org.mockito:mockito-core")
   val commonsLangVersion = "3.14.0"
   testImplementation("org.apache.commons:commons-lang3:$commonsLangVersion")
