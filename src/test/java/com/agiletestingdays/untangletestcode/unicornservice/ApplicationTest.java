@@ -1,15 +1,18 @@
 package com.agiletestingdays.untangletestcode.unicornservice;
 
+import static com.agiletestingdays.untangletestcode.unicornservice.test.UnicornTestDataBuilder.aUnicorn;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.RequestEntity.post;
 
+import com.agiletestingdays.untangletestcode.unicornservice.test.TestDataManager;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,12 +30,23 @@ class ApplicationTest {
   String baseUrl;
 
   @Autowired TestRestTemplate restTemplate;
+  @Autowired TestDataManager testDataManager;
   ObjectMapper objectMapper = new ObjectMapper();
+
+  @BeforeEach
+  void clearDatabase() {
+    testDataManager.clear();
+  }
 
   @Test
   void getUnicornsWorksAndReturnsNonEmptyList() throws JsonProcessingException {
+    // ARRANGE
+    testDataManager.withUnicorn(aUnicorn().build());
+
+    // ACT
     var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
     var body = objectMapper.readTree(response.getBody());

@@ -29,6 +29,12 @@ public class UnicornTestDataBuilder {
           .minusMonths(random.nextInt(0, 13))
           .minusYears(random.nextInt(0, 101));
 
+  private UnicornTestDataBuilder() {}
+
+  public static UnicornTestDataBuilder aUnicorn() {
+    return new UnicornTestDataBuilder();
+  }
+
   public UnicornTestDataBuilder id(UUID id) {
     this.id = id;
     return this;
