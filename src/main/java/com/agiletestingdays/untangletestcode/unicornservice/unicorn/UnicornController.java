@@ -35,7 +35,7 @@ public class UnicornController {
   }
 
   @GetMapping(path = "unicorns/{id}", produces = APPLICATION_JSON_VALUE)
-  public ResponseEntity<UnicornDto> getUnicorn(@PathVariable UUID id) {
+  public ResponseEntity<UnicornDto> getUnicorn(@PathVariable("id") UUID id) {
     return ResponseEntity.ofNullable(service.getById(id).map(UnicornDto::new).orElse(null));
   }
 
