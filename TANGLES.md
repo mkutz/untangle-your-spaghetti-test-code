@@ -10,7 +10,6 @@ Its functionality shouldn't be obscured.\
 Its results should be meaningful.\
 Its failure causes should be easy to find.
 
-
 ## Tangles
 
 ### Hidden Arrange
@@ -29,7 +28,6 @@ Untangle with
 - [Test Data Builder](#test-data-builder)
 - [Test Data Manager](#test-data-manager)
 
-
 ### Duplicate setup code
 
 Creating and setting up test objects is duplicated in multiple tests.
@@ -42,7 +40,6 @@ Untangle with
 
 - [Test Setup Helper Method](#test-setup-helper-method)
 - [Test Data Builder](#test-data-builder)
-
 
 ### Magic Values
 
@@ -58,7 +55,7 @@ It might be obvious to you now, but it won't be to everyone.
 Of course, we can easily check by changing the value or checking the other test cases.
 The problem is that this makes understanding the test case is made harder for no goo reason!
 
-``` java
+```java
 var gilly = new Unicorn(
   "351d0356-6d5e-47d5-adbb-4909058fdf2f", // ??
   "Gilly", // I guess we use this all the time?
@@ -78,7 +75,6 @@ Untangle with
 - [Explicit Constants](#explicit-constants)
 - [Test Data Builder](#test-data-builder)
 
-
 ### Long Arrange
 
 When dealing with big data objects, we need to construct these objects to arrange our tests.
@@ -87,7 +83,7 @@ The other set properties are actually just set to satisfy the constructor of the
 
 This is a problem as it makes spotting the difference of the test case compared to the others harder and hence obscures the intention of the case.
 
-``` java
+```java
 var gilly = new Unicorn(
   randomUUID(),
   "Gilly",
@@ -105,12 +101,11 @@ Untangle with
 - [Test Setup Helper Method](#test-setup-helper-method)
 - [Test Data Builder](#test-data-builder)
 
-
 ### Long Assert
 
 Verifying big data objects can lead to a lot of simple assertions, which make the intention of the test hard to understand.
 
-``` java
+```java
 var response = restTemplate
   .getForEntity(url, String.class);
 
@@ -136,7 +131,6 @@ Untangle with
 - [Verification Method](#verification-method)
 - [Test Data Builder](#test-data-builder) (asserting the result is equal to a built expected object)
 
-
 ### Interdependent Test Cases
 
 Test cases can be written in a way that they rely on other cases.
@@ -148,13 +142,12 @@ Untangle with
 
 - [Test Data Manger](#test-data-manager)
 
-
 ### Multiple Acts
 
 When tests have multiple interactions with the unit under test, they usually have a lot of possible reasons to fail.
 This makes a failing test an ambiguous signal.
 
-``` java
+```java
 var postResponse = restTemplate
   .postForEntity(url, unicorn, String.class); // 1st ACT
 
@@ -179,7 +172,6 @@ Untangle with
 - [Split by Assumptions](#split-with-assumptions)
 - [Test Data Manager](#test-data-manager)
 
-
 ### Lying Test Case Names
 
 Test case names are not executable code.
@@ -189,7 +181,7 @@ They often help though, to understand the general intention of a test case, and 
 
 Often test case names are copy-pasted from other tests, and often we fail adjust them when the content of the test case changes.
 
-``` java
+```java
 @Test
 void postInvalidUnicornYieldsA500Response() {
   var response = restTemplate
@@ -209,7 +201,6 @@ void postInvalidUnicornYieldsA500Response() {
 Untangle with
 
 - [Expressive Test Case Naming](#expressive--consistent-test-case-names)
-
 
 ## Untangles
 
@@ -232,7 +223,6 @@ Act and assert can be combined in one line of code.
 
 See also [Martin Fowler on GivenWhenThen](https://martinfowler.com/bliki/GivenWhenThen.html)
 
-
 ## Expressive & Consistent Test Case Names
 
 Choose a naming scheme that makes test case names clear, expressive, concise, unambiguous, and easily understandable.
@@ -241,7 +231,7 @@ Useful components of a naming scheme are `<unitUnderTest>`, `<stateUnderTest>`, 
 
 Any naming scheme is better than no naming scheme at all!
 
-``` java
+```java
 class <ClassUnderTest>Test {
   void <methodUnderTest>_<stateUnderTest>() {
     … // see code for <expectedBehavior>
@@ -261,7 +251,6 @@ See also
 - [Alex Zhukovich's suggestions](https://ui-testing.academy/naming/naming-conventions-for-test-cases/)
 - [Michael Kutz on naming tests for maintainability](https://michakutz.medium.com/how-to-name-tests-for-maintainability-c11af89f0f04)
 
-
 ### Split with Assumptions
 
 If you find [Multiple Acts](#multiple-acts) in a test case, you might want to split it with Assumptions.
@@ -270,7 +259,7 @@ Copy the test, remove the second act from the original, and replace the copy's a
 An assumption will not fail, but skip the test.
 Hence, the original test case will tell us about the error, but the case depending on it will simply be skipped.
 
-``` java
+```java
 @Test
 void POST_new_unicorn() {
   var response = restTemplate
@@ -305,12 +294,11 @@ See also
 - [Assumptions in JUnit](https://junit.org/junit5/docs/current/user-guide/#writing-tests-assumptions)
 - [AssertJ Assumptions](https://assertj.github.io/doc/#assertj-core-assumptions)
 
-
 ### Test Data Manager
 
 A test data manager directly interacts with the database to inject wanted test data.
 
-``` java
+```java
 testDataManager.withUnicorn(unicorn);
 
 var respose = restTemplate
@@ -322,7 +310,7 @@ assertThat(response.getBody())
 
 It can also be used to clean up and hence allows to test no data scenarios.
 
-``` java
+```java
 testDataManager.withNoUnicorns();
 
 var respose = restTemplate
@@ -337,7 +325,7 @@ assertThat(response.getBody())
 Explicitly named test data constants can help to understand the test code a lot.
 Choose good names, e.g. prefix with `SOME_` to express that the actual value doesn't matter.
 
-``` java
+```java
 var someUnicorn =
   new Unicorn(
     SOME_ID, // "some" value => doesn't matter
@@ -352,7 +340,6 @@ You might want to keep these constants in a separate class (e.g. `TestDataConsta
 
 See also [Random Data Generators](#random-data-generators)
 
-
 ### Random Data Generators
 
 Use random data generators for test data.
@@ -361,7 +348,7 @@ This may be necessary to resolve dependencies between tests (e.g. to ensure uniq
 
 It can also technically underline that the concrete value should not matter for the test.
 
-``` java
+```java
 var someUnicorn =
   new Unicorn(
     randomUUID(), // needs to be unique
@@ -374,12 +361,11 @@ var someUnicorn =
 
 See also [Explicit Constants](#explicit-constants)
 
-
 ### Test Setup Helper Method
 
 Create test setup helper methods to avoid duplication of test object setup in a lot of tests.
 
-``` java
+```java
 private Unicorn createUnicornBornAt(
   LocalDate dateOfBirth) {
   return new Unicorn(
@@ -400,13 +386,12 @@ void age() {
 
 See also [Test Data Builder](#test-data-builder)
 
-
 ### Test Data Builder
 
 Create a builder class that allows to create whatever object is required for the test.
 That builder class should contain or use [random data generators](#random-data-generators) or [constants](#explicit-constants) to fill all the fields that are deemed irrelevant for the test at hand.
 
-``` java
+```java
 var unicorn = new UnicornTestDataBuilder()
     .name("Micha")
     .build();
@@ -416,13 +401,12 @@ There might be also libraries that spare you the burden of writing these builder
 
 See also [Alberto López del Toro on why you should use Test Data Builders](https://betterprogramming.pub/why-you-should-use-test-data-builders-714eb9de20c1)
 
-
 ### Verification Method
 
 Group long asserts that check one logical thing in verification methods.
 This reduces the amount of code in the test itself, and the method name makes the intention more obvious.
 
-``` java
+```java
 assertThat(isValidUnicorn(response.body()))
   .isTrue();
 assertThat(jsonContainsUnicorn(response.body(), unicorn))
@@ -431,7 +415,7 @@ assertThat(jsonContainsUnicorn(response.body(), unicorn))
 
 AssertJ also allows to use your own [Conditions](https://assertj.github.io/doc/#assertj-core-conditions) and [Custom Assertions](https://assertj.github.io/doc/#assertj-core-custom-assertions), which can make the verification code even more elegant.
 
-``` java
+```java
 UnicornAssert.assertThat(unicorn))
   .isValid()
   .isOlderThan(62);

@@ -60,7 +60,10 @@ spotless {
     indentWithSpaces(2)
   }
 
-  freshmark { target("*.md") }
+  flexmark {
+    target("*.md")
+    flexmark()
+  }
 
   java {
     target("**/*.java")

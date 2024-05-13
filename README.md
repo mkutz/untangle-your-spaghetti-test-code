@@ -1,24 +1,10 @@
 # Untangle Your Spaghetti Test Code
+
 [![Build](https://github.com/mkutz/untangle-your-spaghetti-test-code/actions/workflows/build.yml/badge.svg)](https://github.com/mkutz/untangle-your-spaghetti-test-code/actions/workflows/build.yml)
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/mkutz_untangle-your-spaghetti-test-code?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 [![Sonar Coverage](https://img.shields.io/sonar/coverage/mkutz_untangle-your-spaghetti-test-code?server=http%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mkutz/untangle-your-spaghetti-test-code)
-
-
-## Agenda
-
-| When  | What                             | Objective                                                                                                                  |
-|-------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| 14:45 | Welcome: what we do, setup, code |                                                                                                                            |
-| 15:55 | Together: review the code base   |                                                                                                                            |
-| 15:00 | Brainstorming: about problems    | Have a look at the [ApplicationTest].                                                                                      |
-| 15:15 | Untangle the code                | Fix some tangles in the [ApplicationTest]                                                                                  |
-| 15:30 | Coffee break                     |                                                                                                                            |
-| 16:00 | Untangle the code continued      | If you're already done, feel free a look at the tests at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest]. |
-| 16:35 | Retro                            |                                                                                                                            |
-| 16:45 | The end                          |                                                                                                                            |
-
 
 ## Setup
 
@@ -32,7 +18,6 @@
    A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.
 
 4. After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
-
 
 ## Structure
 
@@ -77,7 +62,6 @@ classDiagram
     Unicorn --* ManeColor
 ```
 
-
 ## Objectives
 
 Feel free to use the [Cheat Sheet] for inspiration.
@@ -105,20 +89,21 @@ Feel free to use the [Cheat Sheet] for inspiration.
      How would you reduce them?
 
    - Are the [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md) applied?
+
    </details>
 
 2. Ensemble: Let's untangle it!
 
-3. Have a look at the test at [UnicornServiceTest], [UnicornControllerTest], and [UnicornTest].
+3. Have a look at the test at [UnicornServiceTest], [UnicornControllerTest] and [UnicornTest].
 
    <details><summary>Brainstorm: Which problems do you see?</summary>
 
-    - Which **layer of the testing pyramid** is this test on?
+   - Which **layer of the testing pyramid** is this test on?
 
-      Is the layer appropriate for the test cases?
-      Can we move tests here?
+     Is the layer appropriate for the test cases?
+     Can we move tests here?
+
      </details>
-
 
 ## References
 
@@ -126,13 +111,11 @@ Feel free to use the [Cheat Sheet] for inspiration.
 - [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md)
 - [Cheat Sheet]
 
-
 [ApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/ApplicationTest.java>
 [UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
 [UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
 [UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornTest.java>
 [data.sql]: <src/test/resources/data.sql>
 [Cheat Sheet]: <cheat-sheet.pdf>
-
 [Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>
 [Instancio]: <https://www.instancio.org/>
