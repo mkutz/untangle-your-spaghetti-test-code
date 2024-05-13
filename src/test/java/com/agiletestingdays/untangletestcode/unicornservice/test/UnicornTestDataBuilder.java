@@ -23,6 +23,12 @@ public class UnicornTestDataBuilder {
 
   private Integer hornDiameter = random.nextInt(1, 41);
 
+  private UnicornTestDataBuilder() {}
+
+  private static UnicornTestDataBuilder aUnicorn() {
+    return new UnicornTestDataBuilder();
+  }
+
   private LocalDate dateOfBirth =
       LocalDate.now()
           .minusDays(random.nextInt(0, 31))
