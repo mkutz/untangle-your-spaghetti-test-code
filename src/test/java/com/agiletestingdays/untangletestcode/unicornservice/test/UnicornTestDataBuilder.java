@@ -23,17 +23,17 @@ public class UnicornTestDataBuilder {
 
   private Integer hornDiameter = random.nextInt(1, 41);
 
-  private UnicornTestDataBuilder() {}
-
-  public static UnicornTestDataBuilder aUnicorn() {
-    return new UnicornTestDataBuilder();
-  }
-
   private LocalDate dateOfBirth =
       LocalDate.now()
           .minusDays(random.nextInt(0, 31))
           .minusMonths(random.nextInt(0, 13))
           .minusYears(random.nextInt(0, 101));
+
+  private UnicornTestDataBuilder() {}
+
+  public static UnicornTestDataBuilder aUnicorn() {
+    return new UnicornTestDataBuilder();
+  }
 
   public UnicornTestDataBuilder id(UUID id) {
     this.id = id;
