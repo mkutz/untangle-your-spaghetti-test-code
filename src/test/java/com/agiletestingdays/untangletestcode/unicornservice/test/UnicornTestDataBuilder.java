@@ -25,7 +25,7 @@ public class UnicornTestDataBuilder {
 
   private UnicornTestDataBuilder() {}
 
-  private static UnicornTestDataBuilder aUnicorn() {
+  public static UnicornTestDataBuilder aUnicorn() {
     return new UnicornTestDataBuilder();
   }
 
