@@ -60,11 +60,6 @@ spotless {
     indentWithSpaces(2)
   }
 
-  flexmark {
-    target("*.md")
-    flexmark()
-  }
-
   java {
     target("**/*.java")
     targetExclude("**/build/**/*")
