@@ -27,7 +27,7 @@ class ApplicationTest {
   String baseUrl;
 
   @Autowired TestRestTemplate restTemplate;
-  ObjectMapper objectMapper = new ObjectMapper();
+  @Autowired ObjectMapper objectMapper;
 
   @Test
   void getUnicornsWorksAndReturnsNonEmptyList() throws JsonProcessingException {
