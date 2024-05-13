@@ -77,4 +77,18 @@ public class UnicornTestDataBuilder {
   public Unicorn build() {
     return new Unicorn(id, name, maneColor, hornLength, hornDiameter, dateOfBirth);
   }
+
+  public String buildJson() {
+    return """
+        {
+          "id": "%s",
+          "name": "%s",
+          "maneColor": "%s",
+          "hornLength": %d,
+          "hornDiameter": %d,
+          "dateOfBirth": "%s"
+        }
+        """
+        .formatted(id, name, maneColor.name(), hornLength, hornDiameter, dateOfBirth);
+  }
 }
