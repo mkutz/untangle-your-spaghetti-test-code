@@ -4,21 +4,16 @@ current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 protected_branches=( master main )
 
 for i in "${protected_branches[@]}"; do
-    if [[ $i == "$current_branch" ]]; then
-      echo 'Attention! You are pushing to a protected branch. Running tests and linting...'
+  if [[ $i == "$current_branch" ]]; then
+    echo '⚠️ Attention! You are pushing to a protected branch. Running checks…'
 
-      ./gradlew test
-      if [ $? -ne 0 ]; then
-        echo 'Aborting push (Cannot push when the test suite fails)'
-        exit 1
-      fi
-
-      ./gradlew check -x test
-      if [ $? -ne 0 ]; then
-        echo 'Aborting push (Cannot push when the style check fails)'
-        exit 1
-      fi
+    ./gradlew check
+    if [ $? -ne 0 ]; then
+      echo '✗ check failed'
+      exit 1
     fi
+  fi
 done
 
+echo "✓ check successful"
 exit 0
