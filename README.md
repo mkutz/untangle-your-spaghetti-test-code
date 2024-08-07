@@ -4,20 +4,15 @@
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/mkutz_untangle-your-spaghetti-test-code?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 [![Sonar Coverage](https://img.shields.io/sonar/coverage/mkutz_untangle-your-spaghetti-test-code?server=http%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=mkutz_untangle-your-spaghetti-test-code)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/?autostart=true#https://github.com/mkutz/untangle-your-spaghetti-test-code)
 
 ## Setup
 
 1. [Login to GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-2. [Create a new workspace at Gitpod](https://gitpod.io/new/#https://github.com/mkutz/untangle-your-spaghetti-test-code).
+2. [Create a new workspace at Gitpod](https://gitpod.io/#https://github.com/mkutz/untangle-your-spaghetti-test-code).
    This usually takes a little while, just be patient.
 
-3. Open [ApplicationTest] from the file tree on the left and wait for the Java installation to finish.
-
-   A box will appear on the bottom right, saying _Opening Java Projects_, you can click on _check details_ to follow the installation progress.
-
-4. After the installation is done, you can right-click into the code, and select _Run test at Cursor_ (to run a single test) or _Run Tests in Current File_ (to run all tests).
+3. Open [ApplicationTest] from the file tree on the left. You should be able to execute the containing tests by clicking the green play button in the gutter.
 
 ## Structure
 
