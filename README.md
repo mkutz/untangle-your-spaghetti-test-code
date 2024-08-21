@@ -8,10 +8,9 @@
 ## Setup
 
 1. [Login to GitHub](https://github.com/login) or [create an account](https://github.com/join).
-
-2. [Create a new workspace at Gitpod](https://gitpod.io/#https://github.com/mkutz/untangle-your-spaghetti-test-code).
+2. If you don't have a local JDK 21 installation + an IDE:
+   [create a new workspace at Gitpod](https://gitpod.io/#https://github.com/mkutz/untangle-your-spaghetti-test-code).
    This usually takes a little while, just be patient.
-
 3. Open [ApplicationTest] from the file tree on the left. You should be able to execute the containing tests by clicking the green play button in the gutter.
 
 ## Structure
@@ -66,23 +65,14 @@ Feel free to use the [Cheat Sheet] for inspiration.
    <details><summary>Brainstorm: Which problems do you see?</summary>
 
    - Do you understand **what's being tested**?
-
    - Is there a proper **arrange, act, assert structure** in the test cases?
-
-   - Are the **names of test cases and variables** consistent?
-
-     Does it help to understand implications of failures?
-
+   - Are the **names of test cases and variables** consistent?\
+     Does it help to understand implications of failures?\
      Does it help to find the corresponding code?
-
    - Do you understand **how the test works technically**?
-
    - Do you see **where the test data is coming from**?
-
-   - Which **code duplications** do you find?
-
+   - Which **code duplications** do you find?\
      How would you reduce them?
-
    - Are the [Test Code Quality Criteria](TESTCODE_QUALITY_CRITERIA.md) applied?
 
    </details>
@@ -93,8 +83,7 @@ Feel free to use the [Cheat Sheet] for inspiration.
 
    <details><summary>Brainstorm: Which problems do you see?</summary>
 
-   - Which **layer of the testing pyramid** is this test on?
-
+   - Which **layer of the testing pyramid** is this test on?\
      Is the layer appropriate for the test cases?
      Can we move tests here?
 
