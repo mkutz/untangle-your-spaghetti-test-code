@@ -15,46 +15,8 @@
 
 ## Structure
 
-```mermaid
-classDiagram
-    direction LR
-    class Application {
-        <<springBootApplication>>
-    }
-    namespace unicorn {
-       class Unicorn {
-           <<record>>
-          -id: UUID
-          -name: String
-          -maneColor: ManeColor
-          -hornLength: Integer
-          -hornDiameter: Integer
-          -dateOfBirth: LocalDate
-       }
+![Structure](structure.svg)
 
-       class ManeColor {
-           <<enumeration>>
-       }
-
-       class UnicornController {
-           <<controller>>
-        }
-
-        class UnicornService {
-            <<service>>
-        }
-
-        class UnicornRepository {
-            <<repository>>
-        }
-    }
-    UnicornController --o UnicornService
-    UnicornService --o UnicornRepository
-    UnicornController -- Unicorn
-    UnicornService -- Unicorn
-    UnicornRepository -- Unicorn
-    Unicorn --* ManeColor
-```
 
 ## Objectives
 
