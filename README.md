@@ -58,9 +58,9 @@ Feel free to use the [Cheat Sheet] for inspiration.
 - [Cheat Sheet]
 
 [ApplicationTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/ApplicationTest.java>
-[UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornControllerTest.java>
-[UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornServiceTest.java>
-[UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/unicorn/UnicornTest.java>
+[UnicornControllerTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/adapter/driving/http/UnicornControllerTest.java>
+[UnicornServiceTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/application/service/UnicornServiceTest.java>
+[UnicornTest]: <src/test/java/com/agiletestingdays/untangletestcode/unicornservice/domain/UnicornTest.java>
 [data.sql]: <src/test/resources/data.sql>
 [Cheat Sheet]: <cheat-sheet.pdf>
 [Baeldung on Instancio]: <https://www.baeldung.com/java-test-data-instancio>
