@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,11 +30,12 @@ class ApplicationTest {
   @Autowired TestRestTemplate restTemplate;
   @Autowired ObjectMapper objectMapper;
 
-  // TODO resolve inconsistent test case names
+  // DONE resolve inconsistent test case names ✔
   // TODO move special cases to unit tests
 
   @Test
-  void getUnicornsWorksAndReturnsNonEmptyList() throws JsonProcessingException {
+  @DisplayName("GET /unicorns")
+  void getAllUnicorns() throws JsonProcessingException {
     // TODO resolve hidden arrange
     // ACT
     var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
@@ -48,7 +50,8 @@ class ApplicationTest {
   }
 
   @Test
-  void getSingleUnicornWorksAndReturnsData() throws JsonProcessingException {
+  @DisplayName("GET /unicorns/:id")
+  void getUnicorn() throws JsonProcessingException {
     // TODO resolve hidden arrange
     // ACT
     var response =
@@ -82,7 +85,8 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void postNewUnicorn() {
+  @DisplayName("POST /unicorns")
+  void postUnicorn() {
     // ARRANGE
     var garryJson =
         "{\"dateOfBirth\":\"1999-10-12\",\"hornDiameter\":11,\"hornLength\":37,\"maneColor\":\"BLUE\",\"name\":\"Garry\"}";
@@ -112,7 +116,8 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void testHLZero() throws JsonProcessingException {
+  @DisplayName("POST /unicorns hornLength too low")
+  void postUnicorn_hornLength_too_low() throws JsonProcessingException {
     // ARRANGE
     // TODO resolve long arrange
     var larryJson =
@@ -146,7 +151,8 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void testHLTooMuch() throws JsonProcessingException {
+  @DisplayName("POST /unicorns hornLength too great")
+  void postUnicorn_hornLength_too_great() throws JsonProcessingException {
     // ARRANGE
     // TODO resolve long arrange
     var larryJson =
@@ -180,7 +186,9 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void testHDNotGiven() throws JsonProcessingException { // TODO resolve lying test name
+  @DisplayName("POST /unicorns hornDiameter too low")
+  void postUnicorn_hornDiameter_too_low()
+      throws JsonProcessingException { // TODO resolve lying test name
     // ARRANGE
     var larryJson =
         objectMapper.writeValueAsString(
@@ -213,7 +221,8 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void testHDOver() throws JsonProcessingException {
+  @DisplayName("POST /unicorns hornDiameter too great")
+  void postUnicorn_hornDiameter_too_great() throws JsonProcessingException {
     // ARRANGE
     // TODO resolve long arrange
     var larryJson =
@@ -247,7 +256,8 @@ class ApplicationTest {
 
   @Test
   @DirtiesContext // TODO replace with DB reset in setup
-  void testDOBFuture() throws JsonProcessingException {
+  @DisplayName("POST /unicorns dateOfBirth future")
+  void postUnicorn_dateOfBirth_future() throws JsonProcessingException {
     // ARRANGE
     // TODO resolve long arrange
     var larryJson =
