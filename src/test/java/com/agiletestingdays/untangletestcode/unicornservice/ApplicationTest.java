@@ -29,14 +29,19 @@ class ApplicationTest {
   @Autowired TestRestTemplate restTemplate;
   @Autowired ObjectMapper objectMapper;
 
+  // TODO resolve inconsistent test case names
+  // TODO move special cases to unit tests
+
   @Test
   void getUnicornsWorksAndReturnsNonEmptyList() throws JsonProcessingException {
+    // TODO resolve hidden arrange
+    // ACT
     var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
 
     var body = objectMapper.readTree(response.getBody());
-
     assertThat(body).isNotNull();
     assertThat(body.isArray()).isTrue();
     assertThat(body.size()).isEqualTo(1);
@@ -44,12 +49,18 @@ class ApplicationTest {
 
   @Test
   void getSingleUnicornWorksAndReturnsData() throws JsonProcessingException {
+    // TODO resolve hidden arrange
+    // ACT
     var response =
         restTemplate.getForEntity(
             "%s/unicorns/%s".formatted(baseUrl, "44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23"),
             String.class);
+
+    // ASSERT
+    // TODO resolve long assert
     var unicornData = objectMapper.readTree(response.getBody());
 
+    // TODO resolve magic values below
     assertThat(unicornData.has("id")).isTrue();
     assertThat(unicornData.get("id").asText()).isEqualTo("44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23");
 
@@ -70,10 +81,14 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext
+  @DirtiesContext // TODO replace with DB reset in setup
   void postNewUnicorn() {
+    // ARRANGE
     var garryJson =
         "{\"dateOfBirth\":\"1999-10-12\",\"hornDiameter\":11,\"hornLength\":37,\"maneColor\":\"BLUE\",\"name\":\"Garry\"}";
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
@@ -81,19 +96,25 @@ class ApplicationTest {
                 .body(garryJson),
             String.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(201));
     assertThat(response.getHeaders().get("Location")).isNotNull().hasSize(1);
 
+    // TODO resolve multiple acts
+    // ACT 2
     var anotherResponse =
         restTemplate.getForEntity(
             requireNonNull(response.getHeaders().get("Location")).getFirst(), String.class);
 
+    // ASSERT 2
     assertThat(anotherResponse.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(200));
   }
 
   @Test
-  @DirtiesContext
+  @DirtiesContext // TODO replace with DB reset in setup
   void testHLZero() throws JsonProcessingException {
+    // ARRANGE
+    // TODO resolve long arrange
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -102,11 +123,14 @@ class ApplicationTest {
                 "maneColor",
                 "BLUE",
                 "hornLength",
-                0,
+                0, // only this matters
                 "hornDiameter",
                 18,
                 "dateOfBirth",
                 "1999-10-12"));
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
@@ -114,14 +138,17 @@ class ApplicationTest {
                 .body(larryJson),
             List.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
     assertThat(response.getBody()).contains("hornLength must be between 1 and 100");
   }
 
   @Test
-  @DirtiesContext
+  @DirtiesContext // TODO replace with DB reset in setup
   void testHLTooMuch() throws JsonProcessingException {
+    // ARRANGE
+    // TODO resolve long arrange
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -130,11 +157,14 @@ class ApplicationTest {
                 "maneColor",
                 "BLUE",
                 "hornLength",
-                101,
+                101, // only this matters
                 "hornDiameter",
                 18,
                 "dateOfBirth",
                 "1999-10-12"));
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
@@ -142,14 +172,16 @@ class ApplicationTest {
                 .body(larryJson),
             List.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
     assertThat(response.getBody()).contains("hornLength must be between 1 and 100");
   }
 
   @Test
-  @DirtiesContext
-  void testHDNotGiven() throws JsonProcessingException {
+  @DirtiesContext // TODO replace with DB reset in setup
+  void testHDNotGiven() throws JsonProcessingException { // TODO resolve lying test name
+    // ARRANGE
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -160,9 +192,12 @@ class ApplicationTest {
                 "hornLength",
                 66,
                 "hornDiameter",
-                0,
+                0, // only this matters
                 "dateOfBirth",
                 "1999-10-12"));
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
@@ -170,14 +205,17 @@ class ApplicationTest {
                 .body(larryJson),
             List.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
     assertThat(response.getBody()).contains("hornDiameter must be between 1 and 40");
   }
 
   @Test
-  @DirtiesContext
+  @DirtiesContext // TODO replace with DB reset in setup
   void testHDOver() throws JsonProcessingException {
+    // ARRANGE
+    // TODO resolve long arrange
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -188,9 +226,12 @@ class ApplicationTest {
                 "hornLength",
                 67,
                 "hornDiameter",
-                42,
+                42, // only this matters
                 "dateOfBirth",
                 "1999-10-12"));
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
@@ -198,14 +239,17 @@ class ApplicationTest {
                 .body(larryJson),
             List.class);
 
+    // ASSERT
     assertThat(response.getStatusCode()).isEqualTo(HttpStatusCode.valueOf(400));
     assertThat(response.getHeaders().containsKey("Location")).isFalse();
     assertThat(response.getBody()).contains("hornDiameter must be between 1 and 40");
   }
 
   @Test
-  @DirtiesContext
+  @DirtiesContext // TODO replace with DB reset in setup
   void testDOBFuture() throws JsonProcessingException {
+    // ARRANGE
+    // TODO resolve long arrange
     var larryJson =
         objectMapper.writeValueAsString(
             Map.of(
@@ -218,7 +262,11 @@ class ApplicationTest {
                 "hornDiameter",
                 11,
                 "dateOfBirth",
-                LocalDate.now().plusDays(1).format(DateTimeFormatter.ISO_DATE)));
+                LocalDate.now().plusDays(1).format(DateTimeFormatter.ISO_DATE)) // only this matters
+            );
+
+    // ACT
+    // TODO resolve long/technical act
     var response =
         restTemplate.exchange(
             post("%s/unicorns/".formatted(baseUrl))
