@@ -1,5 +1,6 @@
-package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
+package com.agiletestingdays.untangletestcode.unicornservice.adapter.driving.http;
 
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Past;

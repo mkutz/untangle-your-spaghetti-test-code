@@ -1,9 +1,9 @@
-package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
+package com.agiletestingdays.untangletestcode.unicornservice.domain;
 
 import static java.util.UUID.randomUUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 

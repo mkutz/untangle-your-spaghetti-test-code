@@ -1,4 +1,4 @@
-package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
+package com.agiletestingdays.untangletestcode.unicornservice.domain;
 
 import java.time.LocalDate;
 import java.time.Period;

@@ -1,10 +1,12 @@
-package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
+package com.agiletestingdays.untangletestcode.unicornservice.adapter.driving.http;
 
 import static java.util.Objects.requireNonNull;
 import static java.util.UUID.randomUUID;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
+import com.agiletestingdays.untangletestcode.unicornservice.application.service.UnicornService;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import jakarta.validation.Validator;
 import java.util.List;
 import java.util.UUID;

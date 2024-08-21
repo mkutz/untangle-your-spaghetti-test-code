@@ -3,8 +3,10 @@ package com.agiletestingdays.untangletestcode.unicornservice.test;
 import static java.util.UUID.randomUUID;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn;
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driven.db.UnicornEntity;
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driving.http.UnicornDto;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -76,6 +78,14 @@ public class UnicornTestDataBuilder {
 
   public Unicorn build() {
     return new Unicorn(id, name, maneColor, hornLength, hornDiameter, dateOfBirth);
+  }
+
+  public UnicornDto buildDto() {
+    return new UnicornDto(build());
+  }
+
+  public UnicornEntity buildEntity() {
+    return new UnicornEntity(build());
   }
 
   public String buildJson() {

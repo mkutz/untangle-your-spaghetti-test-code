@@ -13,7 +13,7 @@ java { sourceCompatibility = JavaVersion.VERSION_21 }
 repositories { mavenCentral() }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-webflux")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   runtimeOnly("org.postgresql:postgresql")
@@ -30,6 +30,8 @@ dependencies {
   testImplementation(platform("org.testcontainers:testcontainers-bom:1.20.1"))
   testImplementation("org.testcontainers:postgresql")
   testImplementation("org.testcontainers:junit-jupiter")
+  val stubitVersion = 0.6
+  testImplementation("org.stubit:spring-data:$stubitVersion")
 
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

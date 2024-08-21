@@ -1,4 +1,4 @@
-package com.agiletestingdays.untangletestcode.unicornservice.unicorn;
+package com.agiletestingdays.untangletestcode.unicornservice.adapter.driving.http;
 
 import static java.util.UUID.randomUUID;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,7 +8,9 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn.ManeColor;
+import com.agiletestingdays.untangletestcode.unicornservice.application.service.UnicornService;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import jakarta.validation.Validator;
 import java.time.LocalDate;
 import java.util.List;

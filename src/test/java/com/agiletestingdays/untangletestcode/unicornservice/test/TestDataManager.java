@@ -1,52 +1,27 @@
 package com.agiletestingdays.untangletestcode.unicornservice.test;
 
-import com.agiletestingdays.untangletestcode.unicornservice.unicorn.Unicorn;
-import javax.sql.DataSource;
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driven.db.UnicornEntity;
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driven.db.UnicornRepository;
+import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TestDataManager {
 
-  private final JdbcTemplate jdbcTemplate;
+  private final UnicornRepository repository;
 
-  public TestDataManager(DataSource daraSource) {
-    jdbcTemplate = new JdbcTemplate(daraSource);
+  public TestDataManager(@Qualifier("unicornRepository") UnicornRepository repository) {
+    this.repository = repository;
   }
 
   public TestDataManager withUnicorn(Unicorn unicorn) {
-    jdbcTemplate.update(
-        """
-            INSERT
-              INTO
-                  unicorns(
-                      id,
-                      name,
-                      mane_color,
-                      horn_length,
-                      horn_diameter,
-                      date_of_birth
-                  )
-              VALUES(
-                  ?,
-                  ?,
-                  ?,
-                  ?,
-                  ?,
-                  ?
-              );
-            """,
-        unicorn.id(),
-        unicorn.name(),
-        unicorn.maneColor().name(),
-        unicorn.hornLength(),
-        unicorn.hornDiameter(),
-        unicorn.dateOfBirth());
+    repository.save(new UnicornEntity(unicorn));
     return this;
   }
 
   public TestDataManager clear() {
-    jdbcTemplate.execute("TRUNCATE TABLE unicorns;");
+    repository.deleteAll();
     return this;
   }
 }
