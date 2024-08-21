@@ -1,10 +1,10 @@
 package com.agiletestingdays.untangletestcode.unicornservice.adapter.driving.http;
 
-import static java.util.Objects.requireNonNull;
 import static java.util.UUID.randomUUID;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.agiletestingdays.untangletestcode.unicornservice.application.service.UnicornService;
+import com.agiletestingdays.untangletestcode.unicornservice.application.port.in.ReadUnicorn;
+import com.agiletestingdays.untangletestcode.unicornservice.application.port.in.WriteUnicorn;
 import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
 import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import jakarta.validation.Validator;
@@ -21,24 +21,27 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RestController("unicorns")
 public class UnicornController {
 
-  private final UnicornService service;
+  private final ReadUnicorn readUnicorn;
+  private final WriteUnicorn writeUnicorn;
   private final Validator validator;
 
-  public UnicornController(UnicornService service, Validator validator) {
-    this.service = requireNonNull(service);
-    this.validator = requireNonNull(validator);
+  public UnicornController(
+      ReadUnicorn readUnicorn, WriteUnicorn writeUnicorn, Validator validator) {
+    this.readUnicorn = readUnicorn;
+    this.writeUnicorn = writeUnicorn;
+    this.validator = validator;
   }
 
   @GetMapping(
       path = {"unicorns", "unicorns/"},
       produces = APPLICATION_JSON_VALUE)
   public ResponseEntity<List<UnicornDto>> getAllUnicorns() {
-    return ResponseEntity.ok(service.getAll().stream().map(UnicornDto::new).toList());
+    return ResponseEntity.ok(readUnicorn.getAll().stream().map(UnicornDto::new).toList());
   }
 
   @GetMapping(path = "unicorns/{id}", produces = APPLICATION_JSON_VALUE)
   public ResponseEntity<UnicornDto> getUnicorn(@PathVariable("id") UUID id) {
-    return ResponseEntity.ofNullable(service.getById(id).map(UnicornDto::new).orElse(null));
+    return ResponseEntity.ofNullable(readUnicorn.getById(id).map(UnicornDto::new).orElse(null));
   }
 
   @PostMapping(
@@ -67,7 +70,7 @@ public class UnicornController {
             dto.hornLength(),
             dto.hornDiameter(),
             dto.dateOfBirth());
-    service.createNewUnicorn(unicorn);
+    writeUnicorn.createNewUnicorn(unicorn);
 
     return ResponseEntity.created(
             uriComponentsBuilder.path("unicorns/").path(unicornId.toString()).build().toUri())

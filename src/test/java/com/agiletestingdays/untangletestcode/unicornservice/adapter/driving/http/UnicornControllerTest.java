@@ -8,7 +8,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.agiletestingdays.untangletestcode.unicornservice.application.service.UnicornService;
+import com.agiletestingdays.untangletestcode.unicornservice.application.port.in.ReadUnicorn;
+import com.agiletestingdays.untangletestcode.unicornservice.application.port.in.WriteUnicorn;
 import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn;
 import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import jakarta.validation.Validator;
@@ -22,10 +23,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 class UnicornControllerTest {
 
-  UnicornService service = mock(UnicornService.class);
+  ReadUnicorn readUnicorn = mock(ReadUnicorn.class);
+  WriteUnicorn writeUnicorn = mock(WriteUnicorn.class);
   Validator validator = mock(Validator.class);
 
-  UnicornController unicornController = new UnicornController(service, validator);
+  UnicornController unicornController = new UnicornController(readUnicorn, writeUnicorn, validator);
 
   @Test
   void getAllUnicornsReturnsAListOfUnicornDtos() {
@@ -40,7 +42,7 @@ class UnicornControllerTest {
     var garry =
         new Unicorn(randomUUID(), "Garry", ManeColor.BLUE, 99, 9, LocalDate.of(1912, 12, 12));
     var unicorns = List.of(gilly, garry);
-    when(service.getAll()).thenReturn(unicorns);
+    when(readUnicorn.getAll()).thenReturn(unicorns);
 
     var unicornsResponse = unicornController.getAllUnicorns();
 
@@ -64,14 +66,14 @@ class UnicornControllerTest {
                 garry.hornDiameter(),
                 garry.dateOfBirth()));
 
-    verify(service, times(1)).getAll();
+    verify(readUnicorn, times(1)).getAll();
   }
 
   @Test
   void getSingleUnicornReturnsValidJson() {
     var gilly =
         new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.of(1911, 11, 11));
-    when(service.getById(any(UUID.class))).thenReturn(Optional.of(gilly));
+    when(readUnicorn.getById(any(UUID.class))).thenReturn(Optional.of(gilly));
 
     var unicornResponse = unicornController.getUnicorn(gilly.id());
 
@@ -86,12 +88,12 @@ class UnicornControllerTest {
                 gilly.hornLength(),
                 gilly.hornDiameter(),
                 gilly.dateOfBirth()));
-    verify(service, times(1)).getById(gilly.id());
+    verify(readUnicorn, times(1)).getById(gilly.id());
   }
 
   @Test
   void getSingleUnicornsShouldReturnNullForUnknownId() {
-    when(service.getById(any(UUID.class))).thenReturn(Optional.empty());
+    when(readUnicorn.getById(any(UUID.class))).thenReturn(Optional.empty());
 
     var unicornResponse = unicornController.getUnicorn(randomUUID());
 
@@ -116,6 +118,6 @@ class UnicornControllerTest {
         .hasFieldOrPropertyWithValue("hornDiameter", gillyDto.hornDiameter())
         .hasFieldOrPropertyWithValue("dateOfBirth", gillyDto.dateOfBirth());
     assertThat(createResponse.getHeaders()).containsKey("Location");
-    verify(service, times(1)).createNewUnicorn(any(Unicorn.class));
+    verify(writeUnicorn, times(1)).createNewUnicorn(any(Unicorn.class));
   }
 }
