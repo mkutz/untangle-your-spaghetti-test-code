@@ -1,15 +1,20 @@
 package com.agiletestingdays.untangletestcode.unicornservice;
 
+import static com.agiletestingdays.untangletestcode.unicornservice.test.UnicornTestDataBuilder.aUnicorn;
+import static java.time.format.DateTimeFormatter.ISO_DATE;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.RequestEntity.post;
 
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driven.db.UnicornEntity;
+import com.agiletestingdays.untangletestcode.unicornservice.adapter.driven.db.UnicornRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.ZoneOffset;
 import java.util.List;
 import java.util.Map;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +34,24 @@ class ApplicationTest {
 
   @Autowired TestRestTemplate restTemplate;
   @Autowired ObjectMapper objectMapper;
+  @Autowired UnicornRepository unicornRepository;
 
   // DONE resolve inconsistent test case names ✔
   // TODO move special cases to unit tests
 
+  @BeforeEach
+  void clearDatabase() {
+    unicornRepository.deleteAll();
+  }
+
   @Test
   @DisplayName("GET /unicorns")
   void getAllUnicorns() throws JsonProcessingException {
-    // TODO resolve hidden arrange
+    // DONE resolve hidden arrange ✔
+    // ARRANGE
+    List<UnicornEntity> unicorns =
+        unicornRepository.saveAll(List.of(aUnicorn().buildEntity(), aUnicorn().buildEntity()));
+
     // ACT
     var response = restTemplate.getForEntity("%s/unicorns".formatted(baseUrl), String.class);
 
@@ -46,41 +61,44 @@ class ApplicationTest {
     var body = objectMapper.readTree(response.getBody());
     assertThat(body).isNotNull();
     assertThat(body.isArray()).isTrue();
-    assertThat(body.size()).isEqualTo(1);
+    assertThat(body.size()).isEqualTo(unicorns.size());
   }
 
   @Test
   @DisplayName("GET /unicorns/:id")
   void getUnicorn() throws JsonProcessingException {
-    // TODO resolve hidden arrange
+    // DONE resolve hidden arrange ✔
+    // ARRANGE
+    UnicornEntity unicorn = unicornRepository.save(aUnicorn().buildEntity());
+
     // ACT
     var response =
         restTemplate.getForEntity(
-            "%s/unicorns/%s".formatted(baseUrl, "44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23"),
-            String.class);
+            "%s/unicorns/%s".formatted(baseUrl, unicorn.getId()), String.class);
 
     // ASSERT
     // TODO resolve long assert
     var unicornData = objectMapper.readTree(response.getBody());
 
-    // TODO resolve magic values below
+    // DONE resolve magic values below ✔
     assertThat(unicornData.has("id")).isTrue();
-    assertThat(unicornData.get("id").asText()).isEqualTo("44eb6bdc-a0c9-4ce4-b28b-86d5950bcd23");
+    assertThat(unicornData.get("id").asText()).isEqualTo(unicorn.getId().toString());
 
     assertThat(unicornData.has("name")).isTrue();
-    assertThat(unicornData.get("name").asText()).isEqualTo("Grace");
+    assertThat(unicornData.get("name").asText()).isEqualTo(unicorn.getName());
 
     assertThat(unicornData.has("maneColor")).isTrue();
-    assertThat(unicornData.get("maneColor").asText()).isEqualTo("RAINBOW");
+    assertThat(unicornData.get("maneColor").asText()).isEqualTo(unicorn.getManeColor());
 
     assertThat(unicornData.has("hornLength")).isTrue();
-    assertThat(unicornData.get("hornLength").asInt()).isEqualTo(42);
+    assertThat(unicornData.get("hornLength").asInt()).isEqualTo(unicorn.getHornLength());
 
     assertThat(unicornData.has("hornDiameter")).isTrue();
-    assertThat(unicornData.get("hornDiameter").asInt()).isEqualTo(10);
+    assertThat(unicornData.get("hornDiameter").asInt()).isEqualTo(unicorn.getHornDiameter());
 
     assertThat(unicornData.has("dateOfBirth")).isTrue();
-    assertThat(unicornData.get("dateOfBirth").asText()).isEqualTo("1982-02-19");
+    assertThat(unicornData.get("dateOfBirth").asText())
+        .isEqualTo(LocalDate.ofInstant(unicorn.getDateOfBirth(), ZoneOffset.UTC).toString());
   }
 
   @Test
@@ -272,7 +290,7 @@ class ApplicationTest {
                 "hornDiameter",
                 11,
                 "dateOfBirth",
-                LocalDate.now().plusDays(1).format(DateTimeFormatter.ISO_DATE)) // only this matters
+                LocalDate.now().plusDays(1).format(ISO_DATE)) // only this matters
             );
 
     // ACT
