@@ -1,7 +1,6 @@
 package com.agiletestingdays.untangletestcode.unicornservice;
 
 import static com.agiletestingdays.untangletestcode.unicornservice.test.UnicornTestDataBuilder.aUnicorn;
-import static java.time.format.DateTimeFormatter.ISO_DATE;
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.RequestEntity.post;
@@ -13,7 +12,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -105,8 +103,7 @@ class ApplicationTest {
   @DisplayName("POST /unicorns")
   void postUnicorn() {
     // ARRANGE
-    var garryJson =
-        "{\"dateOfBirth\":\"1999-10-12\",\"hornDiameter\":11,\"hornLength\":37,\"maneColor\":\"BLUE\",\"name\":\"Garry\"}";
+    var garryJson = aUnicorn().buildJson();
 
     // ACT
     // TODO resolve long/technical act
@@ -134,22 +131,10 @@ class ApplicationTest {
   @Test
   // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornLength too low")
-  void postUnicorn_hornLength_too_low() throws JsonProcessingException {
+  void postUnicorn_hornLength_too_low() {
     // ARRANGE
-    // TODO resolve long arrange
-    var larryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Larry",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                0, // only this matters
-                "hornDiameter",
-                18,
-                "dateOfBirth",
-                "1999-10-12"));
+    // DONE resolve long arrange ✔
+    var larryJson = aUnicorn().hornLength(0).buildJson();
 
     // ACT
     // TODO resolve long/technical act
@@ -169,22 +154,10 @@ class ApplicationTest {
   @Test
   // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornLength too great")
-  void postUnicorn_hornLength_too_great() throws JsonProcessingException {
+  void postUnicorn_hornLength_too_great() {
     // ARRANGE
-    // TODO resolve long arrange
-    var larryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Barry",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                101, // only this matters
-                "hornDiameter",
-                18,
-                "dateOfBirth",
-                "1999-10-12"));
+    // DONE resolve long arrange ✔
+    var larryJson = aUnicorn().hornLength(101).buildJson();
 
     // ACT
     // TODO resolve long/technical act
@@ -204,22 +177,10 @@ class ApplicationTest {
   @Test
   // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornDiameter too low")
-  void postUnicorn_hornDiameter_too_low()
-      throws JsonProcessingException { // TODO resolve lying test name
+  void postUnicorn_hornDiameter_too_low() { // DONE resolve lying test name ✔
     // ARRANGE
-    var larryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Jerry",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                66,
-                "hornDiameter",
-                0, // only this matters
-                "dateOfBirth",
-                "1999-10-12"));
+    // DONE resolve long arrange ✔
+    var larryJson = aUnicorn().hornDiameter(0).buildJson();
 
     // ACT
     // TODO resolve long/technical act
@@ -241,20 +202,8 @@ class ApplicationTest {
   @DisplayName("POST /unicorns hornDiameter too great")
   void postUnicorn_hornDiameter_too_great() throws JsonProcessingException {
     // ARRANGE
-    // TODO resolve long arrange
-    var larryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Harry",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                67,
-                "hornDiameter",
-                42, // only this matters
-                "dateOfBirth",
-                "1999-10-12"));
+    // DONE resolve long arrange ✔
+    var larryJson = aUnicorn().hornDiameter(42).buildJson();
 
     // ACT
     // TODO resolve long/technical act
@@ -274,23 +223,10 @@ class ApplicationTest {
   @Test
   // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns dateOfBirth future")
-  void postUnicorn_dateOfBirth_future() throws JsonProcessingException {
+  void postUnicorn_dateOfBirth_future() {
     // ARRANGE
-    // TODO resolve long arrange
-    var larryJson =
-        objectMapper.writeValueAsString(
-            Map.of(
-                "name",
-                "Mary",
-                "maneColor",
-                "BLUE",
-                "hornLength",
-                37,
-                "hornDiameter",
-                11,
-                "dateOfBirth",
-                LocalDate.now().plusDays(1).format(ISO_DATE)) // only this matters
-            );
+    // DONE resolve long arrange ✔
+    var larryJson = aUnicorn().dateOfBirth(LocalDate.now().plusDays(1)).buildJson();
 
     // ACT
     // TODO resolve long/technical act
