@@ -24,7 +24,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = LocalTestApplication.class)
 class ApplicationTest {
@@ -102,7 +101,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns")
   void postUnicorn() {
     // ARRANGE
@@ -133,7 +132,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornLength too low")
   void postUnicorn_hornLength_too_low() throws JsonProcessingException {
     // ARRANGE
@@ -168,7 +167,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornLength too great")
   void postUnicorn_hornLength_too_great() throws JsonProcessingException {
     // ARRANGE
@@ -203,7 +202,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornDiameter too low")
   void postUnicorn_hornDiameter_too_low()
       throws JsonProcessingException { // TODO resolve lying test name
@@ -238,7 +237,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns hornDiameter too great")
   void postUnicorn_hornDiameter_too_great() throws JsonProcessingException {
     // ARRANGE
@@ -273,7 +272,7 @@ class ApplicationTest {
   }
 
   @Test
-  @DirtiesContext // TODO replace with DB reset in setup
+  // @DirtiesContext // DONE replace with DB reset in setup ✔
   @DisplayName("POST /unicorns dateOfBirth future")
   void postUnicorn_dateOfBirth_future() throws JsonProcessingException {
     // ARRANGE
