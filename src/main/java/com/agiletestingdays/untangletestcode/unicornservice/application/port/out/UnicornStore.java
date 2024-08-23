@@ -12,4 +12,6 @@ public interface UnicornStore {
   List<Unicorn> getAll();
 
   Unicorn save(Unicorn unicorn);
+
+  List<Unicorn> saveAll(List<Unicorn> unicorns);
 }

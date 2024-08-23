@@ -1,56 +1,40 @@
 package com.agiletestingdays.untangletestcode.unicornservice.domain;
 
-import static java.util.UUID.randomUUID;
+import static com.agiletestingdays.untangletestcode.unicornservice.test.UnicornTestDataBuilder.aUnicorn;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
-import com.agiletestingdays.untangletestcode.unicornservice.domain.Unicorn.ManeColor;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
 class UnicornTest {
 
   @Test
-  void ageWorks() {
-    var gilly =
-        new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.now().minusYears(62));
+  void age_exact() {
+    var unicorn = aUnicorn().dateOfBirth(LocalDate.now().minusYears(62)).build();
 
-    assertThat(gilly.age()).isEqualTo(62);
+    assertThat(unicorn.age()).isEqualTo(62);
   }
 
   @Test
-  void ageWorksHereToo() {
-    var gilly =
-        new Unicorn(
-            randomUUID(),
-            "Gilly",
-            ManeColor.RED,
-            111,
-            11,
-            LocalDate.now().minusYears(62).minusMonths(1).minusDays(2));
+  void age_older() {
+    var unicorn =
+        aUnicorn().dateOfBirth(LocalDate.now().minusYears(62).minusMonths(1).minusDays(2)).build();
 
-    assertThat(gilly.age()).isEqualTo(62);
+    assertThat(unicorn.age()).isEqualTo(62);
   }
 
   @Test
-  void ageWorksHereAlso() {
-    var gilly =
-        new Unicorn(
-            randomUUID(),
-            "Gilly",
-            ManeColor.RED,
-            111,
-            11,
-            LocalDate.now().minusYears(62).plusDays(1));
+  void age_younger() {
+    var unicorn = aUnicorn().dateOfBirth(LocalDate.now().minusYears(62).plusDays(1)).build();
 
-    assertThat(gilly.age()).isEqualTo(61);
+    assertThat(unicorn.age()).isEqualTo(61);
   }
 
   @Test
-  void negativeAge() {
-    try {
-      new Unicorn(randomUUID(), "Gilly", ManeColor.RED, 111, 11, LocalDate.now().plusYears(2));
-    } catch (IllegalArgumentException e) {
-      assertThat(e.getMessage()).isEqualTo("Future dates of birth are not supported!");
-    }
+  void constructor_future_dateOfBirth() {
+    assertThatIllegalArgumentException()
+        .isThrownBy(() -> aUnicorn().dateOfBirth(LocalDate.now().plusYears(2)).build())
+        .withMessage("Future dates of birth are not supported!");
   }
 }

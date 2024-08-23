@@ -30,4 +30,10 @@ public class UnicornStoreAdapter implements UnicornStore {
   public Unicorn save(Unicorn unicorn) {
     return repository.save(new UnicornEntity(unicorn)).toUnicorn();
   }
+
+  public List<Unicorn> saveAll(List<Unicorn> unicorns) {
+    return repository.saveAll(unicorns.stream().map(UnicornEntity::new).toList()).stream()
+        .map(UnicornEntity::toUnicorn)
+        .toList();
+  }
 }

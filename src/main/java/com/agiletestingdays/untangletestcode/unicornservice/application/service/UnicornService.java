@@ -26,7 +26,12 @@ public class UnicornService implements ReadUnicorn, WriteUnicorn {
     return store.findById(id);
   }
 
-  public void createNewUnicorn(Unicorn newUnicorn) {
-    store.save(newUnicorn);
+  public Unicorn createNewUnicorn(Unicorn newUnicorn) {
+    return store.save(newUnicorn);
+  }
+
+  @Override
+  public List<Unicorn> createNewUnicorns(List<Unicorn> unicorns) {
+    return store.saveAll(unicorns);
   }
 }
