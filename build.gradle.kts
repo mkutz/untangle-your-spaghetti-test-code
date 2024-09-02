@@ -25,7 +25,7 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-testcontainers")
   testImplementation(platform("org.mockito:mockito-bom:5.12.0"))
   testImplementation("org.mockito:mockito-core")
-  val commonsLangVersion = "3.16.0"
+  val commonsLangVersion = "3.17.0"
   testImplementation("org.apache.commons:commons-lang3:$commonsLangVersion")
   testImplementation(platform("org.testcontainers:testcontainers-bom:1.20.1"))
   testImplementation("org.testcontainers:postgresql")
