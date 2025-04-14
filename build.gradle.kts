@@ -18,7 +18,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-validation")
   runtimeOnly("org.postgresql:postgresql")
 
-  testImplementation(platform("org.junit:junit-bom:5.12.1"))
+  testImplementation(platform("org.junit:junit-bom:5.12.2"))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testImplementation("org.junit.jupiter:junit-jupiter-params")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
