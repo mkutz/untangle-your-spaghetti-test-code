@@ -27,7 +27,7 @@ dependencies {
   testImplementation("org.mockito:mockito-core")
   val commonsLangVersion = "3.17.0"
   testImplementation("org.apache.commons:commons-lang3:$commonsLangVersion")
-  testImplementation(platform("org.testcontainers:testcontainers-bom:1.20.6"))
+  testImplementation(platform("org.testcontainers:testcontainers-bom:1.21.0"))
   testImplementation("org.testcontainers:postgresql")
   testImplementation("org.testcontainers:junit-jupiter")
   val stubitVersion = 0.6
