@@ -5,7 +5,7 @@ plugins {
   id("org.sonarqube") version "7.2.2.6593"
   jacoco
   id("info.solidsoft.pitest") version "1.15.0"
-  id("com.diffplug.spotless") version "6.25.0"
+  id("com.diffplug.spotless") version "8.1.0"
 }
 
 java { sourceCompatibility = JavaVersion.VERSION_21 }
