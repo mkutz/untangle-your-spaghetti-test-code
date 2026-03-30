@@ -4,7 +4,7 @@ plugins {
   id("io.spring.dependency-management") version "1.1.7"
   id("org.sonarqube") version "7.2.3.7755"
   jacoco
-  id("info.solidsoft.pitest") version "1.15.0"
+  id("info.solidsoft.pitest") version "1.19.0"
   id("com.diffplug.spotless") version "6.25.0"
 }
 
